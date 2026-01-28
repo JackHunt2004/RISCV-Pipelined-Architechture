@@ -1,0 +1,6 @@
+*.out
+*.vcd
+*.gtkw
+*.log
+*.ys~
+*.swp
