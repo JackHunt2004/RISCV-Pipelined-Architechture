@@ -6,10 +6,8 @@ module instruction_memory(if_instruction,if_pc);
 
     assign if_instruction = {inst_mem[if_pc+3] , inst_mem[if_pc+2] , inst_mem[if_pc+1] , inst_mem[if_pc]};
 
-    always@(posedge clk)
+    initial
         begin
-            if (rst==1)
-                begin
                     // ================= R-TYPE INSTRUCTIONS =================
 
                     // ADD  - 0x007302B3
@@ -169,5 +167,4 @@ module instruction_memory(if_instruction,if_pc);
                     inst_mem[99] = 8'h00;
 
                 end
-        end
 endmodule
