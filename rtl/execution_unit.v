@@ -1,22 +1,35 @@
-module execution_unit(clk,rst,ex_valid,ex_instruction,ex_pc,ex_rs1,ex_rs2,ex_rs1_data,ex_rs2_data,ex_rd,ex_alu_control,ex_imm_val,ex_branch_type,ex_jump_type,ex_wb_pc4,ex_reg_write,wb_rd,wb_reg_write,wb_result,take_branch,take_jump,branch_target,jump_target,mem_valid,mem_instruction,mem_pc,mem_rd,mem_reg_write,mem_result);
+module execution_unit(clk,rst,ex_valid,ex_instruction,ex_pc,ex_rs1,ex_rs2,ex_rd,ex_rs1_data,ex_rs2_data,ex_imm_val,ex_alu_control,ex_branch_type,ex_jump_type,ex_wb_pc4,ex_reg_write,ex_mem_read,ex_mem_write,ex_mem_size,ex_mem_unsigned,wb_rd,wb_reg_write,wb_result,take_branch,take_jump,branch_target,jump_target,mem_valid,mem_instruction,mem_pc,mem_rd,mem_reg_write,mem_result,mem_mem_read,mem_mem_write,mem_mem_size,mem_mem_unsigned,mem_store_data);
+
     input clk,rst;
+
     input ex_valid,ex_wb_pc4,ex_reg_write;
+    input ex_mem_read,ex_mem_write,ex_mem_unsigned;
+
     input [31:0] ex_instruction,ex_pc;
-    input [4:0] ex_rs1,ex_rs2,ex_rd;
     input [31:0] ex_rs1_data,ex_rs2_data,ex_imm_val;
+
+    input [4:0] ex_rs1,ex_rs2,ex_rd;
+
     input [5:0] ex_alu_control;
     input [2:0] ex_branch_type;
     input [1:0] ex_jump_type;
+    input [1:0] ex_mem_size;
+
     input [4:0] wb_rd;
     input wb_reg_write;
     input [31:0] wb_result;
 
     output reg take_branch;
     output take_jump;
+
     output [31:0] branch_target,jump_target;
+
     output mem_valid,mem_reg_write;
-    output [31:0] mem_instruction,mem_pc,mem_result;
+    output [31:0] mem_instruction,mem_pc,mem_result,mem_store_data;
     output [4:0] mem_rd;
+
+    output mem_mem_read,mem_mem_write,mem_mem_unsigned;
+    output [1:0] mem_mem_size;
 
     wire [1:0] forward_a,forward_b;
     reg [31:0] operand_a,operand_b;
@@ -55,6 +68,7 @@ module execution_unit(clk,rst,ex_valid,ex_instruction,ex_pc,ex_rs1,ex_rs2,ex_rs1
     always@(*)
         begin
             take_branch=1'b0;
+
             if(ex_valid)
                 begin
                     case(ex_branch_type)
@@ -70,22 +84,47 @@ module execution_unit(clk,rst,ex_valid,ex_instruction,ex_pc,ex_rs1,ex_rs2,ex_rs1
         end
 
     assign branch_target=ex_pc+ex_imm_val;
-    assign jump_target=(ex_jump_type==2'd2) ? ((operand_a+ex_imm_val)&32'hfffffffe) : (ex_pc+ex_imm_val);
+
+    assign jump_target=(ex_jump_type==2'd2) ?
+                       ((operand_a+ex_imm_val)&32'hfffffffe) :
+                       (ex_pc+ex_imm_val);
+
     assign take_jump=ex_valid && ex_jump_type!=2'd0;
+
     assign ex_result=ex_wb_pc4 ? ex_pc+32'd4 : alu_result;
 
+    /*
+     * The existing forwarding-selected operand_b is the correct
+     * store-data value. It already includes EX/MEM and MEM/WB
+     * forwarding where required.
+     */
     ex_mem_reg exmem(.clk(clk),
                      .rst(rst),
+
                      .ex_valid(ex_valid),
                      .ex_instruction(ex_instruction),
                      .ex_pc(ex_pc),
                      .ex_result(ex_result),
                      .ex_rd(ex_rd),
                      .ex_reg_write(ex_reg_write),
+
+                     .ex_mem_read(ex_mem_read),
+                     .ex_mem_write(ex_mem_write),
+                     .ex_mem_size(ex_mem_size),
+                     .ex_mem_unsigned(ex_mem_unsigned),
+                     .ex_store_data(operand_b),
+
                      .mem_valid(mem_valid),
                      .mem_instruction(mem_instruction),
                      .mem_pc(mem_pc),
                      .mem_result(mem_result),
                      .mem_rd(mem_rd),
-                     .mem_reg_write(mem_reg_write));
+                     .mem_reg_write(mem_reg_write),
+
+                     .mem_mem_read(mem_mem_read),
+                     .mem_mem_write(mem_mem_write),
+                     .mem_mem_size(mem_mem_size),
+                     .mem_mem_unsigned(mem_mem_unsigned),
+                     .mem_store_data(mem_store_data));
+
 endmodule
