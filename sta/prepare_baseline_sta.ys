@@ -1,0 +1,22 @@
+# Baseline OpenSTA preparation
+# Sky130 HD TT 0.25C 1.80V
+#
+# Input netlist is already Sky130 technology-mapped.
+# Do NOT re-techmap combinational cells.
+#
+# proc:
+#   Removes Yosys Verilog-backend bookkeeping and exposes
+#   sequential elements as generic $dff cells.
+#
+# sky130_dff_map.v:
+#   Maps generic $dff cells to Sky130 dfxtp_1 cells
+#   for OpenSTA compatibility.
+
+read_verilog netlist/riscv_core_baseline_tt.v
+hierarchy -top riscv_core
+
+proc
+techmap -map sta/mapping/sky130_dff_map.v
+opt
+
+write_verilog -noattr -noexpr netlist/sta/riscv_core_baseline_sta.v
