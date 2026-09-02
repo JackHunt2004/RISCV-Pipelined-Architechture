@@ -15091,1125 +15091,845 @@ module ex_mem_reg(clk, rst, ex_valid, ex_instruction, ex_pc, ex_result, ex_rd, e
     .D(_075_),
     .Q(mem_rd[0])
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _286_ (
-    .A(ex_mem_size[1]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_040_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _287_ (
-    .A(ex_mem_size[0]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_039_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _288_ (
-    .A(ex_store_data[31]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_137_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _289_ (
-    .A(ex_store_data[30]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_136_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _290_ (
-    .A(ex_store_data[29]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_134_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _291_ (
-    .A(ex_store_data[28]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_133_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _292_ (
-    .A(ex_store_data[27]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_132_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _293_ (
-    .A(ex_store_data[26]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_131_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _294_ (
-    .A(ex_store_data[25]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_130_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _295_ (
-    .A(ex_store_data[24]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_129_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _296_ (
-    .A(ex_store_data[23]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_128_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _297_ (
-    .A(ex_store_data[22]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_127_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _298_ (
-    .A(ex_store_data[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _286_ (
+    .A0(ex_mem_size[1]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_126_)
+    .X(_040_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _299_ (
-    .A(ex_store_data[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _287_ (
+    .A0(ex_mem_size[0]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_125_)
+    .X(_039_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _300_ (
-    .A(ex_store_data[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _288_ (
+    .A0(ex_store_data[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_123_)
+    .X(_137_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _301_ (
-    .A(ex_store_data[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _289_ (
+    .A0(ex_store_data[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_122_)
+    .X(_136_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _302_ (
-    .A(ex_store_data[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _290_ (
+    .A0(ex_store_data[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_121_)
+    .X(_134_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _303_ (
-    .A(ex_store_data[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _291_ (
+    .A0(ex_store_data[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_120_)
+    .X(_133_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _304_ (
-    .A(ex_store_data[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _292_ (
+    .A0(ex_store_data[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_119_)
+    .X(_132_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _305_ (
-    .A(ex_store_data[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _293_ (
+    .A0(ex_store_data[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_118_)
+    .X(_131_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _306_ (
-    .A(ex_store_data[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _294_ (
+    .A0(ex_store_data[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_117_)
+    .X(_130_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _307_ (
-    .A(ex_store_data[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _295_ (
+    .A0(ex_store_data[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_116_)
+    .X(_129_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _308_ (
-    .A(ex_store_data[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _296_ (
+    .A0(ex_store_data[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_115_)
+    .X(_128_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _309_ (
-    .A(ex_store_data[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _297_ (
+    .A0(ex_store_data[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_114_)
+    .X(_127_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _310_ (
-    .A(ex_store_data[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _298_ (
+    .A0(ex_store_data[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_144_)
+    .X(_126_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _311_ (
-    .A(ex_store_data[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _299_ (
+    .A0(ex_store_data[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_143_)
+    .X(_125_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _312_ (
-    .A(ex_store_data[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _300_ (
+    .A0(ex_store_data[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_142_)
+    .X(_123_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _313_ (
-    .A(ex_store_data[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _301_ (
+    .A0(ex_store_data[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_141_)
+    .X(_122_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _314_ (
-    .A(ex_store_data[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _302_ (
+    .A0(ex_store_data[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_140_)
+    .X(_121_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _315_ (
-    .A(ex_store_data[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _303_ (
+    .A0(ex_store_data[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_139_)
+    .X(_120_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _316_ (
-    .A(ex_store_data[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _304_ (
+    .A0(ex_store_data[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_138_)
+    .X(_119_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _317_ (
-    .A(ex_store_data[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _305_ (
+    .A0(ex_store_data[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_135_)
+    .X(_118_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _318_ (
-    .A(ex_store_data[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _306_ (
+    .A0(ex_store_data[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_124_)
+    .X(_117_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _319_ (
-    .A(ex_store_data[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _307_ (
+    .A0(ex_store_data[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_113_)
+    .X(_116_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _320_ (
-    .A(ex_result[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _308_ (
+    .A0(ex_store_data[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_105_)
+    .X(_115_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _321_ (
-    .A(ex_result[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _309_ (
+    .A0(ex_store_data[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_104_)
+    .X(_114_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _322_ (
-    .A(ex_result[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _310_ (
+    .A0(ex_store_data[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_102_)
+    .X(_144_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _323_ (
-    .A(ex_result[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _311_ (
+    .A0(ex_store_data[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_101_)
+    .X(_143_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _324_ (
-    .A(ex_result[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _312_ (
+    .A0(ex_store_data[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_100_)
+    .X(_142_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _325_ (
-    .A(ex_result[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _313_ (
+    .A0(ex_store_data[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_099_)
+    .X(_141_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _326_ (
-    .A(ex_result[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _314_ (
+    .A0(ex_store_data[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_098_)
+    .X(_140_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _327_ (
-    .A(ex_result[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _315_ (
+    .A0(ex_store_data[4]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_097_)
+    .X(_139_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _328_ (
-    .A(ex_result[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _316_ (
+    .A0(ex_store_data[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_096_)
+    .X(_138_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _329_ (
-    .A(ex_result[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _317_ (
+    .A0(ex_store_data[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_095_)
+    .X(_135_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _330_ (
-    .A(ex_result[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _318_ (
+    .A0(ex_store_data[1]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_094_)
+    .X(_124_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _331_ (
-    .A(ex_result[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _319_ (
+    .A0(ex_store_data[0]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_093_)
+    .X(_113_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _332_ (
-    .A(ex_result[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _320_ (
+    .A0(ex_result[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_091_)
+    .X(_105_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _333_ (
-    .A(ex_result[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _321_ (
+    .A0(ex_result[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_090_)
+    .X(_104_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _334_ (
-    .A(ex_result[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _322_ (
+    .A0(ex_result[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_089_)
+    .X(_102_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _335_ (
-    .A(ex_result[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _323_ (
+    .A0(ex_result[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_088_)
+    .X(_101_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _336_ (
-    .A(ex_result[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _324_ (
+    .A0(ex_result[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_087_)
+    .X(_100_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _337_ (
-    .A(ex_result[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _325_ (
+    .A0(ex_result[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_086_)
+    .X(_099_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _338_ (
-    .A(ex_result[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _326_ (
+    .A0(ex_result[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_085_)
+    .X(_098_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _339_ (
-    .A(ex_result[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _327_ (
+    .A0(ex_result[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_084_)
+    .X(_097_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _340_ (
-    .A(ex_result[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _328_ (
+    .A0(ex_result[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_083_)
+    .X(_096_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _341_ (
-    .A(ex_result[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _329_ (
+    .A0(ex_result[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_082_)
+    .X(_095_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _342_ (
-    .A(ex_result[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _330_ (
+    .A0(ex_result[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_112_)
+    .X(_094_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _343_ (
-    .A(ex_result[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _331_ (
+    .A0(ex_result[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_111_)
+    .X(_093_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _344_ (
-    .A(ex_result[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _332_ (
+    .A0(ex_result[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_110_)
+    .X(_091_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _345_ (
-    .A(ex_result[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _333_ (
+    .A0(ex_result[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_109_)
+    .X(_090_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _346_ (
-    .A(ex_result[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _334_ (
+    .A0(ex_result[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_108_)
+    .X(_089_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _347_ (
-    .A(ex_result[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _335_ (
+    .A0(ex_result[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_107_)
+    .X(_088_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _348_ (
-    .A(ex_result[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _336_ (
+    .A0(ex_result[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_106_)
+    .X(_087_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _349_ (
-    .A(ex_result[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _337_ (
+    .A0(ex_result[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_103_)
+    .X(_086_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _350_ (
-    .A(ex_result[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _338_ (
+    .A0(ex_result[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_092_)
+    .X(_085_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _351_ (
-    .A(ex_result[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _339_ (
+    .A0(ex_result[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_081_)
+    .X(_084_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _352_ (
-    .A(ex_pc[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _340_ (
+    .A0(ex_result[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_067_)
+    .X(_083_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _353_ (
-    .A(ex_pc[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _341_ (
+    .A0(ex_result[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_066_)
+    .X(_082_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _354_ (
-    .A(ex_pc[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _342_ (
+    .A0(ex_result[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_064_)
+    .X(_112_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _355_ (
-    .A(ex_pc[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _343_ (
+    .A0(ex_result[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_063_)
+    .X(_111_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _356_ (
-    .A(ex_pc[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _344_ (
+    .A0(ex_result[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_062_)
+    .X(_110_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _357_ (
-    .A(ex_pc[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _345_ (
+    .A0(ex_result[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_061_)
+    .X(_109_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _358_ (
-    .A(ex_pc[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _346_ (
+    .A0(ex_result[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_060_)
+    .X(_108_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _359_ (
-    .A(ex_pc[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _347_ (
+    .A0(ex_result[4]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_059_)
+    .X(_107_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _360_ (
-    .A(ex_pc[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _348_ (
+    .A0(ex_result[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_058_)
+    .X(_106_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _361_ (
-    .A(ex_pc[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _349_ (
+    .A0(ex_result[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_057_)
+    .X(_103_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _362_ (
-    .A(ex_pc[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _350_ (
+    .A0(ex_result[1]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_056_)
+    .X(_092_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _363_ (
-    .A(ex_pc[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _351_ (
+    .A0(ex_result[0]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_055_)
+    .X(_081_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _364_ (
-    .A(ex_pc[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _352_ (
+    .A0(ex_pc[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_053_)
+    .X(_067_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _365_ (
-    .A(ex_pc[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _353_ (
+    .A0(ex_pc[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_052_)
+    .X(_066_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _366_ (
-    .A(ex_pc[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _354_ (
+    .A0(ex_pc[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_051_)
+    .X(_064_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _367_ (
-    .A(ex_pc[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _355_ (
+    .A0(ex_pc[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_050_)
+    .X(_063_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _368_ (
-    .A(ex_pc[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _356_ (
+    .A0(ex_pc[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_049_)
+    .X(_062_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _369_ (
-    .A(ex_pc[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _357_ (
+    .A0(ex_pc[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_048_)
+    .X(_061_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _370_ (
-    .A(ex_pc[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _358_ (
+    .A0(ex_pc[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_047_)
+    .X(_060_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _371_ (
-    .A(ex_pc[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _359_ (
+    .A0(ex_pc[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_046_)
+    .X(_059_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _372_ (
-    .A(ex_pc[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _360_ (
+    .A0(ex_pc[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_045_)
+    .X(_058_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _373_ (
-    .A(ex_pc[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _361_ (
+    .A0(ex_pc[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_044_)
+    .X(_057_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _374_ (
-    .A(ex_pc[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _362_ (
+    .A0(ex_pc[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_074_)
+    .X(_056_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _375_ (
-    .A(ex_pc[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _363_ (
+    .A0(ex_pc[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_073_)
+    .X(_055_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _376_ (
-    .A(ex_pc[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _364_ (
+    .A0(ex_pc[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_072_)
+    .X(_053_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _377_ (
-    .A(ex_pc[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _365_ (
+    .A0(ex_pc[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_071_)
+    .X(_052_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _378_ (
-    .A(ex_pc[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _366_ (
+    .A0(ex_pc[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_070_)
+    .X(_051_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _379_ (
-    .A(ex_pc[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _367_ (
+    .A0(ex_pc[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_069_)
+    .X(_050_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _380_ (
-    .A(ex_pc[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _368_ (
+    .A0(ex_pc[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_068_)
+    .X(_049_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _381_ (
-    .A(ex_pc[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _369_ (
+    .A0(ex_pc[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_065_)
+    .X(_048_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _382_ (
-    .A(ex_pc[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _370_ (
+    .A0(ex_pc[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_054_)
+    .X(_047_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _383_ (
-    .A(ex_pc[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _371_ (
+    .A0(ex_pc[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_043_)
+    .X(_046_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _384_ (
-    .A(ex_instruction[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _372_ (
+    .A0(ex_pc[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_030_)
+    .X(_045_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _385_ (
-    .A(ex_instruction[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _373_ (
+    .A0(ex_pc[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_029_)
+    .X(_044_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _386_ (
-    .A(ex_instruction[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _374_ (
+    .A0(ex_pc[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_027_)
+    .X(_074_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _387_ (
-    .A(ex_instruction[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _375_ (
+    .A0(ex_pc[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_026_)
+    .X(_073_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _388_ (
-    .A(ex_instruction[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _376_ (
+    .A0(ex_pc[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_025_)
+    .X(_072_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _389_ (
-    .A(ex_instruction[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _377_ (
+    .A0(ex_pc[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_024_)
+    .X(_071_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _390_ (
-    .A(ex_instruction[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _378_ (
+    .A0(ex_pc[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_023_)
+    .X(_070_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _391_ (
-    .A(ex_instruction[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _379_ (
+    .A0(ex_pc[4]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_022_)
+    .X(_069_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _392_ (
-    .A(ex_instruction[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _380_ (
+    .A0(ex_pc[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_021_)
+    .X(_068_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _393_ (
-    .A(ex_instruction[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _381_ (
+    .A0(ex_pc[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_020_)
+    .X(_065_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _394_ (
-    .A(ex_instruction[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _382_ (
+    .A0(ex_pc[1]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_019_)
+    .X(_054_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _395_ (
-    .A(ex_instruction[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _383_ (
+    .A0(ex_pc[0]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_018_)
+    .X(_043_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _396_ (
-    .A(ex_instruction[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _384_ (
+    .A0(ex_instruction[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_016_)
+    .X(_030_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _397_ (
-    .A(ex_instruction[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _385_ (
+    .A0(ex_instruction[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_015_)
+    .X(_029_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _398_ (
-    .A(ex_instruction[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _386_ (
+    .A0(ex_instruction[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_014_)
+    .X(_027_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _399_ (
-    .A(ex_instruction[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _387_ (
+    .A0(ex_instruction[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_013_)
+    .X(_026_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _400_ (
-    .A(ex_instruction[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _388_ (
+    .A0(ex_instruction[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_012_)
+    .X(_025_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _401_ (
-    .A(ex_instruction[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _389_ (
+    .A0(ex_instruction[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_011_)
+    .X(_024_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _402_ (
-    .A(ex_instruction[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _390_ (
+    .A0(ex_instruction[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_010_)
+    .X(_023_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _403_ (
-    .A(ex_instruction[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _391_ (
+    .A0(ex_instruction[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_009_)
+    .X(_022_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _404_ (
-    .A(ex_instruction[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _392_ (
+    .A0(ex_instruction[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_008_)
+    .X(_021_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _405_ (
-    .A(ex_instruction[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _393_ (
+    .A0(ex_instruction[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_007_)
+    .X(_020_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _406_ (
-    .A(ex_instruction[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _394_ (
+    .A0(ex_instruction[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_037_)
+    .X(_019_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _407_ (
-    .A(ex_instruction[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _395_ (
+    .A0(ex_instruction[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_036_)
+    .X(_018_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _408_ (
-    .A(ex_instruction[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _396_ (
+    .A0(ex_instruction[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_035_)
+    .X(_016_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _409_ (
-    .A(ex_instruction[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _397_ (
+    .A0(ex_instruction[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_034_)
+    .X(_015_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _410_ (
-    .A(ex_instruction[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _398_ (
+    .A0(ex_instruction[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_033_)
+    .X(_014_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _411_ (
-    .A(ex_instruction[4]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _399_ (
+    .A0(ex_instruction[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_032_)
+    .X(_013_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _412_ (
-    .A(ex_instruction[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _400_ (
+    .A0(ex_instruction[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_031_)
+    .X(_012_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _413_ (
-    .A(ex_instruction[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _401_ (
+    .A0(ex_instruction[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_028_)
+    .X(_011_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _414_ (
-    .A(ex_instruction[1]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _402_ (
+    .A0(ex_instruction[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_017_)
+    .X(_010_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _415_ (
-    .A(ex_instruction[0]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _403_ (
+    .A0(ex_instruction[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_006_)
+    .X(_009_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _416_ (
-    .A(ex_mem_unsigned),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _404_ (
+    .A0(ex_instruction[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_041_)
+    .X(_008_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _417_ (
-    .A(_002_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _405_ (
+    .A0(ex_instruction[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_042_)
+    .X(_007_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _418_ (
-    .A(_001_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _406_ (
+    .A0(ex_instruction[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_038_)
+    .X(_037_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _419_ (
-    .A(_000_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _407_ (
+    .A0(ex_instruction[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_080_)
+    .X(_036_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _420_ (
-    .A(ex_valid),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _408_ (
+    .A0(ex_instruction[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_145_)
+    .X(_035_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _421_ (
-    .A(ex_rd[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _409_ (
+    .A0(ex_instruction[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_079_)
+    .X(_034_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _422_ (
-    .A(ex_rd[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _410_ (
+    .A0(ex_instruction[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_078_)
+    .X(_033_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _423_ (
-    .A(ex_rd[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _411_ (
+    .A0(ex_instruction[4]),
+    .A1(1'h1),
     .S(rst),
-    .Y(_077_)
+    .X(_032_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _424_ (
-    .A(ex_rd[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _412_ (
+    .A0(ex_instruction[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_076_)
+    .X(_031_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _425_ (
-    .A(ex_rd[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _413_ (
+    .A0(ex_instruction[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_075_)
+    .X(_028_)
+  );
+  sky130_fd_sc_hd__mux2_1 _414_ (
+    .A0(ex_instruction[1]),
+    .A1(1'h1),
+    .S(rst),
+    .X(_017_)
+  );
+  sky130_fd_sc_hd__mux2_1 _415_ (
+    .A0(ex_instruction[0]),
+    .A1(1'h1),
+    .S(rst),
+    .X(_006_)
+  );
+  sky130_fd_sc_hd__mux2_1 _416_ (
+    .A0(ex_mem_unsigned),
+    .A1(1'h0),
+    .S(rst),
+    .X(_041_)
+  );
+  sky130_fd_sc_hd__mux2_1 _417_ (
+    .A0(_002_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_042_)
+  );
+  sky130_fd_sc_hd__mux2_1 _418_ (
+    .A0(_001_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_038_)
+  );
+  sky130_fd_sc_hd__mux2_1 _419_ (
+    .A0(_000_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_080_)
+  );
+  sky130_fd_sc_hd__mux2_1 _420_ (
+    .A0(ex_valid),
+    .A1(1'h0),
+    .S(rst),
+    .X(_145_)
+  );
+  sky130_fd_sc_hd__mux2_1 _421_ (
+    .A0(ex_rd[4]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_079_)
+  );
+  sky130_fd_sc_hd__mux2_1 _422_ (
+    .A0(ex_rd[3]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_078_)
+  );
+  sky130_fd_sc_hd__mux2_1 _423_ (
+    .A0(ex_rd[2]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_077_)
+  );
+  sky130_fd_sc_hd__mux2_1 _424_ (
+    .A0(ex_rd[1]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_076_)
+  );
+  sky130_fd_sc_hd__mux2_1 _425_ (
+    .A0(ex_rd[0]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_075_)
   );
   sky130_fd_sc_hd__and2_0 _003_ (
     .A(ex_reg_write),
@@ -22232,1557 +21952,1169 @@ module id_ex_reg(clk, rst, flush, id_valid, id_instruction, id_alu_control, id_p
     .D(_008_),
     .Q(ex_alu_control[0])
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _396_ (
-    .A(id_jump_type[1]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_082_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _397_ (
-    .A(id_jump_type[0]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_081_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _398_ (
-    .A(id_branch_type[2]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_016_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _399_ (
-    .A(id_branch_type[1]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_015_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _400_ (
-    .A(id_branch_type[0]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_014_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _401_ (
-    .A(id_rs2[4]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_167_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _402_ (
-    .A(id_rs2[3]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_166_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _403_ (
-    .A(id_rs2[2]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_165_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _404_ (
-    .A(id_rs2[1]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_164_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _405_ (
-    .A(id_rs2[0]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_163_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _406_ (
-    .A(id_rs1[4]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_130_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _407_ (
-    .A(id_rs1[3]),
-    .B(1'h0),
-    .S(_003_),
-    .Y(_129_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _408_ (
-    .A(id_rs1[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _396_ (
+    .A0(id_jump_type[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_128_)
+    .X(_082_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _409_ (
-    .A(id_rs1[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _397_ (
+    .A0(id_jump_type[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_127_)
+    .X(_081_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _410_ (
-    .A(id_rs1[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _398_ (
+    .A0(id_branch_type[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_126_)
+    .X(_016_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _411_ (
-    .A(id_imm_val[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _399_ (
+    .A0(id_branch_type[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_041_)
+    .X(_015_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _412_ (
-    .A(id_imm_val[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _400_ (
+    .A0(id_branch_type[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_040_)
+    .X(_014_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _413_ (
-    .A(id_imm_val[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _401_ (
+    .A0(id_rs2[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_038_)
+    .X(_167_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _414_ (
-    .A(id_imm_val[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _402_ (
+    .A0(id_rs2[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_037_)
+    .X(_166_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _415_ (
-    .A(id_imm_val[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _403_ (
+    .A0(id_rs2[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_036_)
+    .X(_165_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _416_ (
-    .A(id_imm_val[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _404_ (
+    .A0(id_rs2[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_035_)
+    .X(_164_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _417_ (
-    .A(id_imm_val[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _405_ (
+    .A0(id_rs2[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_034_)
+    .X(_163_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _418_ (
-    .A(id_imm_val[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _406_ (
+    .A0(id_rs1[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_033_)
+    .X(_130_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _419_ (
-    .A(id_imm_val[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _407_ (
+    .A0(id_rs1[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_032_)
+    .X(_129_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _420_ (
-    .A(id_imm_val[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _408_ (
+    .A0(id_rs1[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_031_)
+    .X(_128_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _421_ (
-    .A(id_imm_val[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _409_ (
+    .A0(id_rs1[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_030_)
+    .X(_127_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _422_ (
-    .A(id_imm_val[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _410_ (
+    .A0(id_rs1[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_029_)
+    .X(_126_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _423_ (
-    .A(id_imm_val[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _411_ (
+    .A0(id_imm_val[31]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_027_)
+    .X(_041_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _424_ (
-    .A(id_imm_val[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _412_ (
+    .A0(id_imm_val[30]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_026_)
+    .X(_040_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _425_ (
-    .A(id_imm_val[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _413_ (
+    .A0(id_imm_val[29]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_025_)
+    .X(_038_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _426_ (
-    .A(id_imm_val[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _414_ (
+    .A0(id_imm_val[28]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_024_)
+    .X(_037_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _427_ (
-    .A(id_imm_val[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _415_ (
+    .A0(id_imm_val[27]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_023_)
+    .X(_036_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _428_ (
-    .A(id_imm_val[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _416_ (
+    .A0(id_imm_val[26]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_022_)
+    .X(_035_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _429_ (
-    .A(id_imm_val[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _417_ (
+    .A0(id_imm_val[25]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_021_)
+    .X(_034_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _430_ (
-    .A(id_imm_val[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _418_ (
+    .A0(id_imm_val[24]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_020_)
+    .X(_033_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _431_ (
-    .A(id_imm_val[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _419_ (
+    .A0(id_imm_val[23]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_019_)
+    .X(_032_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _432_ (
-    .A(id_imm_val[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _420_ (
+    .A0(id_imm_val[22]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_018_)
+    .X(_031_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _433_ (
-    .A(id_imm_val[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _421_ (
+    .A0(id_imm_val[21]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_048_)
+    .X(_030_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _434_ (
-    .A(id_imm_val[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _422_ (
+    .A0(id_imm_val[20]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_047_)
+    .X(_029_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _435_ (
-    .A(id_imm_val[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _423_ (
+    .A0(id_imm_val[19]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_046_)
+    .X(_027_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _436_ (
-    .A(id_imm_val[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _424_ (
+    .A0(id_imm_val[18]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_045_)
+    .X(_026_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _437_ (
-    .A(id_imm_val[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _425_ (
+    .A0(id_imm_val[17]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_044_)
+    .X(_025_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _438_ (
-    .A(id_imm_val[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _426_ (
+    .A0(id_imm_val[16]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_043_)
+    .X(_024_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _439_ (
-    .A(id_imm_val[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _427_ (
+    .A0(id_imm_val[15]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_042_)
+    .X(_023_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _440_ (
-    .A(id_imm_val[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _428_ (
+    .A0(id_imm_val[14]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_039_)
+    .X(_022_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _441_ (
-    .A(id_imm_val[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _429_ (
+    .A0(id_imm_val[13]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_028_)
+    .X(_021_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _442_ (
-    .A(id_imm_val[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _430_ (
+    .A0(id_imm_val[12]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_017_)
+    .X(_020_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _443_ (
-    .A(id_rs2_data[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _431_ (
+    .A0(id_imm_val[11]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_192_)
+    .X(_019_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _444_ (
-    .A(id_rs2_data[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _432_ (
+    .A0(id_imm_val[10]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_191_)
+    .X(_018_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _445_ (
-    .A(id_rs2_data[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _433_ (
+    .A0(id_imm_val[9]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_189_)
+    .X(_048_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _446_ (
-    .A(id_rs2_data[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _434_ (
+    .A0(id_imm_val[8]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_188_)
+    .X(_047_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _447_ (
-    .A(id_rs2_data[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _435_ (
+    .A0(id_imm_val[7]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_187_)
+    .X(_046_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _448_ (
-    .A(id_rs2_data[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _436_ (
+    .A0(id_imm_val[6]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_186_)
+    .X(_045_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _449_ (
-    .A(id_rs2_data[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _437_ (
+    .A0(id_imm_val[5]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_185_)
+    .X(_044_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _450_ (
-    .A(id_rs2_data[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _438_ (
+    .A0(id_imm_val[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_184_)
+    .X(_043_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _451_ (
-    .A(id_rs2_data[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _439_ (
+    .A0(id_imm_val[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_183_)
+    .X(_042_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _452_ (
-    .A(id_rs2_data[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _440_ (
+    .A0(id_imm_val[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_182_)
+    .X(_039_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _453_ (
-    .A(id_rs2_data[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _441_ (
+    .A0(id_imm_val[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_181_)
+    .X(_028_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _454_ (
-    .A(id_rs2_data[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _442_ (
+    .A0(id_imm_val[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_180_)
+    .X(_017_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _455_ (
-    .A(id_rs2_data[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _443_ (
+    .A0(id_rs2_data[31]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_178_)
+    .X(_192_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _456_ (
-    .A(id_rs2_data[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _444_ (
+    .A0(id_rs2_data[30]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_177_)
+    .X(_191_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _457_ (
-    .A(id_rs2_data[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _445_ (
+    .A0(id_rs2_data[29]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_176_)
+    .X(_189_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _458_ (
-    .A(id_rs2_data[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _446_ (
+    .A0(id_rs2_data[28]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_175_)
+    .X(_188_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _459_ (
-    .A(id_rs2_data[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _447_ (
+    .A0(id_rs2_data[27]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_174_)
+    .X(_187_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _460_ (
-    .A(id_rs2_data[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _448_ (
+    .A0(id_rs2_data[26]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_173_)
+    .X(_186_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _461_ (
-    .A(id_rs2_data[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _449_ (
+    .A0(id_rs2_data[25]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_172_)
+    .X(_185_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _462_ (
-    .A(id_rs2_data[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _450_ (
+    .A0(id_rs2_data[24]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_171_)
+    .X(_184_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _463_ (
-    .A(id_rs2_data[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _451_ (
+    .A0(id_rs2_data[23]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_170_)
+    .X(_183_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _464_ (
-    .A(id_rs2_data[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _452_ (
+    .A0(id_rs2_data[22]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_169_)
+    .X(_182_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _465_ (
-    .A(id_rs2_data[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _453_ (
+    .A0(id_rs2_data[21]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_199_)
+    .X(_181_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _466_ (
-    .A(id_rs2_data[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _454_ (
+    .A0(id_rs2_data[20]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_198_)
+    .X(_180_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _467_ (
-    .A(id_rs2_data[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _455_ (
+    .A0(id_rs2_data[19]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_197_)
+    .X(_178_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _468_ (
-    .A(id_rs2_data[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _456_ (
+    .A0(id_rs2_data[18]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_196_)
+    .X(_177_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _469_ (
-    .A(id_rs2_data[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _457_ (
+    .A0(id_rs2_data[17]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_195_)
+    .X(_176_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _470_ (
-    .A(id_rs2_data[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _458_ (
+    .A0(id_rs2_data[16]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_194_)
+    .X(_175_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _471_ (
-    .A(id_rs2_data[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _459_ (
+    .A0(id_rs2_data[15]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_193_)
+    .X(_174_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _472_ (
-    .A(id_rs2_data[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _460_ (
+    .A0(id_rs2_data[14]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_190_)
+    .X(_173_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _473_ (
-    .A(id_rs2_data[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _461_ (
+    .A0(id_rs2_data[13]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_179_)
+    .X(_172_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _474_ (
-    .A(id_rs2_data[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _462_ (
+    .A0(id_rs2_data[12]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_168_)
+    .X(_171_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _475_ (
-    .A(id_rs1_data[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _463_ (
+    .A0(id_rs2_data[11]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_155_)
+    .X(_170_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _476_ (
-    .A(id_rs1_data[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _464_ (
+    .A0(id_rs2_data[10]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_154_)
+    .X(_169_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _477_ (
-    .A(id_rs1_data[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _465_ (
+    .A0(id_rs2_data[9]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_152_)
+    .X(_199_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _478_ (
-    .A(id_rs1_data[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _466_ (
+    .A0(id_rs2_data[8]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_151_)
+    .X(_198_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _479_ (
-    .A(id_rs1_data[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _467_ (
+    .A0(id_rs2_data[7]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_150_)
+    .X(_197_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _480_ (
-    .A(id_rs1_data[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _468_ (
+    .A0(id_rs2_data[6]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_149_)
+    .X(_196_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _481_ (
-    .A(id_rs1_data[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _469_ (
+    .A0(id_rs2_data[5]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_148_)
+    .X(_195_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _482_ (
-    .A(id_rs1_data[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _470_ (
+    .A0(id_rs2_data[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_147_)
+    .X(_194_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _483_ (
-    .A(id_rs1_data[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _471_ (
+    .A0(id_rs2_data[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_146_)
+    .X(_193_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _484_ (
-    .A(id_rs1_data[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _472_ (
+    .A0(id_rs2_data[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_145_)
+    .X(_190_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _485_ (
-    .A(id_rs1_data[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _473_ (
+    .A0(id_rs2_data[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_144_)
+    .X(_179_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _486_ (
-    .A(id_rs1_data[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _474_ (
+    .A0(id_rs2_data[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_143_)
+    .X(_168_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _487_ (
-    .A(id_rs1_data[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _475_ (
+    .A0(id_rs1_data[31]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_141_)
+    .X(_155_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _488_ (
-    .A(id_rs1_data[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _476_ (
+    .A0(id_rs1_data[30]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_140_)
+    .X(_154_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _489_ (
-    .A(id_rs1_data[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _477_ (
+    .A0(id_rs1_data[29]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_139_)
+    .X(_152_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _490_ (
-    .A(id_rs1_data[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _478_ (
+    .A0(id_rs1_data[28]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_138_)
+    .X(_151_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _491_ (
-    .A(id_rs1_data[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _479_ (
+    .A0(id_rs1_data[27]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_137_)
+    .X(_150_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _492_ (
-    .A(id_rs1_data[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _480_ (
+    .A0(id_rs1_data[26]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_136_)
+    .X(_149_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _493_ (
-    .A(id_rs1_data[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _481_ (
+    .A0(id_rs1_data[25]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_135_)
+    .X(_148_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _494_ (
-    .A(id_rs1_data[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _482_ (
+    .A0(id_rs1_data[24]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_134_)
+    .X(_147_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _495_ (
-    .A(id_rs1_data[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _483_ (
+    .A0(id_rs1_data[23]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_133_)
+    .X(_146_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _496_ (
-    .A(id_rs1_data[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _484_ (
+    .A0(id_rs1_data[22]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_132_)
+    .X(_145_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _497_ (
-    .A(id_rs1_data[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _485_ (
+    .A0(id_rs1_data[21]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_162_)
+    .X(_144_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _498_ (
-    .A(id_rs1_data[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _486_ (
+    .A0(id_rs1_data[20]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_161_)
+    .X(_143_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _499_ (
-    .A(id_rs1_data[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _487_ (
+    .A0(id_rs1_data[19]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_160_)
+    .X(_141_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _500_ (
-    .A(id_rs1_data[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _488_ (
+    .A0(id_rs1_data[18]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_159_)
+    .X(_140_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _501_ (
-    .A(id_rs1_data[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _489_ (
+    .A0(id_rs1_data[17]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_158_)
+    .X(_139_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _502_ (
-    .A(id_rs1_data[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _490_ (
+    .A0(id_rs1_data[16]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_157_)
+    .X(_138_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _503_ (
-    .A(id_rs1_data[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _491_ (
+    .A0(id_rs1_data[15]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_156_)
+    .X(_137_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _504_ (
-    .A(id_rs1_data[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _492_ (
+    .A0(id_rs1_data[14]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_153_)
+    .X(_136_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _505_ (
-    .A(id_rs1_data[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _493_ (
+    .A0(id_rs1_data[13]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_142_)
+    .X(_135_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _506_ (
-    .A(id_rs1_data[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _494_ (
+    .A0(id_rs1_data[12]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_131_)
+    .X(_134_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _507_ (
-    .A(id_wb_pc4),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _495_ (
+    .A0(id_rs1_data[11]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_201_)
+    .X(_133_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _508_ (
-    .A(id_rd[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _496_ (
+    .A0(id_rs1_data[10]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_124_)
+    .X(_132_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _509_ (
-    .A(id_rd[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _497_ (
+    .A0(id_rs1_data[9]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_123_)
+    .X(_162_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _510_ (
-    .A(id_rd[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _498_ (
+    .A0(id_rs1_data[8]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_122_)
+    .X(_161_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _511_ (
-    .A(id_rd[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _499_ (
+    .A0(id_rs1_data[7]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_121_)
+    .X(_160_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _512_ (
-    .A(id_rd[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _500_ (
+    .A0(id_rs1_data[6]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_120_)
+    .X(_159_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _513_ (
-    .A(id_mem_size[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _501_ (
+    .A0(id_rs1_data[5]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_085_)
+    .X(_158_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _514_ (
-    .A(id_mem_size[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _502_ (
+    .A0(id_rs1_data[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_084_)
+    .X(_157_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _515_ (
-    .A(id_pc[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _503_ (
+    .A0(id_rs1_data[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_112_)
+    .X(_156_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _516_ (
-    .A(id_pc[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _504_ (
+    .A0(id_rs1_data[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_111_)
+    .X(_153_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _517_ (
-    .A(id_pc[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _505_ (
+    .A0(id_rs1_data[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_109_)
+    .X(_142_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _518_ (
-    .A(id_pc[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _506_ (
+    .A0(id_rs1_data[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_108_)
+    .X(_131_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _519_ (
-    .A(id_pc[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _507_ (
+    .A0(id_wb_pc4),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_107_)
+    .X(_201_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _520_ (
-    .A(id_pc[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _508_ (
+    .A0(id_rd[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_106_)
+    .X(_124_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _521_ (
-    .A(id_pc[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _509_ (
+    .A0(id_rd[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_105_)
+    .X(_123_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _522_ (
-    .A(id_pc[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _510_ (
+    .A0(id_rd[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_104_)
+    .X(_122_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _523_ (
-    .A(id_pc[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _511_ (
+    .A0(id_rd[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_103_)
+    .X(_121_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _524_ (
-    .A(id_pc[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _512_ (
+    .A0(id_rd[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_102_)
+    .X(_120_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _525_ (
-    .A(id_pc[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _513_ (
+    .A0(id_mem_size[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_101_)
+    .X(_085_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _526_ (
-    .A(id_pc[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _514_ (
+    .A0(id_mem_size[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_100_)
+    .X(_084_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _527_ (
-    .A(id_pc[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _515_ (
+    .A0(id_pc[31]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_098_)
+    .X(_112_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _528_ (
-    .A(id_pc[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _516_ (
+    .A0(id_pc[30]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_097_)
+    .X(_111_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _529_ (
-    .A(id_pc[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _517_ (
+    .A0(id_pc[29]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_096_)
+    .X(_109_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _530_ (
-    .A(id_pc[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _518_ (
+    .A0(id_pc[28]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_095_)
+    .X(_108_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _531_ (
-    .A(id_pc[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _519_ (
+    .A0(id_pc[27]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_094_)
+    .X(_107_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _532_ (
-    .A(id_pc[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _520_ (
+    .A0(id_pc[26]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_093_)
+    .X(_106_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _533_ (
-    .A(id_pc[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _521_ (
+    .A0(id_pc[25]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_092_)
+    .X(_105_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _534_ (
-    .A(id_pc[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _522_ (
+    .A0(id_pc[24]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_091_)
+    .X(_104_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _535_ (
-    .A(id_pc[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _523_ (
+    .A0(id_pc[23]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_090_)
+    .X(_103_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _536_ (
-    .A(id_pc[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _524_ (
+    .A0(id_pc[22]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_089_)
+    .X(_102_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _537_ (
-    .A(id_pc[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _525_ (
+    .A0(id_pc[21]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_119_)
+    .X(_101_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _538_ (
-    .A(id_pc[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _526_ (
+    .A0(id_pc[20]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_118_)
+    .X(_100_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _539_ (
-    .A(id_pc[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _527_ (
+    .A0(id_pc[19]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_117_)
+    .X(_098_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _540_ (
-    .A(id_pc[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _528_ (
+    .A0(id_pc[18]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_116_)
+    .X(_097_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _541_ (
-    .A(id_pc[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _529_ (
+    .A0(id_pc[17]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_115_)
+    .X(_096_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _542_ (
-    .A(id_pc[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _530_ (
+    .A0(id_pc[16]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_114_)
+    .X(_095_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _543_ (
-    .A(id_pc[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _531_ (
+    .A0(id_pc[15]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_113_)
+    .X(_094_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _544_ (
-    .A(id_pc[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _532_ (
+    .A0(id_pc[14]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_110_)
+    .X(_093_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _545_ (
-    .A(id_pc[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _533_ (
+    .A0(id_pc[13]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_099_)
+    .X(_092_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _546_ (
-    .A(id_pc[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _534_ (
+    .A0(id_pc[12]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_088_)
+    .X(_091_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _547_ (
-    .A(id_instruction[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _535_ (
+    .A0(id_pc[11]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_073_)
+    .X(_090_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _548_ (
-    .A(id_instruction[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _536_ (
+    .A0(id_pc[10]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_072_)
+    .X(_089_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _549_ (
-    .A(id_instruction[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _537_ (
+    .A0(id_pc[9]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_070_)
+    .X(_119_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _550_ (
-    .A(id_instruction[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _538_ (
+    .A0(id_pc[8]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_069_)
+    .X(_118_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _551_ (
-    .A(id_instruction[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _539_ (
+    .A0(id_pc[7]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_068_)
+    .X(_117_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _552_ (
-    .A(id_instruction[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _540_ (
+    .A0(id_pc[6]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_067_)
+    .X(_116_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _553_ (
-    .A(id_instruction[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _541_ (
+    .A0(id_pc[5]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_066_)
+    .X(_115_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _554_ (
-    .A(id_instruction[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _542_ (
+    .A0(id_pc[4]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_065_)
+    .X(_114_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _555_ (
-    .A(id_instruction[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _543_ (
+    .A0(id_pc[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_064_)
+    .X(_113_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _556_ (
-    .A(id_instruction[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _544_ (
+    .A0(id_pc[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_063_)
+    .X(_110_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _557_ (
-    .A(id_instruction[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _545_ (
+    .A0(id_pc[1]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_062_)
+    .X(_099_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _558_ (
-    .A(id_instruction[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _546_ (
+    .A0(id_pc[0]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_061_)
+    .X(_088_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _559_ (
-    .A(id_instruction[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _547_ (
+    .A0(id_instruction[31]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_059_)
+    .X(_073_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _560_ (
-    .A(id_instruction[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _548_ (
+    .A0(id_instruction[30]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_058_)
+    .X(_072_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _561_ (
-    .A(id_instruction[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _549_ (
+    .A0(id_instruction[29]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_057_)
+    .X(_070_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _562_ (
-    .A(id_instruction[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _550_ (
+    .A0(id_instruction[28]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_056_)
+    .X(_069_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _563_ (
-    .A(id_instruction[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _551_ (
+    .A0(id_instruction[27]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_055_)
+    .X(_068_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _564_ (
-    .A(id_instruction[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _552_ (
+    .A0(id_instruction[26]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_054_)
+    .X(_067_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _565_ (
-    .A(id_instruction[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _553_ (
+    .A0(id_instruction[25]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_053_)
+    .X(_066_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _566_ (
-    .A(id_instruction[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _554_ (
+    .A0(id_instruction[24]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_052_)
+    .X(_065_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _567_ (
-    .A(id_instruction[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _555_ (
+    .A0(id_instruction[23]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_051_)
+    .X(_064_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _568_ (
-    .A(id_instruction[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _556_ (
+    .A0(id_instruction[22]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_050_)
+    .X(_063_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _569_ (
-    .A(id_instruction[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _557_ (
+    .A0(id_instruction[21]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_080_)
+    .X(_062_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _570_ (
-    .A(id_instruction[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _558_ (
+    .A0(id_instruction[20]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_079_)
+    .X(_061_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _571_ (
-    .A(id_instruction[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _559_ (
+    .A0(id_instruction[19]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_078_)
+    .X(_059_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _572_ (
-    .A(id_instruction[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _560_ (
+    .A0(id_instruction[18]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_077_)
+    .X(_058_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _573_ (
-    .A(id_instruction[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _561_ (
+    .A0(id_instruction[17]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_076_)
+    .X(_057_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _574_ (
-    .A(id_instruction[4]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _562_ (
+    .A0(id_instruction[16]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_075_)
+    .X(_056_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _575_ (
-    .A(id_instruction[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _563_ (
+    .A0(id_instruction[15]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_074_)
+    .X(_055_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _576_ (
-    .A(id_instruction[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _564_ (
+    .A0(id_instruction[14]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_071_)
+    .X(_054_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _577_ (
-    .A(id_instruction[1]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _565_ (
+    .A0(id_instruction[13]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_060_)
+    .X(_053_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _578_ (
-    .A(id_instruction[0]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _566_ (
+    .A0(id_instruction[12]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_049_)
+    .X(_052_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _579_ (
-    .A(id_mem_unsigned),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _567_ (
+    .A0(id_instruction[11]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_086_)
+    .X(_051_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _580_ (
-    .A(_002_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _568_ (
+    .A0(id_instruction[10]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_087_)
+    .X(_050_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _581_ (
-    .A(_001_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _569_ (
+    .A0(id_instruction[9]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_083_)
+    .X(_080_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _582_ (
-    .A(_000_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _570_ (
+    .A0(id_instruction[8]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_125_)
+    .X(_079_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _583_ (
-    .A(id_valid),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _571_ (
+    .A0(id_instruction[7]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_200_)
+    .X(_078_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _584_ (
-    .A(id_alu_control[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _572_ (
+    .A0(id_instruction[6]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_013_)
+    .X(_077_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _585_ (
-    .A(id_alu_control[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _573_ (
+    .A0(id_instruction[5]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_012_)
+    .X(_076_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _586_ (
-    .A(id_alu_control[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _574_ (
+    .A0(id_instruction[4]),
+    .A1(1'h1),
     .S(_003_),
-    .Y(_011_)
+    .X(_075_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _587_ (
-    .A(id_alu_control[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _575_ (
+    .A0(id_instruction[3]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_010_)
+    .X(_074_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _588_ (
-    .A(id_alu_control[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _576_ (
+    .A0(id_instruction[2]),
+    .A1(1'h0),
     .S(_003_),
-    .Y(_009_)
+    .X(_071_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _589_ (
-    .A(id_alu_control[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _577_ (
+    .A0(id_instruction[1]),
+    .A1(1'h1),
     .S(_003_),
-    .Y(_008_)
+    .X(_060_)
+  );
+  sky130_fd_sc_hd__mux2_1 _578_ (
+    .A0(id_instruction[0]),
+    .A1(1'h1),
+    .S(_003_),
+    .X(_049_)
+  );
+  sky130_fd_sc_hd__mux2_1 _579_ (
+    .A0(id_mem_unsigned),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_086_)
+  );
+  sky130_fd_sc_hd__mux2_1 _580_ (
+    .A0(_002_),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_087_)
+  );
+  sky130_fd_sc_hd__mux2_1 _581_ (
+    .A0(_001_),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_083_)
+  );
+  sky130_fd_sc_hd__mux2_1 _582_ (
+    .A0(_000_),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_125_)
+  );
+  sky130_fd_sc_hd__mux2_1 _583_ (
+    .A0(id_valid),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_200_)
+  );
+  sky130_fd_sc_hd__mux2_1 _584_ (
+    .A0(id_alu_control[5]),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_013_)
+  );
+  sky130_fd_sc_hd__mux2_1 _585_ (
+    .A0(id_alu_control[4]),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_012_)
+  );
+  sky130_fd_sc_hd__mux2_1 _586_ (
+    .A0(id_alu_control[3]),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_011_)
+  );
+  sky130_fd_sc_hd__mux2_1 _587_ (
+    .A0(id_alu_control[2]),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_010_)
+  );
+  sky130_fd_sc_hd__mux2_1 _588_ (
+    .A0(id_alu_control[1]),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_009_)
+  );
+  sky130_fd_sc_hd__mux2_1 _589_ (
+    .A0(id_alu_control[0]),
+    .A1(1'h0),
+    .S(_003_),
+    .X(_008_)
   );
   sky130_fd_sc_hd__lpflow_inputiso1p_1 _004_ (
     .A(rst),
@@ -24216,525 +23548,395 @@ module if_id_reg(clk, rst, flush, if_valid, if_instruction, if_pc, id_valid, id_
     .D(_066_),
     .Q(id_valid)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _132_ (
-    .A(if_pc[31]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_058_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _133_ (
-    .A(if_pc[30]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_057_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _134_ (
-    .A(if_pc[29]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_055_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _135_ (
-    .A(if_pc[28]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_054_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _136_ (
-    .A(if_pc[27]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_053_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _137_ (
-    .A(if_pc[26]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_052_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _138_ (
-    .A(if_pc[25]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_051_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _139_ (
-    .A(if_pc[24]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_050_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _140_ (
-    .A(if_pc[23]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_049_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _141_ (
-    .A(if_pc[22]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_048_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _142_ (
-    .A(if_pc[21]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_047_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _143_ (
-    .A(if_pc[20]),
-    .B(1'h0),
-    .S(_00_),
-    .Y(_046_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _144_ (
-    .A(if_pc[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _132_ (
+    .A0(if_pc[31]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_044_)
+    .X(_058_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _145_ (
-    .A(if_pc[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _133_ (
+    .A0(if_pc[30]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_043_)
+    .X(_057_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _146_ (
-    .A(if_pc[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _134_ (
+    .A0(if_pc[29]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_042_)
+    .X(_055_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _147_ (
-    .A(if_pc[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _135_ (
+    .A0(if_pc[28]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_041_)
+    .X(_054_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _148_ (
-    .A(if_pc[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _136_ (
+    .A0(if_pc[27]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_040_)
+    .X(_053_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _149_ (
-    .A(if_pc[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _137_ (
+    .A0(if_pc[26]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_039_)
+    .X(_052_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _150_ (
-    .A(if_pc[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _138_ (
+    .A0(if_pc[25]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_038_)
+    .X(_051_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _151_ (
-    .A(if_pc[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _139_ (
+    .A0(if_pc[24]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_037_)
+    .X(_050_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _152_ (
-    .A(if_pc[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _140_ (
+    .A0(if_pc[23]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_036_)
+    .X(_049_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _153_ (
-    .A(if_pc[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _141_ (
+    .A0(if_pc[22]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_035_)
+    .X(_048_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _154_ (
-    .A(if_pc[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _142_ (
+    .A0(if_pc[21]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_065_)
+    .X(_047_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _155_ (
-    .A(if_pc[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _143_ (
+    .A0(if_pc[20]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_064_)
+    .X(_046_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _156_ (
-    .A(if_pc[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _144_ (
+    .A0(if_pc[19]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_063_)
+    .X(_044_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _157_ (
-    .A(if_pc[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _145_ (
+    .A0(if_pc[18]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_062_)
+    .X(_043_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _158_ (
-    .A(if_pc[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _146_ (
+    .A0(if_pc[17]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_061_)
+    .X(_042_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _159_ (
-    .A(if_pc[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _147_ (
+    .A0(if_pc[16]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_060_)
+    .X(_041_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _160_ (
-    .A(if_pc[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _148_ (
+    .A0(if_pc[15]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_059_)
+    .X(_040_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _161_ (
-    .A(if_pc[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _149_ (
+    .A0(if_pc[14]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_056_)
+    .X(_039_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _162_ (
-    .A(if_pc[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _150_ (
+    .A0(if_pc[13]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_045_)
+    .X(_038_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _163_ (
-    .A(if_pc[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _151_ (
+    .A0(if_pc[12]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_034_)
+    .X(_037_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _164_ (
-    .A(if_instruction[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _152_ (
+    .A0(if_pc[11]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_026_)
+    .X(_036_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _165_ (
-    .A(if_instruction[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _153_ (
+    .A0(if_pc[10]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_025_)
+    .X(_035_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _166_ (
-    .A(if_instruction[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _154_ (
+    .A0(if_pc[9]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_023_)
+    .X(_065_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _167_ (
-    .A(if_instruction[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _155_ (
+    .A0(if_pc[8]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_022_)
+    .X(_064_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _168_ (
-    .A(if_instruction[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _156_ (
+    .A0(if_pc[7]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_021_)
+    .X(_063_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _169_ (
-    .A(if_instruction[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _157_ (
+    .A0(if_pc[6]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_020_)
+    .X(_062_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _170_ (
-    .A(if_instruction[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _158_ (
+    .A0(if_pc[5]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_019_)
+    .X(_061_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _171_ (
-    .A(if_instruction[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _159_ (
+    .A0(if_pc[4]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_018_)
+    .X(_060_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _172_ (
-    .A(if_instruction[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _160_ (
+    .A0(if_pc[3]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_017_)
+    .X(_059_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _173_ (
-    .A(if_instruction[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _161_ (
+    .A0(if_pc[2]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_016_)
+    .X(_056_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _174_ (
-    .A(if_instruction[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _162_ (
+    .A0(if_pc[1]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_015_)
+    .X(_045_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _175_ (
-    .A(if_instruction[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _163_ (
+    .A0(if_pc[0]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_014_)
+    .X(_034_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _176_ (
-    .A(if_instruction[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _164_ (
+    .A0(if_instruction[31]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_012_)
+    .X(_026_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _177_ (
-    .A(if_instruction[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _165_ (
+    .A0(if_instruction[30]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_011_)
+    .X(_025_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _178_ (
-    .A(if_instruction[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _166_ (
+    .A0(if_instruction[29]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_010_)
+    .X(_023_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _179_ (
-    .A(if_instruction[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _167_ (
+    .A0(if_instruction[28]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_009_)
+    .X(_022_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _180_ (
-    .A(if_instruction[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _168_ (
+    .A0(if_instruction[27]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_008_)
+    .X(_021_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _181_ (
-    .A(if_instruction[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _169_ (
+    .A0(if_instruction[26]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_007_)
+    .X(_020_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _182_ (
-    .A(if_instruction[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _170_ (
+    .A0(if_instruction[25]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_006_)
+    .X(_019_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _183_ (
-    .A(if_instruction[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _171_ (
+    .A0(if_instruction[24]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_005_)
+    .X(_018_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _184_ (
-    .A(if_instruction[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _172_ (
+    .A0(if_instruction[23]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_004_)
+    .X(_017_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _185_ (
-    .A(if_instruction[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _173_ (
+    .A0(if_instruction[22]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_003_)
+    .X(_016_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _186_ (
-    .A(if_instruction[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _174_ (
+    .A0(if_instruction[21]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_033_)
+    .X(_015_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _187_ (
-    .A(if_instruction[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _175_ (
+    .A0(if_instruction[20]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_032_)
+    .X(_014_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _188_ (
-    .A(if_instruction[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _176_ (
+    .A0(if_instruction[19]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_031_)
+    .X(_012_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _189_ (
-    .A(if_instruction[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _177_ (
+    .A0(if_instruction[18]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_030_)
+    .X(_011_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _190_ (
-    .A(if_instruction[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _178_ (
+    .A0(if_instruction[17]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_029_)
+    .X(_010_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _191_ (
-    .A(if_instruction[4]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _179_ (
+    .A0(if_instruction[16]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_028_)
+    .X(_009_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _192_ (
-    .A(if_instruction[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _180_ (
+    .A0(if_instruction[15]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_027_)
+    .X(_008_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _193_ (
-    .A(if_instruction[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _181_ (
+    .A0(if_instruction[14]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_024_)
+    .X(_007_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _194_ (
-    .A(if_instruction[1]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _182_ (
+    .A0(if_instruction[13]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_013_)
+    .X(_006_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _195_ (
-    .A(if_instruction[0]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _183_ (
+    .A0(if_instruction[12]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_002_)
+    .X(_005_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _196_ (
-    .A(if_valid),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _184_ (
+    .A0(if_instruction[11]),
+    .A1(1'h0),
     .S(_00_),
-    .Y(_066_)
+    .X(_004_)
+  );
+  sky130_fd_sc_hd__mux2_1 _185_ (
+    .A0(if_instruction[10]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_003_)
+  );
+  sky130_fd_sc_hd__mux2_1 _186_ (
+    .A0(if_instruction[9]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_033_)
+  );
+  sky130_fd_sc_hd__mux2_1 _187_ (
+    .A0(if_instruction[8]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_032_)
+  );
+  sky130_fd_sc_hd__mux2_1 _188_ (
+    .A0(if_instruction[7]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_031_)
+  );
+  sky130_fd_sc_hd__mux2_1 _189_ (
+    .A0(if_instruction[6]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_030_)
+  );
+  sky130_fd_sc_hd__mux2_1 _190_ (
+    .A0(if_instruction[5]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_029_)
+  );
+  sky130_fd_sc_hd__mux2_1 _191_ (
+    .A0(if_instruction[4]),
+    .A1(1'h1),
+    .S(_00_),
+    .X(_028_)
+  );
+  sky130_fd_sc_hd__mux2_1 _192_ (
+    .A0(if_instruction[3]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_027_)
+  );
+  sky130_fd_sc_hd__mux2_1 _193_ (
+    .A0(if_instruction[2]),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_024_)
+  );
+  sky130_fd_sc_hd__mux2_1 _194_ (
+    .A0(if_instruction[1]),
+    .A1(1'h1),
+    .S(_00_),
+    .X(_013_)
+  );
+  sky130_fd_sc_hd__mux2_1 _195_ (
+    .A0(if_instruction[0]),
+    .A1(1'h1),
+    .S(_00_),
+    .X(_002_)
+  );
+  sky130_fd_sc_hd__mux2_1 _196_ (
+    .A0(if_valid),
+    .A1(1'h0),
+    .S(_00_),
+    .X(_066_)
   );
   sky130_fd_sc_hd__lpflow_inputiso1p_1 _01_ (
     .A(rst),
@@ -25490,277 +24692,209 @@ module instruction_fetch_unit(clk, rst, flush, take_branch, take_jump, jump_targ
     .D(_276_),
     .Q(if_pc[2])
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _320_ (
-    .A(if_pc[1]),
-    .B(next_pc[1]),
+  sky130_fd_sc_hd__mux2_1 _320_ (
+    .A0(if_pc[1]),
+    .A1(next_pc[1]),
     .S(_000_),
-    .Y(_286_)
+    .X(_286_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _321_ (
-    .A(_286_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _321_ (
+    .A0(_286_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_265_)
+    .X(_265_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _322_ (
-    .A(if_pc[0]),
-    .B(next_pc[0]),
+  sky130_fd_sc_hd__mux2_1 _322_ (
+    .A0(if_pc[0]),
+    .A1(next_pc[0]),
     .S(_000_),
-    .Y(_287_)
+    .X(_287_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _323_ (
-    .A(_287_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _323_ (
+    .A0(_287_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_254_)
+    .X(_254_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _324_ (
-    .A(next_pc[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _324_ (
+    .A0(next_pc[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_278_)
+    .X(_278_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _325_ (
-    .A(next_pc[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _325_ (
+    .A0(next_pc[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_277_)
+    .X(_277_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _326_ (
-    .A(next_pc[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _326_ (
+    .A0(next_pc[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_275_)
+    .X(_275_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _327_ (
-    .A(next_pc[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _327_ (
+    .A0(next_pc[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_274_)
+    .X(_274_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _328_ (
-    .A(next_pc[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _328_ (
+    .A0(next_pc[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_273_)
+    .X(_273_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _329_ (
-    .A(next_pc[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _329_ (
+    .A0(next_pc[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_272_)
+    .X(_272_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _330_ (
-    .A(next_pc[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _330_ (
+    .A0(next_pc[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_271_)
+    .X(_271_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _331_ (
-    .A(next_pc[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _331_ (
+    .A0(next_pc[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_270_)
+    .X(_270_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _332_ (
-    .A(next_pc[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _332_ (
+    .A0(next_pc[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_269_)
+    .X(_269_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _333_ (
-    .A(next_pc[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _333_ (
+    .A0(next_pc[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_268_)
+    .X(_268_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _334_ (
-    .A(next_pc[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _334_ (
+    .A0(next_pc[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_267_)
+    .X(_267_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _335_ (
-    .A(next_pc[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _335_ (
+    .A0(next_pc[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_266_)
+    .X(_266_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _336_ (
-    .A(next_pc[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _336_ (
+    .A0(next_pc[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_264_)
+    .X(_264_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _337_ (
-    .A(next_pc[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _337_ (
+    .A0(next_pc[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_263_)
+    .X(_263_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _338_ (
-    .A(next_pc[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _338_ (
+    .A0(next_pc[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_262_)
+    .X(_262_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _339_ (
-    .A(next_pc[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _339_ (
+    .A0(next_pc[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_261_)
+    .X(_261_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _340_ (
-    .A(next_pc[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _340_ (
+    .A0(next_pc[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_260_)
+    .X(_260_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _341_ (
-    .A(next_pc[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _341_ (
+    .A0(next_pc[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_259_)
+    .X(_259_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _342_ (
-    .A(next_pc[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _342_ (
+    .A0(next_pc[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_258_)
+    .X(_258_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _343_ (
-    .A(next_pc[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _343_ (
+    .A0(next_pc[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_257_)
+    .X(_257_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _344_ (
-    .A(next_pc[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _344_ (
+    .A0(next_pc[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_256_)
+    .X(_256_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _345_ (
-    .A(next_pc[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _345_ (
+    .A0(next_pc[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_255_)
+    .X(_255_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _346_ (
-    .A(next_pc[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _346_ (
+    .A0(next_pc[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_285_)
+    .X(_285_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _347_ (
-    .A(next_pc[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _347_ (
+    .A0(next_pc[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_284_)
+    .X(_284_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _348_ (
-    .A(next_pc[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _348_ (
+    .A0(next_pc[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_283_)
+    .X(_283_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _349_ (
-    .A(next_pc[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _349_ (
+    .A0(next_pc[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_282_)
+    .X(_282_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _350_ (
-    .A(next_pc[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _350_ (
+    .A0(next_pc[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_281_)
+    .X(_281_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _351_ (
-    .A(next_pc[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _351_ (
+    .A0(next_pc[4]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_280_)
+    .X(_280_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _352_ (
-    .A(next_pc[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _352_ (
+    .A0(next_pc[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_279_)
+    .X(_279_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _353_ (
-    .A(next_pc[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _353_ (
+    .A0(next_pc[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_276_)
+    .X(_276_)
   );
   sky130_fd_sc_hd__clkinv_1 _111_ (
     .A(take_jump),
@@ -27322,829 +26456,623 @@ module mem_wb_reg(clk, rst, mem_valid, mem_instruction, mem_pc, mem_rd, mem_reg_
     .D(_130_),
     .Q(wb_rd[0])
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _272_ (
-    .A(mem_pc[31]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_122_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _273_ (
-    .A(mem_pc[30]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_121_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _274_ (
-    .A(mem_pc[29]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_119_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _275_ (
-    .A(mem_pc[28]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_118_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _276_ (
-    .A(mem_pc[27]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_117_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _277_ (
-    .A(mem_pc[26]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_116_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _278_ (
-    .A(mem_pc[25]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_115_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _279_ (
-    .A(mem_pc[24]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_114_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _280_ (
-    .A(mem_pc[23]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_113_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _281_ (
-    .A(mem_pc[22]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_112_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _282_ (
-    .A(mem_pc[21]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_111_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _283_ (
-    .A(mem_pc[20]),
-    .B(1'h0),
-    .S(rst),
-    .Y(_110_)
-  );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _284_ (
-    .A(mem_pc[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _272_ (
+    .A0(mem_pc[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_108_)
+    .X(_122_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _285_ (
-    .A(mem_pc[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _273_ (
+    .A0(mem_pc[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_107_)
+    .X(_121_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _286_ (
-    .A(mem_pc[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _274_ (
+    .A0(mem_pc[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_106_)
+    .X(_119_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _287_ (
-    .A(mem_pc[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _275_ (
+    .A0(mem_pc[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_105_)
+    .X(_118_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _288_ (
-    .A(mem_pc[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _276_ (
+    .A0(mem_pc[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_104_)
+    .X(_117_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _289_ (
-    .A(mem_pc[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _277_ (
+    .A0(mem_pc[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_103_)
+    .X(_116_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _290_ (
-    .A(mem_pc[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _278_ (
+    .A0(mem_pc[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_102_)
+    .X(_115_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _291_ (
-    .A(mem_pc[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _279_ (
+    .A0(mem_pc[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_101_)
+    .X(_114_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _292_ (
-    .A(mem_pc[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _280_ (
+    .A0(mem_pc[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_100_)
+    .X(_113_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _293_ (
-    .A(mem_pc[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _281_ (
+    .A0(mem_pc[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_099_)
+    .X(_112_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _294_ (
-    .A(mem_pc[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _282_ (
+    .A0(mem_pc[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_129_)
+    .X(_111_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _295_ (
-    .A(mem_pc[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _283_ (
+    .A0(mem_pc[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_128_)
+    .X(_110_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _296_ (
-    .A(mem_pc[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _284_ (
+    .A0(mem_pc[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_127_)
+    .X(_108_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _297_ (
-    .A(mem_pc[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _285_ (
+    .A0(mem_pc[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_126_)
+    .X(_107_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _298_ (
-    .A(mem_pc[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _286_ (
+    .A0(mem_pc[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_125_)
+    .X(_106_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _299_ (
-    .A(mem_pc[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _287_ (
+    .A0(mem_pc[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_124_)
+    .X(_105_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _300_ (
-    .A(mem_pc[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _288_ (
+    .A0(mem_pc[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_123_)
+    .X(_104_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _301_ (
-    .A(mem_pc[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _289_ (
+    .A0(mem_pc[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_120_)
+    .X(_103_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _302_ (
-    .A(mem_pc[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _290_ (
+    .A0(mem_pc[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_109_)
+    .X(_102_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _303_ (
-    .A(mem_pc[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _291_ (
+    .A0(mem_pc[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_098_)
+    .X(_101_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _304_ (
-    .A(mem_instruction[31]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _292_ (
+    .A0(mem_pc[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_090_)
+    .X(_100_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _305_ (
-    .A(mem_instruction[30]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _293_ (
+    .A0(mem_pc[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_089_)
+    .X(_099_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _306_ (
-    .A(mem_instruction[29]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _294_ (
+    .A0(mem_pc[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_087_)
+    .X(_129_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _307_ (
-    .A(mem_instruction[28]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _295_ (
+    .A0(mem_pc[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_086_)
+    .X(_128_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _308_ (
-    .A(mem_instruction[27]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _296_ (
+    .A0(mem_pc[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_085_)
+    .X(_127_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _309_ (
-    .A(mem_instruction[26]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _297_ (
+    .A0(mem_pc[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_084_)
+    .X(_126_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _310_ (
-    .A(mem_instruction[25]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _298_ (
+    .A0(mem_pc[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_083_)
+    .X(_125_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _311_ (
-    .A(mem_instruction[24]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _299_ (
+    .A0(mem_pc[4]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_082_)
+    .X(_124_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _312_ (
-    .A(mem_instruction[23]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _300_ (
+    .A0(mem_pc[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_081_)
+    .X(_123_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _313_ (
-    .A(mem_instruction[22]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _301_ (
+    .A0(mem_pc[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_080_)
+    .X(_120_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _314_ (
-    .A(mem_instruction[21]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _302_ (
+    .A0(mem_pc[1]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_079_)
+    .X(_109_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _315_ (
-    .A(mem_instruction[20]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _303_ (
+    .A0(mem_pc[0]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_078_)
+    .X(_098_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _316_ (
-    .A(mem_instruction[19]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _304_ (
+    .A0(mem_instruction[31]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_076_)
+    .X(_090_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _317_ (
-    .A(mem_instruction[18]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _305_ (
+    .A0(mem_instruction[30]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_075_)
+    .X(_089_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _318_ (
-    .A(mem_instruction[17]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _306_ (
+    .A0(mem_instruction[29]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_074_)
+    .X(_087_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _319_ (
-    .A(mem_instruction[16]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _307_ (
+    .A0(mem_instruction[28]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_073_)
+    .X(_086_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _320_ (
-    .A(mem_instruction[15]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _308_ (
+    .A0(mem_instruction[27]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_072_)
+    .X(_085_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _321_ (
-    .A(mem_instruction[14]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _309_ (
+    .A0(mem_instruction[26]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_071_)
+    .X(_084_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _322_ (
-    .A(mem_instruction[13]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _310_ (
+    .A0(mem_instruction[25]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_070_)
+    .X(_083_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _323_ (
-    .A(mem_instruction[12]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _311_ (
+    .A0(mem_instruction[24]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_069_)
+    .X(_082_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _324_ (
-    .A(mem_instruction[11]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _312_ (
+    .A0(mem_instruction[23]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_068_)
+    .X(_081_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _325_ (
-    .A(mem_instruction[10]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _313_ (
+    .A0(mem_instruction[22]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_067_)
+    .X(_080_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _326_ (
-    .A(mem_instruction[9]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _314_ (
+    .A0(mem_instruction[21]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_097_)
+    .X(_079_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _327_ (
-    .A(mem_instruction[8]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _315_ (
+    .A0(mem_instruction[20]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_096_)
+    .X(_078_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _328_ (
-    .A(mem_instruction[7]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _316_ (
+    .A0(mem_instruction[19]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_095_)
+    .X(_076_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _329_ (
-    .A(mem_instruction[6]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _317_ (
+    .A0(mem_instruction[18]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_094_)
+    .X(_075_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _330_ (
-    .A(mem_instruction[5]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _318_ (
+    .A0(mem_instruction[17]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_093_)
+    .X(_074_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _331_ (
-    .A(mem_instruction[4]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _319_ (
+    .A0(mem_instruction[16]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_092_)
+    .X(_073_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _332_ (
-    .A(mem_instruction[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _320_ (
+    .A0(mem_instruction[15]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_091_)
+    .X(_072_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _333_ (
-    .A(mem_instruction[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _321_ (
+    .A0(mem_instruction[14]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_088_)
+    .X(_071_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _334_ (
-    .A(mem_instruction[1]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _322_ (
+    .A0(mem_instruction[13]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_077_)
+    .X(_070_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _335_ (
-    .A(mem_instruction[0]),
-    .B(1'h1),
+  sky130_fd_sc_hd__mux2_1 _323_ (
+    .A0(mem_instruction[12]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_066_)
+    .X(_069_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _336_ (
-    .A(mem_valid),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _324_ (
+    .A0(mem_instruction[11]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_168_)
+    .X(_068_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _337_ (
-    .A(_025_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _325_ (
+    .A0(mem_instruction[10]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_160_)
+    .X(_067_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _338_ (
-    .A(_024_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _326_ (
+    .A0(mem_instruction[9]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_159_)
+    .X(_097_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _339_ (
-    .A(_022_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _327_ (
+    .A0(mem_instruction[8]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_157_)
+    .X(_096_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _340_ (
-    .A(_021_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _328_ (
+    .A0(mem_instruction[7]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_156_)
+    .X(_095_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _341_ (
-    .A(_020_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _329_ (
+    .A0(mem_instruction[6]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_155_)
+    .X(_094_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _342_ (
-    .A(_019_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _330_ (
+    .A0(mem_instruction[5]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_154_)
+    .X(_093_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _343_ (
-    .A(_018_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _331_ (
+    .A0(mem_instruction[4]),
+    .A1(1'h1),
     .S(rst),
-    .Y(_153_)
+    .X(_092_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _344_ (
-    .A(_017_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _332_ (
+    .A0(mem_instruction[3]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_152_)
+    .X(_091_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _345_ (
-    .A(_016_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _333_ (
+    .A0(mem_instruction[2]),
+    .A1(1'h0),
     .S(rst),
-    .Y(_151_)
+    .X(_088_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _346_ (
-    .A(_015_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _334_ (
+    .A0(mem_instruction[1]),
+    .A1(1'h1),
     .S(rst),
-    .Y(_150_)
+    .X(_077_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _347_ (
-    .A(_014_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _335_ (
+    .A0(mem_instruction[0]),
+    .A1(1'h1),
     .S(rst),
-    .Y(_149_)
+    .X(_066_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _348_ (
-    .A(_013_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _336_ (
+    .A0(mem_valid),
+    .A1(1'h0),
     .S(rst),
-    .Y(_148_)
+    .X(_168_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _349_ (
-    .A(_011_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _337_ (
+    .A0(_025_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_146_)
+    .X(_160_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _350_ (
-    .A(_010_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _338_ (
+    .A0(_024_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_145_)
+    .X(_159_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _351_ (
-    .A(_009_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _339_ (
+    .A0(_022_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_144_)
+    .X(_157_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _352_ (
-    .A(_008_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _340_ (
+    .A0(_021_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_143_)
+    .X(_156_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _353_ (
-    .A(_007_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _341_ (
+    .A0(_020_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_142_)
+    .X(_155_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _354_ (
-    .A(_006_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _342_ (
+    .A0(_019_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_141_)
+    .X(_154_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _355_ (
-    .A(_005_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _343_ (
+    .A0(_018_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_140_)
+    .X(_153_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _356_ (
-    .A(_004_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _344_ (
+    .A0(_017_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_139_)
+    .X(_152_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _357_ (
-    .A(_003_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _345_ (
+    .A0(_016_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_138_)
+    .X(_151_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _358_ (
-    .A(_002_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _346_ (
+    .A0(_015_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_137_)
+    .X(_150_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _359_ (
-    .A(_032_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _347_ (
+    .A0(_014_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_167_)
+    .X(_149_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _360_ (
-    .A(_031_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _348_ (
+    .A0(_013_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_166_)
+    .X(_148_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _361_ (
-    .A(_030_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _349_ (
+    .A0(_011_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_165_)
+    .X(_146_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _362_ (
-    .A(_029_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _350_ (
+    .A0(_010_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_164_)
+    .X(_145_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _363_ (
-    .A(_028_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _351_ (
+    .A0(_009_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_163_)
+    .X(_144_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _364_ (
-    .A(_027_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _352_ (
+    .A0(_008_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_162_)
+    .X(_143_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _365_ (
-    .A(_026_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _353_ (
+    .A0(_007_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_161_)
+    .X(_142_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _366_ (
-    .A(_023_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _354_ (
+    .A0(_006_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_158_)
+    .X(_141_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _367_ (
-    .A(_012_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _355_ (
+    .A0(_005_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_147_)
+    .X(_140_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _368_ (
-    .A(_001_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _356_ (
+    .A0(_004_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_136_)
+    .X(_139_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _369_ (
-    .A(_000_),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _357_ (
+    .A0(_003_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_135_)
+    .X(_138_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _370_ (
-    .A(mem_rd[4]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _358_ (
+    .A0(_002_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_134_)
+    .X(_137_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _371_ (
-    .A(mem_rd[3]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _359_ (
+    .A0(_032_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_133_)
+    .X(_167_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _372_ (
-    .A(mem_rd[2]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _360_ (
+    .A0(_031_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_132_)
+    .X(_166_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _373_ (
-    .A(mem_rd[1]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _361_ (
+    .A0(_030_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_131_)
+    .X(_165_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _374_ (
-    .A(mem_rd[0]),
-    .B(1'h0),
+  sky130_fd_sc_hd__mux2_1 _362_ (
+    .A0(_029_),
+    .A1(1'h0),
     .S(rst),
-    .Y(_130_)
+    .X(_164_)
+  );
+  sky130_fd_sc_hd__mux2_1 _363_ (
+    .A0(_028_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_163_)
+  );
+  sky130_fd_sc_hd__mux2_1 _364_ (
+    .A0(_027_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_162_)
+  );
+  sky130_fd_sc_hd__mux2_1 _365_ (
+    .A0(_026_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_161_)
+  );
+  sky130_fd_sc_hd__mux2_1 _366_ (
+    .A0(_023_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_158_)
+  );
+  sky130_fd_sc_hd__mux2_1 _367_ (
+    .A0(_012_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_147_)
+  );
+  sky130_fd_sc_hd__mux2_1 _368_ (
+    .A0(_001_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_136_)
+  );
+  sky130_fd_sc_hd__mux2_1 _369_ (
+    .A0(_000_),
+    .A1(1'h0),
+    .S(rst),
+    .X(_135_)
+  );
+  sky130_fd_sc_hd__mux2_1 _370_ (
+    .A0(mem_rd[4]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_134_)
+  );
+  sky130_fd_sc_hd__mux2_1 _371_ (
+    .A0(mem_rd[3]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_133_)
+  );
+  sky130_fd_sc_hd__mux2_1 _372_ (
+    .A0(mem_rd[2]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_132_)
+  );
+  sky130_fd_sc_hd__mux2_1 _373_ (
+    .A0(mem_rd[1]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_131_)
+  );
+  sky130_fd_sc_hd__mux2_1 _374_ (
+    .A0(mem_rd[0]),
+    .A1(1'h0),
+    .S(rst),
+    .X(_130_)
   );
   sky130_fd_sc_hd__and2_0 _033_ (
     .A(mem_reg_write),
@@ -36251,7941 +35179,5957 @@ module register_file(clk, rst, rs1, rs2, rd, result, reg_write, rs1_data, rs2_da
     .D(_3902_),
     .Q(\registers[11] [0])
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5854_ (
-    .A(\registers[10] [31]),
-    .B(_0056_),
+  sky130_fd_sc_hd__mux2_1 _5854_ (
+    .A0(\registers[10] [31]),
+    .A1(_0056_),
     .S(_0030_),
-    .Y(_3894_)
+    .X(_3894_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5855_ (
-    .A(\registers[10] [30]),
-    .B(_0055_),
+  sky130_fd_sc_hd__mux2_1 _5855_ (
+    .A0(\registers[10] [30]),
+    .A1(_0055_),
     .S(_0030_),
-    .Y(_3893_)
+    .X(_3893_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5856_ (
-    .A(\registers[10] [29]),
-    .B(_0053_),
+  sky130_fd_sc_hd__mux2_1 _5856_ (
+    .A0(\registers[10] [29]),
+    .A1(_0053_),
     .S(_0030_),
-    .Y(_3891_)
+    .X(_3891_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5857_ (
-    .A(\registers[10] [28]),
-    .B(_0052_),
+  sky130_fd_sc_hd__mux2_1 _5857_ (
+    .A0(\registers[10] [28]),
+    .A1(_0052_),
     .S(_0030_),
-    .Y(_3890_)
+    .X(_3890_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5858_ (
-    .A(\registers[10] [27]),
-    .B(_0051_),
+  sky130_fd_sc_hd__mux2_1 _5858_ (
+    .A0(\registers[10] [27]),
+    .A1(_0051_),
     .S(_0030_),
-    .Y(_3889_)
+    .X(_3889_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5859_ (
-    .A(\registers[10] [26]),
-    .B(_0050_),
+  sky130_fd_sc_hd__mux2_1 _5859_ (
+    .A0(\registers[10] [26]),
+    .A1(_0050_),
     .S(_0030_),
-    .Y(_3888_)
+    .X(_3888_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5860_ (
-    .A(\registers[10] [25]),
-    .B(_0049_),
+  sky130_fd_sc_hd__mux2_1 _5860_ (
+    .A0(\registers[10] [25]),
+    .A1(_0049_),
     .S(_0030_),
-    .Y(_3887_)
+    .X(_3887_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5861_ (
-    .A(\registers[10] [24]),
-    .B(_0048_),
+  sky130_fd_sc_hd__mux2_1 _5861_ (
+    .A0(\registers[10] [24]),
+    .A1(_0048_),
     .S(_0030_),
-    .Y(_3886_)
+    .X(_3886_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5862_ (
-    .A(\registers[10] [23]),
-    .B(_0047_),
+  sky130_fd_sc_hd__mux2_1 _5862_ (
+    .A0(\registers[10] [23]),
+    .A1(_0047_),
     .S(_0030_),
-    .Y(_3885_)
+    .X(_3885_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5863_ (
-    .A(\registers[10] [22]),
-    .B(_0046_),
+  sky130_fd_sc_hd__mux2_1 _5863_ (
+    .A0(\registers[10] [22]),
+    .A1(_0046_),
     .S(_0030_),
-    .Y(_3884_)
+    .X(_3884_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5864_ (
-    .A(\registers[10] [21]),
-    .B(_0045_),
+  sky130_fd_sc_hd__mux2_1 _5864_ (
+    .A0(\registers[10] [21]),
+    .A1(_0045_),
     .S(_0030_),
-    .Y(_3883_)
+    .X(_3883_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5865_ (
-    .A(\registers[10] [20]),
-    .B(_0044_),
+  sky130_fd_sc_hd__mux2_1 _5865_ (
+    .A0(\registers[10] [20]),
+    .A1(_0044_),
     .S(_0030_),
-    .Y(_3882_)
+    .X(_3882_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5866_ (
-    .A(\registers[10] [19]),
-    .B(_0042_),
+  sky130_fd_sc_hd__mux2_1 _5866_ (
+    .A0(\registers[10] [19]),
+    .A1(_0042_),
     .S(_0030_),
-    .Y(_3880_)
+    .X(_3880_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5867_ (
-    .A(\registers[10] [18]),
-    .B(_0041_),
+  sky130_fd_sc_hd__mux2_1 _5867_ (
+    .A0(\registers[10] [18]),
+    .A1(_0041_),
     .S(_0030_),
-    .Y(_3879_)
+    .X(_3879_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5868_ (
-    .A(\registers[10] [17]),
-    .B(_0040_),
+  sky130_fd_sc_hd__mux2_1 _5868_ (
+    .A0(\registers[10] [17]),
+    .A1(_0040_),
     .S(_0030_),
-    .Y(_3878_)
+    .X(_3878_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5869_ (
-    .A(\registers[10] [16]),
-    .B(_0039_),
+  sky130_fd_sc_hd__mux2_1 _5869_ (
+    .A0(\registers[10] [16]),
+    .A1(_0039_),
     .S(_0030_),
-    .Y(_3877_)
+    .X(_3877_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5870_ (
-    .A(\registers[10] [15]),
-    .B(_0038_),
+  sky130_fd_sc_hd__mux2_1 _5870_ (
+    .A0(\registers[10] [15]),
+    .A1(_0038_),
     .S(_0030_),
-    .Y(_3876_)
+    .X(_3876_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5871_ (
-    .A(\registers[10] [14]),
-    .B(_0037_),
+  sky130_fd_sc_hd__mux2_1 _5871_ (
+    .A0(\registers[10] [14]),
+    .A1(_0037_),
     .S(_0030_),
-    .Y(_3875_)
+    .X(_3875_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5872_ (
-    .A(\registers[10] [13]),
-    .B(_0036_),
+  sky130_fd_sc_hd__mux2_1 _5872_ (
+    .A0(\registers[10] [13]),
+    .A1(_0036_),
     .S(_0030_),
-    .Y(_3874_)
+    .X(_3874_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5873_ (
-    .A(\registers[10] [12]),
-    .B(_0035_),
+  sky130_fd_sc_hd__mux2_1 _5873_ (
+    .A0(\registers[10] [12]),
+    .A1(_0035_),
     .S(_0030_),
-    .Y(_3873_)
+    .X(_3873_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5874_ (
-    .A(\registers[10] [11]),
-    .B(_0034_),
+  sky130_fd_sc_hd__mux2_1 _5874_ (
+    .A0(\registers[10] [11]),
+    .A1(_0034_),
     .S(_0030_),
-    .Y(_3872_)
+    .X(_3872_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5875_ (
-    .A(\registers[10] [10]),
-    .B(_0033_),
+  sky130_fd_sc_hd__mux2_1 _5875_ (
+    .A0(\registers[10] [10]),
+    .A1(_0033_),
     .S(_0030_),
-    .Y(_3871_)
+    .X(_3871_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5876_ (
-    .A(\registers[10] [9]),
-    .B(_0063_),
+  sky130_fd_sc_hd__mux2_1 _5876_ (
+    .A0(\registers[10] [9]),
+    .A1(_0063_),
     .S(_0030_),
-    .Y(_3901_)
+    .X(_3901_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5877_ (
-    .A(\registers[10] [8]),
-    .B(_0062_),
+  sky130_fd_sc_hd__mux2_1 _5877_ (
+    .A0(\registers[10] [8]),
+    .A1(_0062_),
     .S(_0030_),
-    .Y(_3900_)
+    .X(_3900_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5878_ (
-    .A(\registers[10] [7]),
-    .B(_0061_),
+  sky130_fd_sc_hd__mux2_1 _5878_ (
+    .A0(\registers[10] [7]),
+    .A1(_0061_),
     .S(_0030_),
-    .Y(_3899_)
+    .X(_3899_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5879_ (
-    .A(\registers[10] [6]),
-    .B(_0060_),
+  sky130_fd_sc_hd__mux2_1 _5879_ (
+    .A0(\registers[10] [6]),
+    .A1(_0060_),
     .S(_0030_),
-    .Y(_3898_)
+    .X(_3898_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5880_ (
-    .A(\registers[10] [5]),
-    .B(_0059_),
+  sky130_fd_sc_hd__mux2_1 _5880_ (
+    .A0(\registers[10] [5]),
+    .A1(_0059_),
     .S(_0030_),
-    .Y(_3897_)
+    .X(_3897_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5881_ (
-    .A(\registers[10] [4]),
-    .B(_0058_),
+  sky130_fd_sc_hd__mux2_1 _5881_ (
+    .A0(\registers[10] [4]),
+    .A1(_0058_),
     .S(_0030_),
-    .Y(_3896_)
+    .X(_3896_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5882_ (
-    .A(\registers[10] [3]),
-    .B(_0057_),
+  sky130_fd_sc_hd__mux2_1 _5882_ (
+    .A0(\registers[10] [3]),
+    .A1(_0057_),
     .S(_0030_),
-    .Y(_3895_)
+    .X(_3895_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5883_ (
-    .A(\registers[10] [2]),
-    .B(_0054_),
+  sky130_fd_sc_hd__mux2_1 _5883_ (
+    .A0(\registers[10] [2]),
+    .A1(_0054_),
     .S(_0030_),
-    .Y(_3892_)
+    .X(_3892_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5884_ (
-    .A(\registers[10] [1]),
-    .B(_0043_),
+  sky130_fd_sc_hd__mux2_1 _5884_ (
+    .A0(\registers[10] [1]),
+    .A1(_0043_),
     .S(_0030_),
-    .Y(_3881_)
+    .X(_3881_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5885_ (
-    .A(\registers[11] [31]),
-    .B(_0088_),
+  sky130_fd_sc_hd__mux2_1 _5885_ (
+    .A0(\registers[11] [31]),
+    .A1(_0088_),
     .S(_0029_),
-    .Y(_3926_)
+    .X(_3926_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5886_ (
-    .A(\registers[11] [30]),
-    .B(_0087_),
+  sky130_fd_sc_hd__mux2_1 _5886_ (
+    .A0(\registers[11] [30]),
+    .A1(_0087_),
     .S(_0029_),
-    .Y(_3925_)
+    .X(_3925_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5887_ (
-    .A(\registers[11] [29]),
-    .B(_0085_),
+  sky130_fd_sc_hd__mux2_1 _5887_ (
+    .A0(\registers[11] [29]),
+    .A1(_0085_),
     .S(_0029_),
-    .Y(_3923_)
+    .X(_3923_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5888_ (
-    .A(\registers[11] [28]),
-    .B(_0084_),
+  sky130_fd_sc_hd__mux2_1 _5888_ (
+    .A0(\registers[11] [28]),
+    .A1(_0084_),
     .S(_0029_),
-    .Y(_3922_)
+    .X(_3922_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5889_ (
-    .A(\registers[11] [27]),
-    .B(_0083_),
+  sky130_fd_sc_hd__mux2_1 _5889_ (
+    .A0(\registers[11] [27]),
+    .A1(_0083_),
     .S(_0029_),
-    .Y(_3921_)
+    .X(_3921_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5890_ (
-    .A(\registers[11] [26]),
-    .B(_0082_),
+  sky130_fd_sc_hd__mux2_1 _5890_ (
+    .A0(\registers[11] [26]),
+    .A1(_0082_),
     .S(_0029_),
-    .Y(_3920_)
+    .X(_3920_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5891_ (
-    .A(\registers[11] [25]),
-    .B(_0081_),
+  sky130_fd_sc_hd__mux2_1 _5891_ (
+    .A0(\registers[11] [25]),
+    .A1(_0081_),
     .S(_0029_),
-    .Y(_3919_)
+    .X(_3919_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5892_ (
-    .A(\registers[11] [24]),
-    .B(_0080_),
+  sky130_fd_sc_hd__mux2_1 _5892_ (
+    .A0(\registers[11] [24]),
+    .A1(_0080_),
     .S(_0029_),
-    .Y(_3918_)
+    .X(_3918_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5893_ (
-    .A(\registers[11] [23]),
-    .B(_0079_),
+  sky130_fd_sc_hd__mux2_1 _5893_ (
+    .A0(\registers[11] [23]),
+    .A1(_0079_),
     .S(_0029_),
-    .Y(_3917_)
+    .X(_3917_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5894_ (
-    .A(\registers[11] [22]),
-    .B(_0078_),
+  sky130_fd_sc_hd__mux2_1 _5894_ (
+    .A0(\registers[11] [22]),
+    .A1(_0078_),
     .S(_0029_),
-    .Y(_3916_)
+    .X(_3916_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5895_ (
-    .A(\registers[11] [21]),
-    .B(_0077_),
+  sky130_fd_sc_hd__mux2_1 _5895_ (
+    .A0(\registers[11] [21]),
+    .A1(_0077_),
     .S(_0029_),
-    .Y(_3915_)
+    .X(_3915_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5896_ (
-    .A(\registers[11] [20]),
-    .B(_0076_),
+  sky130_fd_sc_hd__mux2_1 _5896_ (
+    .A0(\registers[11] [20]),
+    .A1(_0076_),
     .S(_0029_),
-    .Y(_3914_)
+    .X(_3914_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5897_ (
-    .A(\registers[11] [19]),
-    .B(_0074_),
+  sky130_fd_sc_hd__mux2_1 _5897_ (
+    .A0(\registers[11] [19]),
+    .A1(_0074_),
     .S(_0029_),
-    .Y(_3912_)
+    .X(_3912_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5898_ (
-    .A(\registers[11] [18]),
-    .B(_0073_),
+  sky130_fd_sc_hd__mux2_1 _5898_ (
+    .A0(\registers[11] [18]),
+    .A1(_0073_),
     .S(_0029_),
-    .Y(_3911_)
+    .X(_3911_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5899_ (
-    .A(\registers[11] [17]),
-    .B(_0072_),
+  sky130_fd_sc_hd__mux2_1 _5899_ (
+    .A0(\registers[11] [17]),
+    .A1(_0072_),
     .S(_0029_),
-    .Y(_3910_)
+    .X(_3910_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5900_ (
-    .A(\registers[11] [16]),
-    .B(_0071_),
+  sky130_fd_sc_hd__mux2_1 _5900_ (
+    .A0(\registers[11] [16]),
+    .A1(_0071_),
     .S(_0029_),
-    .Y(_3909_)
+    .X(_3909_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5901_ (
-    .A(\registers[9] [14]),
-    .B(_0997_),
+  sky130_fd_sc_hd__mux2_1 _5901_ (
+    .A0(\registers[9] [14]),
+    .A1(_0997_),
     .S(_0000_),
-    .Y(_4835_)
+    .X(_4835_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5902_ (
-    .A(\registers[22] [27]),
-    .B(_0467_),
+  sky130_fd_sc_hd__mux2_1 _5902_ (
+    .A0(\registers[22] [27]),
+    .A1(_0467_),
     .S(_0017_),
-    .Y(_4305_)
+    .X(_4305_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5903_ (
-    .A(\registers[9] [15]),
-    .B(_0998_),
+  sky130_fd_sc_hd__mux2_1 _5903_ (
+    .A0(\registers[9] [15]),
+    .A1(_0998_),
     .S(_0000_),
-    .Y(_4836_)
+    .X(_4836_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5904_ (
-    .A(\registers[22] [28]),
-    .B(_0468_),
+  sky130_fd_sc_hd__mux2_1 _5904_ (
+    .A0(\registers[22] [28]),
+    .A1(_0468_),
     .S(_0017_),
-    .Y(_4306_)
+    .X(_4306_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5905_ (
-    .A(\registers[9] [16]),
-    .B(_0999_),
+  sky130_fd_sc_hd__mux2_1 _5905_ (
+    .A0(\registers[9] [16]),
+    .A1(_0999_),
     .S(_0000_),
-    .Y(_4837_)
+    .X(_4837_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5906_ (
-    .A(\registers[22] [29]),
-    .B(_0469_),
+  sky130_fd_sc_hd__mux2_1 _5906_ (
+    .A0(\registers[22] [29]),
+    .A1(_0469_),
     .S(_0017_),
-    .Y(_4307_)
+    .X(_4307_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5907_ (
-    .A(\registers[9] [17]),
-    .B(_1000_),
+  sky130_fd_sc_hd__mux2_1 _5907_ (
+    .A0(\registers[9] [17]),
+    .A1(_1000_),
     .S(_0000_),
-    .Y(_4838_)
+    .X(_4838_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5908_ (
-    .A(\registers[22] [30]),
-    .B(_0471_),
+  sky130_fd_sc_hd__mux2_1 _5908_ (
+    .A0(\registers[22] [30]),
+    .A1(_0471_),
     .S(_0017_),
-    .Y(_4309_)
+    .X(_4309_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5909_ (
-    .A(\registers[9] [18]),
-    .B(_1001_),
+  sky130_fd_sc_hd__mux2_1 _5909_ (
+    .A0(\registers[9] [18]),
+    .A1(_1001_),
     .S(_0000_),
-    .Y(_4839_)
+    .X(_4839_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5910_ (
-    .A(\registers[22] [31]),
-    .B(_0472_),
+  sky130_fd_sc_hd__mux2_1 _5910_ (
+    .A0(\registers[22] [31]),
+    .A1(_0472_),
     .S(_0017_),
-    .Y(_4310_)
+    .X(_4310_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5911_ (
-    .A(\registers[9] [19]),
-    .B(_1002_),
+  sky130_fd_sc_hd__mux2_1 _5911_ (
+    .A0(\registers[9] [19]),
+    .A1(_1002_),
     .S(_0000_),
-    .Y(_4840_)
+    .X(_4840_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5912_ (
-    .A(\registers[21] [1]),
-    .B(_0427_),
+  sky130_fd_sc_hd__mux2_1 _5912_ (
+    .A0(\registers[21] [1]),
+    .A1(_0427_),
     .S(_0018_),
-    .Y(_4265_)
+    .X(_4265_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5913_ (
-    .A(\registers[9] [20]),
-    .B(_1004_),
+  sky130_fd_sc_hd__mux2_1 _5913_ (
+    .A0(\registers[9] [20]),
+    .A1(_1004_),
     .S(_0000_),
-    .Y(_4842_)
+    .X(_4842_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5914_ (
-    .A(\registers[21] [2]),
-    .B(_0438_),
+  sky130_fd_sc_hd__mux2_1 _5914_ (
+    .A0(\registers[21] [2]),
+    .A1(_0438_),
     .S(_0018_),
-    .Y(_4276_)
+    .X(_4276_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5915_ (
-    .A(\registers[9] [21]),
-    .B(_1005_),
+  sky130_fd_sc_hd__mux2_1 _5915_ (
+    .A0(\registers[9] [21]),
+    .A1(_1005_),
     .S(_0000_),
-    .Y(_4843_)
+    .X(_4843_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5916_ (
-    .A(\registers[21] [3]),
-    .B(_0441_),
+  sky130_fd_sc_hd__mux2_1 _5916_ (
+    .A0(\registers[21] [3]),
+    .A1(_0441_),
     .S(_0018_),
-    .Y(_4279_)
+    .X(_4279_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5917_ (
-    .A(\registers[9] [22]),
-    .B(_1006_),
+  sky130_fd_sc_hd__mux2_1 _5917_ (
+    .A0(\registers[9] [22]),
+    .A1(_1006_),
     .S(_0000_),
-    .Y(_4844_)
+    .X(_4844_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5918_ (
-    .A(\registers[21] [4]),
-    .B(_0442_),
+  sky130_fd_sc_hd__mux2_1 _5918_ (
+    .A0(\registers[21] [4]),
+    .A1(_0442_),
     .S(_0018_),
-    .Y(_4280_)
+    .X(_4280_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5919_ (
-    .A(\registers[9] [23]),
-    .B(_1007_),
+  sky130_fd_sc_hd__mux2_1 _5919_ (
+    .A0(\registers[9] [23]),
+    .A1(_1007_),
     .S(_0000_),
-    .Y(_4845_)
+    .X(_4845_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5920_ (
-    .A(\registers[21] [5]),
-    .B(_0443_),
+  sky130_fd_sc_hd__mux2_1 _5920_ (
+    .A0(\registers[21] [5]),
+    .A1(_0443_),
     .S(_0018_),
-    .Y(_4281_)
+    .X(_4281_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5921_ (
-    .A(\registers[9] [24]),
-    .B(_1008_),
+  sky130_fd_sc_hd__mux2_1 _5921_ (
+    .A0(\registers[9] [24]),
+    .A1(_1008_),
     .S(_0000_),
-    .Y(_4846_)
+    .X(_4846_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5922_ (
-    .A(\registers[21] [6]),
-    .B(_0444_),
+  sky130_fd_sc_hd__mux2_1 _5922_ (
+    .A0(\registers[21] [6]),
+    .A1(_0444_),
     .S(_0018_),
-    .Y(_4282_)
+    .X(_4282_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5923_ (
-    .A(\registers[9] [25]),
-    .B(_1009_),
+  sky130_fd_sc_hd__mux2_1 _5923_ (
+    .A0(\registers[9] [25]),
+    .A1(_1009_),
     .S(_0000_),
-    .Y(_4847_)
+    .X(_4847_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5924_ (
-    .A(\registers[21] [7]),
-    .B(_0445_),
+  sky130_fd_sc_hd__mux2_1 _5924_ (
+    .A0(\registers[21] [7]),
+    .A1(_0445_),
     .S(_0018_),
-    .Y(_4283_)
+    .X(_4283_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5925_ (
-    .A(\registers[9] [26]),
-    .B(_1010_),
+  sky130_fd_sc_hd__mux2_1 _5925_ (
+    .A0(\registers[9] [26]),
+    .A1(_1010_),
     .S(_0000_),
-    .Y(_4848_)
+    .X(_4848_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5926_ (
-    .A(\registers[21] [8]),
-    .B(_0446_),
+  sky130_fd_sc_hd__mux2_1 _5926_ (
+    .A0(\registers[21] [8]),
+    .A1(_0446_),
     .S(_0018_),
-    .Y(_4284_)
+    .X(_4284_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5927_ (
-    .A(\registers[9] [27]),
-    .B(_1011_),
+  sky130_fd_sc_hd__mux2_1 _5927_ (
+    .A0(\registers[9] [27]),
+    .A1(_1011_),
     .S(_0000_),
-    .Y(_4849_)
+    .X(_4849_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5928_ (
-    .A(\registers[21] [9]),
-    .B(_0447_),
+  sky130_fd_sc_hd__mux2_1 _5928_ (
+    .A0(\registers[21] [9]),
+    .A1(_0447_),
     .S(_0018_),
-    .Y(_4285_)
+    .X(_4285_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5929_ (
-    .A(\registers[9] [28]),
-    .B(_1012_),
+  sky130_fd_sc_hd__mux2_1 _5929_ (
+    .A0(\registers[9] [28]),
+    .A1(_1012_),
     .S(_0000_),
-    .Y(_4850_)
+    .X(_4850_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5930_ (
-    .A(\registers[21] [10]),
-    .B(_0417_),
+  sky130_fd_sc_hd__mux2_1 _5930_ (
+    .A0(\registers[21] [10]),
+    .A1(_0417_),
     .S(_0018_),
-    .Y(_4255_)
+    .X(_4255_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5931_ (
-    .A(\registers[9] [29]),
-    .B(_1013_),
+  sky130_fd_sc_hd__mux2_1 _5931_ (
+    .A0(\registers[9] [29]),
+    .A1(_1013_),
     .S(_0000_),
-    .Y(_4851_)
+    .X(_4851_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5932_ (
-    .A(\registers[21] [11]),
-    .B(_0418_),
+  sky130_fd_sc_hd__mux2_1 _5932_ (
+    .A0(\registers[21] [11]),
+    .A1(_0418_),
     .S(_0018_),
-    .Y(_4256_)
+    .X(_4256_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5933_ (
-    .A(\registers[9] [30]),
-    .B(_1015_),
+  sky130_fd_sc_hd__mux2_1 _5933_ (
+    .A0(\registers[9] [30]),
+    .A1(_1015_),
     .S(_0000_),
-    .Y(_4853_)
+    .X(_4853_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5934_ (
-    .A(\registers[21] [12]),
-    .B(_0419_),
+  sky130_fd_sc_hd__mux2_1 _5934_ (
+    .A0(\registers[21] [12]),
+    .A1(_0419_),
     .S(_0018_),
-    .Y(_4257_)
+    .X(_4257_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5935_ (
-    .A(\registers[9] [31]),
-    .B(_1016_),
+  sky130_fd_sc_hd__mux2_1 _5935_ (
+    .A0(\registers[9] [31]),
+    .A1(_1016_),
     .S(_0000_),
-    .Y(_4854_)
+    .X(_4854_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5936_ (
-    .A(\registers[21] [13]),
-    .B(_0420_),
+  sky130_fd_sc_hd__mux2_1 _5936_ (
+    .A0(\registers[21] [13]),
+    .A1(_0420_),
     .S(_0018_),
-    .Y(_4258_)
+    .X(_4258_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5937_ (
-    .A(\registers[8] [1]),
-    .B(_0971_),
+  sky130_fd_sc_hd__mux2_1 _5937_ (
+    .A0(\registers[8] [1]),
+    .A1(_0971_),
     .S(_0001_),
-    .Y(_4809_)
+    .X(_4809_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5938_ (
-    .A(\registers[21] [14]),
-    .B(_0421_),
+  sky130_fd_sc_hd__mux2_1 _5938_ (
+    .A0(\registers[21] [14]),
+    .A1(_0421_),
     .S(_0018_),
-    .Y(_4259_)
+    .X(_4259_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5939_ (
-    .A(\registers[8] [2]),
-    .B(_0982_),
+  sky130_fd_sc_hd__mux2_1 _5939_ (
+    .A0(\registers[8] [2]),
+    .A1(_0982_),
     .S(_0001_),
-    .Y(_4820_)
+    .X(_4820_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5940_ (
-    .A(\registers[21] [15]),
-    .B(_0422_),
+  sky130_fd_sc_hd__mux2_1 _5940_ (
+    .A0(\registers[21] [15]),
+    .A1(_0422_),
     .S(_0018_),
-    .Y(_4260_)
+    .X(_4260_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5941_ (
-    .A(\registers[8] [3]),
-    .B(_0985_),
+  sky130_fd_sc_hd__mux2_1 _5941_ (
+    .A0(\registers[8] [3]),
+    .A1(_0985_),
     .S(_0001_),
-    .Y(_4823_)
+    .X(_4823_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5942_ (
-    .A(\registers[21] [16]),
-    .B(_0423_),
+  sky130_fd_sc_hd__mux2_1 _5942_ (
+    .A0(\registers[21] [16]),
+    .A1(_0423_),
     .S(_0018_),
-    .Y(_4261_)
+    .X(_4261_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5943_ (
-    .A(\registers[8] [4]),
-    .B(_0986_),
+  sky130_fd_sc_hd__mux2_1 _5943_ (
+    .A0(\registers[8] [4]),
+    .A1(_0986_),
     .S(_0001_),
-    .Y(_4824_)
+    .X(_4824_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5944_ (
-    .A(\registers[21] [17]),
-    .B(_0424_),
+  sky130_fd_sc_hd__mux2_1 _5944_ (
+    .A0(\registers[21] [17]),
+    .A1(_0424_),
     .S(_0018_),
-    .Y(_4262_)
+    .X(_4262_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5945_ (
-    .A(\registers[8] [5]),
-    .B(_0987_),
+  sky130_fd_sc_hd__mux2_1 _5945_ (
+    .A0(\registers[8] [5]),
+    .A1(_0987_),
     .S(_0001_),
-    .Y(_4825_)
+    .X(_4825_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5946_ (
-    .A(\registers[21] [18]),
-    .B(_0425_),
+  sky130_fd_sc_hd__mux2_1 _5946_ (
+    .A0(\registers[21] [18]),
+    .A1(_0425_),
     .S(_0018_),
-    .Y(_4263_)
+    .X(_4263_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5947_ (
-    .A(\registers[8] [6]),
-    .B(_0988_),
+  sky130_fd_sc_hd__mux2_1 _5947_ (
+    .A0(\registers[8] [6]),
+    .A1(_0988_),
     .S(_0001_),
-    .Y(_4826_)
+    .X(_4826_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5948_ (
-    .A(\registers[21] [19]),
-    .B(_0426_),
+  sky130_fd_sc_hd__mux2_1 _5948_ (
+    .A0(\registers[21] [19]),
+    .A1(_0426_),
     .S(_0018_),
-    .Y(_4264_)
+    .X(_4264_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5949_ (
-    .A(\registers[8] [7]),
-    .B(_0989_),
+  sky130_fd_sc_hd__mux2_1 _5949_ (
+    .A0(\registers[8] [7]),
+    .A1(_0989_),
     .S(_0001_),
-    .Y(_4827_)
+    .X(_4827_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5950_ (
-    .A(\registers[21] [20]),
-    .B(_0428_),
+  sky130_fd_sc_hd__mux2_1 _5950_ (
+    .A0(\registers[21] [20]),
+    .A1(_0428_),
     .S(_0018_),
-    .Y(_4266_)
+    .X(_4266_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5951_ (
-    .A(\registers[8] [8]),
-    .B(_0990_),
+  sky130_fd_sc_hd__mux2_1 _5951_ (
+    .A0(\registers[8] [8]),
+    .A1(_0990_),
     .S(_0001_),
-    .Y(_4828_)
+    .X(_4828_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5952_ (
-    .A(\registers[21] [21]),
-    .B(_0429_),
+  sky130_fd_sc_hd__mux2_1 _5952_ (
+    .A0(\registers[21] [21]),
+    .A1(_0429_),
     .S(_0018_),
-    .Y(_4267_)
+    .X(_4267_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5953_ (
-    .A(\registers[8] [9]),
-    .B(_0991_),
+  sky130_fd_sc_hd__mux2_1 _5953_ (
+    .A0(\registers[8] [9]),
+    .A1(_0991_),
     .S(_0001_),
-    .Y(_4829_)
+    .X(_4829_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5954_ (
-    .A(\registers[21] [22]),
-    .B(_0430_),
+  sky130_fd_sc_hd__mux2_1 _5954_ (
+    .A0(\registers[21] [22]),
+    .A1(_0430_),
     .S(_0018_),
-    .Y(_4268_)
+    .X(_4268_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5955_ (
-    .A(\registers[8] [10]),
-    .B(_0961_),
+  sky130_fd_sc_hd__mux2_1 _5955_ (
+    .A0(\registers[8] [10]),
+    .A1(_0961_),
     .S(_0001_),
-    .Y(_4799_)
+    .X(_4799_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5956_ (
-    .A(\registers[21] [23]),
-    .B(_0431_),
+  sky130_fd_sc_hd__mux2_1 _5956_ (
+    .A0(\registers[21] [23]),
+    .A1(_0431_),
     .S(_0018_),
-    .Y(_4269_)
+    .X(_4269_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5957_ (
-    .A(\registers[8] [11]),
-    .B(_0962_),
+  sky130_fd_sc_hd__mux2_1 _5957_ (
+    .A0(\registers[8] [11]),
+    .A1(_0962_),
     .S(_0001_),
-    .Y(_4800_)
+    .X(_4800_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5958_ (
-    .A(\registers[21] [24]),
-    .B(_0432_),
+  sky130_fd_sc_hd__mux2_1 _5958_ (
+    .A0(\registers[21] [24]),
+    .A1(_0432_),
     .S(_0018_),
-    .Y(_4270_)
+    .X(_4270_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5959_ (
-    .A(\registers[8] [12]),
-    .B(_0963_),
+  sky130_fd_sc_hd__mux2_1 _5959_ (
+    .A0(\registers[8] [12]),
+    .A1(_0963_),
     .S(_0001_),
-    .Y(_4801_)
+    .X(_4801_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5960_ (
-    .A(\registers[21] [25]),
-    .B(_0433_),
+  sky130_fd_sc_hd__mux2_1 _5960_ (
+    .A0(\registers[21] [25]),
+    .A1(_0433_),
     .S(_0018_),
-    .Y(_4271_)
+    .X(_4271_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5961_ (
-    .A(\registers[8] [13]),
-    .B(_0964_),
+  sky130_fd_sc_hd__mux2_1 _5961_ (
+    .A0(\registers[8] [13]),
+    .A1(_0964_),
     .S(_0001_),
-    .Y(_4802_)
+    .X(_4802_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5962_ (
-    .A(\registers[21] [26]),
-    .B(_0434_),
+  sky130_fd_sc_hd__mux2_1 _5962_ (
+    .A0(\registers[21] [26]),
+    .A1(_0434_),
     .S(_0018_),
-    .Y(_4272_)
+    .X(_4272_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5963_ (
-    .A(\registers[8] [14]),
-    .B(_0965_),
+  sky130_fd_sc_hd__mux2_1 _5963_ (
+    .A0(\registers[8] [14]),
+    .A1(_0965_),
     .S(_0001_),
-    .Y(_4803_)
+    .X(_4803_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5964_ (
-    .A(\registers[21] [27]),
-    .B(_0435_),
+  sky130_fd_sc_hd__mux2_1 _5964_ (
+    .A0(\registers[21] [27]),
+    .A1(_0435_),
     .S(_0018_),
-    .Y(_4273_)
+    .X(_4273_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5965_ (
-    .A(\registers[8] [15]),
-    .B(_0966_),
+  sky130_fd_sc_hd__mux2_1 _5965_ (
+    .A0(\registers[8] [15]),
+    .A1(_0966_),
     .S(_0001_),
-    .Y(_4804_)
+    .X(_4804_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5966_ (
-    .A(\registers[21] [28]),
-    .B(_0436_),
+  sky130_fd_sc_hd__mux2_1 _5966_ (
+    .A0(\registers[21] [28]),
+    .A1(_0436_),
     .S(_0018_),
-    .Y(_4274_)
+    .X(_4274_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5967_ (
-    .A(\registers[8] [16]),
-    .B(_0967_),
+  sky130_fd_sc_hd__mux2_1 _5967_ (
+    .A0(\registers[8] [16]),
+    .A1(_0967_),
     .S(_0001_),
-    .Y(_4805_)
+    .X(_4805_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5968_ (
-    .A(\registers[21] [29]),
-    .B(_0437_),
+  sky130_fd_sc_hd__mux2_1 _5968_ (
+    .A0(\registers[21] [29]),
+    .A1(_0437_),
     .S(_0018_),
-    .Y(_4275_)
+    .X(_4275_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5969_ (
-    .A(\registers[8] [17]),
-    .B(_0968_),
+  sky130_fd_sc_hd__mux2_1 _5969_ (
+    .A0(\registers[8] [17]),
+    .A1(_0968_),
     .S(_0001_),
-    .Y(_4806_)
+    .X(_4806_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5970_ (
-    .A(\registers[21] [30]),
-    .B(_0439_),
+  sky130_fd_sc_hd__mux2_1 _5970_ (
+    .A0(\registers[21] [30]),
+    .A1(_0439_),
     .S(_0018_),
-    .Y(_4277_)
+    .X(_4277_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5971_ (
-    .A(\registers[8] [18]),
-    .B(_0969_),
+  sky130_fd_sc_hd__mux2_1 _5971_ (
+    .A0(\registers[8] [18]),
+    .A1(_0969_),
     .S(_0001_),
-    .Y(_4807_)
+    .X(_4807_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5972_ (
-    .A(\registers[21] [31]),
-    .B(_0440_),
+  sky130_fd_sc_hd__mux2_1 _5972_ (
+    .A0(\registers[21] [31]),
+    .A1(_0440_),
     .S(_0018_),
-    .Y(_4278_)
+    .X(_4278_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5973_ (
-    .A(\registers[8] [19]),
-    .B(_0970_),
+  sky130_fd_sc_hd__mux2_1 _5973_ (
+    .A0(\registers[8] [19]),
+    .A1(_0970_),
     .S(_0001_),
-    .Y(_4808_)
+    .X(_4808_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5974_ (
-    .A(\registers[20] [1]),
-    .B(_0395_),
+  sky130_fd_sc_hd__mux2_1 _5974_ (
+    .A0(\registers[20] [1]),
+    .A1(_0395_),
     .S(_0019_),
-    .Y(_4233_)
+    .X(_4233_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5975_ (
-    .A(\registers[8] [20]),
-    .B(_0972_),
+  sky130_fd_sc_hd__mux2_1 _5975_ (
+    .A0(\registers[8] [20]),
+    .A1(_0972_),
     .S(_0001_),
-    .Y(_4810_)
+    .X(_4810_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5976_ (
-    .A(\registers[20] [2]),
-    .B(_0406_),
+  sky130_fd_sc_hd__mux2_1 _5976_ (
+    .A0(\registers[20] [2]),
+    .A1(_0406_),
     .S(_0019_),
-    .Y(_4244_)
+    .X(_4244_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5977_ (
-    .A(\registers[8] [21]),
-    .B(_0973_),
+  sky130_fd_sc_hd__mux2_1 _5977_ (
+    .A0(\registers[8] [21]),
+    .A1(_0973_),
     .S(_0001_),
-    .Y(_4811_)
+    .X(_4811_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5978_ (
-    .A(\registers[20] [3]),
-    .B(_0409_),
+  sky130_fd_sc_hd__mux2_1 _5978_ (
+    .A0(\registers[20] [3]),
+    .A1(_0409_),
     .S(_0019_),
-    .Y(_4247_)
+    .X(_4247_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5979_ (
-    .A(\registers[8] [22]),
-    .B(_0974_),
+  sky130_fd_sc_hd__mux2_1 _5979_ (
+    .A0(\registers[8] [22]),
+    .A1(_0974_),
     .S(_0001_),
-    .Y(_4812_)
+    .X(_4812_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5980_ (
-    .A(\registers[20] [4]),
-    .B(_0410_),
+  sky130_fd_sc_hd__mux2_1 _5980_ (
+    .A0(\registers[20] [4]),
+    .A1(_0410_),
     .S(_0019_),
-    .Y(_4248_)
+    .X(_4248_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5981_ (
-    .A(\registers[8] [23]),
-    .B(_0975_),
+  sky130_fd_sc_hd__mux2_1 _5981_ (
+    .A0(\registers[8] [23]),
+    .A1(_0975_),
     .S(_0001_),
-    .Y(_4813_)
+    .X(_4813_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5982_ (
-    .A(\registers[20] [5]),
-    .B(_0411_),
+  sky130_fd_sc_hd__mux2_1 _5982_ (
+    .A0(\registers[20] [5]),
+    .A1(_0411_),
     .S(_0019_),
-    .Y(_4249_)
+    .X(_4249_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5983_ (
-    .A(\registers[8] [24]),
-    .B(_0976_),
+  sky130_fd_sc_hd__mux2_1 _5983_ (
+    .A0(\registers[8] [24]),
+    .A1(_0976_),
     .S(_0001_),
-    .Y(_4814_)
+    .X(_4814_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5984_ (
-    .A(\registers[20] [6]),
-    .B(_0412_),
+  sky130_fd_sc_hd__mux2_1 _5984_ (
+    .A0(\registers[20] [6]),
+    .A1(_0412_),
     .S(_0019_),
-    .Y(_4250_)
+    .X(_4250_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5985_ (
-    .A(\registers[8] [25]),
-    .B(_0977_),
+  sky130_fd_sc_hd__mux2_1 _5985_ (
+    .A0(\registers[8] [25]),
+    .A1(_0977_),
     .S(_0001_),
-    .Y(_4815_)
+    .X(_4815_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5986_ (
-    .A(\registers[20] [7]),
-    .B(_0413_),
+  sky130_fd_sc_hd__mux2_1 _5986_ (
+    .A0(\registers[20] [7]),
+    .A1(_0413_),
     .S(_0019_),
-    .Y(_4251_)
+    .X(_4251_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5987_ (
-    .A(\registers[8] [26]),
-    .B(_0978_),
+  sky130_fd_sc_hd__mux2_1 _5987_ (
+    .A0(\registers[8] [26]),
+    .A1(_0978_),
     .S(_0001_),
-    .Y(_4816_)
+    .X(_4816_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5988_ (
-    .A(\registers[20] [8]),
-    .B(_0414_),
+  sky130_fd_sc_hd__mux2_1 _5988_ (
+    .A0(\registers[20] [8]),
+    .A1(_0414_),
     .S(_0019_),
-    .Y(_4252_)
+    .X(_4252_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5989_ (
-    .A(\registers[8] [27]),
-    .B(_0979_),
+  sky130_fd_sc_hd__mux2_1 _5989_ (
+    .A0(\registers[8] [27]),
+    .A1(_0979_),
     .S(_0001_),
-    .Y(_4817_)
+    .X(_4817_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5990_ (
-    .A(\registers[20] [9]),
-    .B(_0415_),
+  sky130_fd_sc_hd__mux2_1 _5990_ (
+    .A0(\registers[20] [9]),
+    .A1(_0415_),
     .S(_0019_),
-    .Y(_4253_)
+    .X(_4253_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5991_ (
-    .A(\registers[8] [28]),
-    .B(_0980_),
+  sky130_fd_sc_hd__mux2_1 _5991_ (
+    .A0(\registers[8] [28]),
+    .A1(_0980_),
     .S(_0001_),
-    .Y(_4818_)
+    .X(_4818_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5992_ (
-    .A(\registers[20] [10]),
-    .B(_0385_),
+  sky130_fd_sc_hd__mux2_1 _5992_ (
+    .A0(\registers[20] [10]),
+    .A1(_0385_),
     .S(_0019_),
-    .Y(_4223_)
+    .X(_4223_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5993_ (
-    .A(\registers[8] [29]),
-    .B(_0981_),
+  sky130_fd_sc_hd__mux2_1 _5993_ (
+    .A0(\registers[8] [29]),
+    .A1(_0981_),
     .S(_0001_),
-    .Y(_4819_)
+    .X(_4819_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5994_ (
-    .A(\registers[20] [11]),
-    .B(_0386_),
+  sky130_fd_sc_hd__mux2_1 _5994_ (
+    .A0(\registers[20] [11]),
+    .A1(_0386_),
     .S(_0019_),
-    .Y(_4224_)
+    .X(_4224_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5995_ (
-    .A(\registers[8] [30]),
-    .B(_0983_),
+  sky130_fd_sc_hd__mux2_1 _5995_ (
+    .A0(\registers[8] [30]),
+    .A1(_0983_),
     .S(_0001_),
-    .Y(_4821_)
+    .X(_4821_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5996_ (
-    .A(\registers[20] [12]),
-    .B(_0387_),
+  sky130_fd_sc_hd__mux2_1 _5996_ (
+    .A0(\registers[20] [12]),
+    .A1(_0387_),
     .S(_0019_),
-    .Y(_4225_)
+    .X(_4225_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5997_ (
-    .A(\registers[8] [31]),
-    .B(_0984_),
+  sky130_fd_sc_hd__mux2_1 _5997_ (
+    .A0(\registers[8] [31]),
+    .A1(_0984_),
     .S(_0001_),
-    .Y(_4822_)
+    .X(_4822_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5998_ (
-    .A(\registers[20] [13]),
-    .B(_0388_),
+  sky130_fd_sc_hd__mux2_1 _5998_ (
+    .A0(\registers[20] [13]),
+    .A1(_0388_),
     .S(_0019_),
-    .Y(_4226_)
+    .X(_4226_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _5999_ (
-    .A(\registers[7] [1]),
-    .B(_0939_),
+  sky130_fd_sc_hd__mux2_1 _5999_ (
+    .A0(\registers[7] [1]),
+    .A1(_0939_),
     .S(_0002_),
-    .Y(_4777_)
+    .X(_4777_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6000_ (
-    .A(\registers[20] [14]),
-    .B(_0389_),
+  sky130_fd_sc_hd__mux2_1 _6000_ (
+    .A0(\registers[20] [14]),
+    .A1(_0389_),
     .S(_0019_),
-    .Y(_4227_)
+    .X(_4227_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6001_ (
-    .A(\registers[7] [2]),
-    .B(_0950_),
+  sky130_fd_sc_hd__mux2_1 _6001_ (
+    .A0(\registers[7] [2]),
+    .A1(_0950_),
     .S(_0002_),
-    .Y(_4788_)
+    .X(_4788_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6002_ (
-    .A(\registers[20] [15]),
-    .B(_0390_),
+  sky130_fd_sc_hd__mux2_1 _6002_ (
+    .A0(\registers[20] [15]),
+    .A1(_0390_),
     .S(_0019_),
-    .Y(_4228_)
+    .X(_4228_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6003_ (
-    .A(\registers[7] [3]),
-    .B(_0953_),
+  sky130_fd_sc_hd__mux2_1 _6003_ (
+    .A0(\registers[7] [3]),
+    .A1(_0953_),
     .S(_0002_),
-    .Y(_4791_)
+    .X(_4791_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6004_ (
-    .A(\registers[20] [16]),
-    .B(_0391_),
+  sky130_fd_sc_hd__mux2_1 _6004_ (
+    .A0(\registers[20] [16]),
+    .A1(_0391_),
     .S(_0019_),
-    .Y(_4229_)
+    .X(_4229_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6005_ (
-    .A(\registers[7] [4]),
-    .B(_0954_),
+  sky130_fd_sc_hd__mux2_1 _6005_ (
+    .A0(\registers[7] [4]),
+    .A1(_0954_),
     .S(_0002_),
-    .Y(_4792_)
+    .X(_4792_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6006_ (
-    .A(\registers[20] [17]),
-    .B(_0392_),
+  sky130_fd_sc_hd__mux2_1 _6006_ (
+    .A0(\registers[20] [17]),
+    .A1(_0392_),
     .S(_0019_),
-    .Y(_4230_)
+    .X(_4230_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6007_ (
-    .A(\registers[7] [5]),
-    .B(_0955_),
+  sky130_fd_sc_hd__mux2_1 _6007_ (
+    .A0(\registers[7] [5]),
+    .A1(_0955_),
     .S(_0002_),
-    .Y(_4793_)
+    .X(_4793_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6008_ (
-    .A(\registers[20] [18]),
-    .B(_0393_),
+  sky130_fd_sc_hd__mux2_1 _6008_ (
+    .A0(\registers[20] [18]),
+    .A1(_0393_),
     .S(_0019_),
-    .Y(_4231_)
+    .X(_4231_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6009_ (
-    .A(\registers[7] [6]),
-    .B(_0956_),
+  sky130_fd_sc_hd__mux2_1 _6009_ (
+    .A0(\registers[7] [6]),
+    .A1(_0956_),
     .S(_0002_),
-    .Y(_4794_)
+    .X(_4794_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6010_ (
-    .A(\registers[20] [19]),
-    .B(_0394_),
+  sky130_fd_sc_hd__mux2_1 _6010_ (
+    .A0(\registers[20] [19]),
+    .A1(_0394_),
     .S(_0019_),
-    .Y(_4232_)
+    .X(_4232_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6011_ (
-    .A(\registers[7] [7]),
-    .B(_0957_),
+  sky130_fd_sc_hd__mux2_1 _6011_ (
+    .A0(\registers[7] [7]),
+    .A1(_0957_),
     .S(_0002_),
-    .Y(_4795_)
+    .X(_4795_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6012_ (
-    .A(\registers[20] [20]),
-    .B(_0396_),
+  sky130_fd_sc_hd__mux2_1 _6012_ (
+    .A0(\registers[20] [20]),
+    .A1(_0396_),
     .S(_0019_),
-    .Y(_4234_)
+    .X(_4234_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6013_ (
-    .A(\registers[7] [8]),
-    .B(_0958_),
+  sky130_fd_sc_hd__mux2_1 _6013_ (
+    .A0(\registers[7] [8]),
+    .A1(_0958_),
     .S(_0002_),
-    .Y(_4796_)
+    .X(_4796_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6014_ (
-    .A(\registers[20] [21]),
-    .B(_0397_),
+  sky130_fd_sc_hd__mux2_1 _6014_ (
+    .A0(\registers[20] [21]),
+    .A1(_0397_),
     .S(_0019_),
-    .Y(_4235_)
+    .X(_4235_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6015_ (
-    .A(\registers[7] [9]),
-    .B(_0959_),
+  sky130_fd_sc_hd__mux2_1 _6015_ (
+    .A0(\registers[7] [9]),
+    .A1(_0959_),
     .S(_0002_),
-    .Y(_4797_)
+    .X(_4797_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6016_ (
-    .A(\registers[20] [22]),
-    .B(_0398_),
+  sky130_fd_sc_hd__mux2_1 _6016_ (
+    .A0(\registers[20] [22]),
+    .A1(_0398_),
     .S(_0019_),
-    .Y(_4236_)
+    .X(_4236_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6017_ (
-    .A(\registers[7] [10]),
-    .B(_0929_),
+  sky130_fd_sc_hd__mux2_1 _6017_ (
+    .A0(\registers[7] [10]),
+    .A1(_0929_),
     .S(_0002_),
-    .Y(_4767_)
+    .X(_4767_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6018_ (
-    .A(\registers[20] [23]),
-    .B(_0399_),
+  sky130_fd_sc_hd__mux2_1 _6018_ (
+    .A0(\registers[20] [23]),
+    .A1(_0399_),
     .S(_0019_),
-    .Y(_4237_)
+    .X(_4237_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6019_ (
-    .A(\registers[7] [11]),
-    .B(_0930_),
+  sky130_fd_sc_hd__mux2_1 _6019_ (
+    .A0(\registers[7] [11]),
+    .A1(_0930_),
     .S(_0002_),
-    .Y(_4768_)
+    .X(_4768_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6020_ (
-    .A(\registers[20] [24]),
-    .B(_0400_),
+  sky130_fd_sc_hd__mux2_1 _6020_ (
+    .A0(\registers[20] [24]),
+    .A1(_0400_),
     .S(_0019_),
-    .Y(_4238_)
+    .X(_4238_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6021_ (
-    .A(\registers[7] [12]),
-    .B(_0931_),
+  sky130_fd_sc_hd__mux2_1 _6021_ (
+    .A0(\registers[7] [12]),
+    .A1(_0931_),
     .S(_0002_),
-    .Y(_4769_)
+    .X(_4769_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6022_ (
-    .A(\registers[20] [25]),
-    .B(_0401_),
+  sky130_fd_sc_hd__mux2_1 _6022_ (
+    .A0(\registers[20] [25]),
+    .A1(_0401_),
     .S(_0019_),
-    .Y(_4239_)
+    .X(_4239_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6023_ (
-    .A(\registers[7] [13]),
-    .B(_0932_),
+  sky130_fd_sc_hd__mux2_1 _6023_ (
+    .A0(\registers[7] [13]),
+    .A1(_0932_),
     .S(_0002_),
-    .Y(_4770_)
+    .X(_4770_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6024_ (
-    .A(\registers[20] [26]),
-    .B(_0402_),
+  sky130_fd_sc_hd__mux2_1 _6024_ (
+    .A0(\registers[20] [26]),
+    .A1(_0402_),
     .S(_0019_),
-    .Y(_4240_)
+    .X(_4240_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6025_ (
-    .A(\registers[7] [14]),
-    .B(_0933_),
+  sky130_fd_sc_hd__mux2_1 _6025_ (
+    .A0(\registers[7] [14]),
+    .A1(_0933_),
     .S(_0002_),
-    .Y(_4771_)
+    .X(_4771_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6026_ (
-    .A(\registers[20] [27]),
-    .B(_0403_),
+  sky130_fd_sc_hd__mux2_1 _6026_ (
+    .A0(\registers[20] [27]),
+    .A1(_0403_),
     .S(_0019_),
-    .Y(_4241_)
+    .X(_4241_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6027_ (
-    .A(\registers[7] [15]),
-    .B(_0934_),
+  sky130_fd_sc_hd__mux2_1 _6027_ (
+    .A0(\registers[7] [15]),
+    .A1(_0934_),
     .S(_0002_),
-    .Y(_4772_)
+    .X(_4772_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6028_ (
-    .A(\registers[20] [28]),
-    .B(_0404_),
+  sky130_fd_sc_hd__mux2_1 _6028_ (
+    .A0(\registers[20] [28]),
+    .A1(_0404_),
     .S(_0019_),
-    .Y(_4242_)
+    .X(_4242_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6029_ (
-    .A(\registers[7] [16]),
-    .B(_0935_),
+  sky130_fd_sc_hd__mux2_1 _6029_ (
+    .A0(\registers[7] [16]),
+    .A1(_0935_),
     .S(_0002_),
-    .Y(_4773_)
+    .X(_4773_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6030_ (
-    .A(\registers[20] [29]),
-    .B(_0405_),
+  sky130_fd_sc_hd__mux2_1 _6030_ (
+    .A0(\registers[20] [29]),
+    .A1(_0405_),
     .S(_0019_),
-    .Y(_4243_)
+    .X(_4243_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6031_ (
-    .A(\registers[7] [17]),
-    .B(_0936_),
+  sky130_fd_sc_hd__mux2_1 _6031_ (
+    .A0(\registers[7] [17]),
+    .A1(_0936_),
     .S(_0002_),
-    .Y(_4774_)
+    .X(_4774_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6032_ (
-    .A(\registers[20] [30]),
-    .B(_0407_),
+  sky130_fd_sc_hd__mux2_1 _6032_ (
+    .A0(\registers[20] [30]),
+    .A1(_0407_),
     .S(_0019_),
-    .Y(_4245_)
+    .X(_4245_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6033_ (
-    .A(\registers[7] [18]),
-    .B(_0937_),
+  sky130_fd_sc_hd__mux2_1 _6033_ (
+    .A0(\registers[7] [18]),
+    .A1(_0937_),
     .S(_0002_),
-    .Y(_4775_)
+    .X(_4775_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6034_ (
-    .A(\registers[20] [31]),
-    .B(_0408_),
+  sky130_fd_sc_hd__mux2_1 _6034_ (
+    .A0(\registers[20] [31]),
+    .A1(_0408_),
     .S(_0019_),
-    .Y(_4246_)
+    .X(_4246_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6035_ (
-    .A(\registers[7] [19]),
-    .B(_0938_),
+  sky130_fd_sc_hd__mux2_1 _6035_ (
+    .A0(\registers[7] [19]),
+    .A1(_0938_),
     .S(_0002_),
-    .Y(_4776_)
+    .X(_4776_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6036_ (
-    .A(\registers[1] [1]),
-    .B(_0363_),
+  sky130_fd_sc_hd__mux2_1 _6036_ (
+    .A0(\registers[1] [1]),
+    .A1(_0363_),
     .S(_0020_),
-    .Y(_4201_)
+    .X(_4201_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6037_ (
-    .A(\registers[7] [20]),
-    .B(_0940_),
+  sky130_fd_sc_hd__mux2_1 _6037_ (
+    .A0(\registers[7] [20]),
+    .A1(_0940_),
     .S(_0002_),
-    .Y(_4778_)
+    .X(_4778_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6038_ (
-    .A(\registers[1] [2]),
-    .B(_0374_),
+  sky130_fd_sc_hd__mux2_1 _6038_ (
+    .A0(\registers[1] [2]),
+    .A1(_0374_),
     .S(_0020_),
-    .Y(_4212_)
+    .X(_4212_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6039_ (
-    .A(\registers[7] [21]),
-    .B(_0941_),
+  sky130_fd_sc_hd__mux2_1 _6039_ (
+    .A0(\registers[7] [21]),
+    .A1(_0941_),
     .S(_0002_),
-    .Y(_4779_)
+    .X(_4779_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6040_ (
-    .A(\registers[1] [3]),
-    .B(_0377_),
+  sky130_fd_sc_hd__mux2_1 _6040_ (
+    .A0(\registers[1] [3]),
+    .A1(_0377_),
     .S(_0020_),
-    .Y(_4215_)
+    .X(_4215_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6041_ (
-    .A(\registers[7] [22]),
-    .B(_0942_),
+  sky130_fd_sc_hd__mux2_1 _6041_ (
+    .A0(\registers[7] [22]),
+    .A1(_0942_),
     .S(_0002_),
-    .Y(_4780_)
+    .X(_4780_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6042_ (
-    .A(\registers[1] [4]),
-    .B(_0378_),
+  sky130_fd_sc_hd__mux2_1 _6042_ (
+    .A0(\registers[1] [4]),
+    .A1(_0378_),
     .S(_0020_),
-    .Y(_4216_)
+    .X(_4216_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6043_ (
-    .A(\registers[7] [23]),
-    .B(_0943_),
+  sky130_fd_sc_hd__mux2_1 _6043_ (
+    .A0(\registers[7] [23]),
+    .A1(_0943_),
     .S(_0002_),
-    .Y(_4781_)
+    .X(_4781_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6044_ (
-    .A(\registers[1] [5]),
-    .B(_0379_),
+  sky130_fd_sc_hd__mux2_1 _6044_ (
+    .A0(\registers[1] [5]),
+    .A1(_0379_),
     .S(_0020_),
-    .Y(_4217_)
+    .X(_4217_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6045_ (
-    .A(\registers[7] [24]),
-    .B(_0944_),
+  sky130_fd_sc_hd__mux2_1 _6045_ (
+    .A0(\registers[7] [24]),
+    .A1(_0944_),
     .S(_0002_),
-    .Y(_4782_)
+    .X(_4782_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6046_ (
-    .A(\registers[1] [6]),
-    .B(_0380_),
+  sky130_fd_sc_hd__mux2_1 _6046_ (
+    .A0(\registers[1] [6]),
+    .A1(_0380_),
     .S(_0020_),
-    .Y(_4218_)
+    .X(_4218_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6047_ (
-    .A(\registers[7] [25]),
-    .B(_0945_),
+  sky130_fd_sc_hd__mux2_1 _6047_ (
+    .A0(\registers[7] [25]),
+    .A1(_0945_),
     .S(_0002_),
-    .Y(_4783_)
+    .X(_4783_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6048_ (
-    .A(\registers[1] [7]),
-    .B(_0381_),
+  sky130_fd_sc_hd__mux2_1 _6048_ (
+    .A0(\registers[1] [7]),
+    .A1(_0381_),
     .S(_0020_),
-    .Y(_4219_)
+    .X(_4219_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6049_ (
-    .A(\registers[7] [26]),
-    .B(_0946_),
+  sky130_fd_sc_hd__mux2_1 _6049_ (
+    .A0(\registers[7] [26]),
+    .A1(_0946_),
     .S(_0002_),
-    .Y(_4784_)
+    .X(_4784_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6050_ (
-    .A(\registers[1] [8]),
-    .B(_0382_),
+  sky130_fd_sc_hd__mux2_1 _6050_ (
+    .A0(\registers[1] [8]),
+    .A1(_0382_),
     .S(_0020_),
-    .Y(_4220_)
+    .X(_4220_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6051_ (
-    .A(\registers[7] [27]),
-    .B(_0947_),
+  sky130_fd_sc_hd__mux2_1 _6051_ (
+    .A0(\registers[7] [27]),
+    .A1(_0947_),
     .S(_0002_),
-    .Y(_4785_)
+    .X(_4785_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6052_ (
-    .A(\registers[1] [9]),
-    .B(_0383_),
+  sky130_fd_sc_hd__mux2_1 _6052_ (
+    .A0(\registers[1] [9]),
+    .A1(_0383_),
     .S(_0020_),
-    .Y(_4221_)
+    .X(_4221_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6053_ (
-    .A(\registers[7] [28]),
-    .B(_0948_),
+  sky130_fd_sc_hd__mux2_1 _6053_ (
+    .A0(\registers[7] [28]),
+    .A1(_0948_),
     .S(_0002_),
-    .Y(_4786_)
+    .X(_4786_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6054_ (
-    .A(\registers[1] [10]),
-    .B(_0353_),
+  sky130_fd_sc_hd__mux2_1 _6054_ (
+    .A0(\registers[1] [10]),
+    .A1(_0353_),
     .S(_0020_),
-    .Y(_4191_)
+    .X(_4191_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6055_ (
-    .A(\registers[7] [29]),
-    .B(_0949_),
+  sky130_fd_sc_hd__mux2_1 _6055_ (
+    .A0(\registers[7] [29]),
+    .A1(_0949_),
     .S(_0002_),
-    .Y(_4787_)
+    .X(_4787_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6056_ (
-    .A(\registers[1] [11]),
-    .B(_0354_),
+  sky130_fd_sc_hd__mux2_1 _6056_ (
+    .A0(\registers[1] [11]),
+    .A1(_0354_),
     .S(_0020_),
-    .Y(_4192_)
+    .X(_4192_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6057_ (
-    .A(\registers[7] [30]),
-    .B(_0951_),
+  sky130_fd_sc_hd__mux2_1 _6057_ (
+    .A0(\registers[7] [30]),
+    .A1(_0951_),
     .S(_0002_),
-    .Y(_4789_)
+    .X(_4789_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6058_ (
-    .A(\registers[1] [12]),
-    .B(_0355_),
+  sky130_fd_sc_hd__mux2_1 _6058_ (
+    .A0(\registers[1] [12]),
+    .A1(_0355_),
     .S(_0020_),
-    .Y(_4193_)
+    .X(_4193_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6059_ (
-    .A(\registers[7] [31]),
-    .B(_0952_),
+  sky130_fd_sc_hd__mux2_1 _6059_ (
+    .A0(\registers[7] [31]),
+    .A1(_0952_),
     .S(_0002_),
-    .Y(_4790_)
+    .X(_4790_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6060_ (
-    .A(\registers[1] [13]),
-    .B(_0356_),
+  sky130_fd_sc_hd__mux2_1 _6060_ (
+    .A0(\registers[1] [13]),
+    .A1(_0356_),
     .S(_0020_),
-    .Y(_4194_)
+    .X(_4194_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6061_ (
-    .A(\registers[6] [1]),
-    .B(_0907_),
+  sky130_fd_sc_hd__mux2_1 _6061_ (
+    .A0(\registers[6] [1]),
+    .A1(_0907_),
     .S(_0003_),
-    .Y(_4745_)
+    .X(_4745_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6062_ (
-    .A(\registers[1] [14]),
-    .B(_0357_),
+  sky130_fd_sc_hd__mux2_1 _6062_ (
+    .A0(\registers[1] [14]),
+    .A1(_0357_),
     .S(_0020_),
-    .Y(_4195_)
+    .X(_4195_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6063_ (
-    .A(\registers[6] [2]),
-    .B(_0918_),
+  sky130_fd_sc_hd__mux2_1 _6063_ (
+    .A0(\registers[6] [2]),
+    .A1(_0918_),
     .S(_0003_),
-    .Y(_4756_)
+    .X(_4756_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6064_ (
-    .A(\registers[1] [15]),
-    .B(_0358_),
+  sky130_fd_sc_hd__mux2_1 _6064_ (
+    .A0(\registers[1] [15]),
+    .A1(_0358_),
     .S(_0020_),
-    .Y(_4196_)
+    .X(_4196_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6065_ (
-    .A(\registers[6] [3]),
-    .B(_0921_),
+  sky130_fd_sc_hd__mux2_1 _6065_ (
+    .A0(\registers[6] [3]),
+    .A1(_0921_),
     .S(_0003_),
-    .Y(_4759_)
+    .X(_4759_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6066_ (
-    .A(\registers[1] [16]),
-    .B(_0359_),
+  sky130_fd_sc_hd__mux2_1 _6066_ (
+    .A0(\registers[1] [16]),
+    .A1(_0359_),
     .S(_0020_),
-    .Y(_4197_)
+    .X(_4197_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6067_ (
-    .A(\registers[6] [4]),
-    .B(_0922_),
+  sky130_fd_sc_hd__mux2_1 _6067_ (
+    .A0(\registers[6] [4]),
+    .A1(_0922_),
     .S(_0003_),
-    .Y(_4760_)
+    .X(_4760_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6068_ (
-    .A(\registers[1] [17]),
-    .B(_0360_),
+  sky130_fd_sc_hd__mux2_1 _6068_ (
+    .A0(\registers[1] [17]),
+    .A1(_0360_),
     .S(_0020_),
-    .Y(_4198_)
+    .X(_4198_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6069_ (
-    .A(\registers[6] [5]),
-    .B(_0923_),
+  sky130_fd_sc_hd__mux2_1 _6069_ (
+    .A0(\registers[6] [5]),
+    .A1(_0923_),
     .S(_0003_),
-    .Y(_4761_)
+    .X(_4761_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6070_ (
-    .A(\registers[1] [18]),
-    .B(_0361_),
+  sky130_fd_sc_hd__mux2_1 _6070_ (
+    .A0(\registers[1] [18]),
+    .A1(_0361_),
     .S(_0020_),
-    .Y(_4199_)
+    .X(_4199_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6071_ (
-    .A(\registers[6] [6]),
-    .B(_0924_),
+  sky130_fd_sc_hd__mux2_1 _6071_ (
+    .A0(\registers[6] [6]),
+    .A1(_0924_),
     .S(_0003_),
-    .Y(_4762_)
+    .X(_4762_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6072_ (
-    .A(\registers[1] [19]),
-    .B(_0362_),
+  sky130_fd_sc_hd__mux2_1 _6072_ (
+    .A0(\registers[1] [19]),
+    .A1(_0362_),
     .S(_0020_),
-    .Y(_4200_)
+    .X(_4200_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6073_ (
-    .A(\registers[6] [7]),
-    .B(_0925_),
+  sky130_fd_sc_hd__mux2_1 _6073_ (
+    .A0(\registers[6] [7]),
+    .A1(_0925_),
     .S(_0003_),
-    .Y(_4763_)
+    .X(_4763_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6074_ (
-    .A(\registers[1] [20]),
-    .B(_0364_),
+  sky130_fd_sc_hd__mux2_1 _6074_ (
+    .A0(\registers[1] [20]),
+    .A1(_0364_),
     .S(_0020_),
-    .Y(_4202_)
+    .X(_4202_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6075_ (
-    .A(\registers[6] [8]),
-    .B(_0926_),
+  sky130_fd_sc_hd__mux2_1 _6075_ (
+    .A0(\registers[6] [8]),
+    .A1(_0926_),
     .S(_0003_),
-    .Y(_4764_)
+    .X(_4764_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6076_ (
-    .A(\registers[1] [21]),
-    .B(_0365_),
+  sky130_fd_sc_hd__mux2_1 _6076_ (
+    .A0(\registers[1] [21]),
+    .A1(_0365_),
     .S(_0020_),
-    .Y(_4203_)
+    .X(_4203_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6077_ (
-    .A(\registers[6] [9]),
-    .B(_0927_),
+  sky130_fd_sc_hd__mux2_1 _6077_ (
+    .A0(\registers[6] [9]),
+    .A1(_0927_),
     .S(_0003_),
-    .Y(_4765_)
+    .X(_4765_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6078_ (
-    .A(\registers[1] [22]),
-    .B(_0366_),
+  sky130_fd_sc_hd__mux2_1 _6078_ (
+    .A0(\registers[1] [22]),
+    .A1(_0366_),
     .S(_0020_),
-    .Y(_4204_)
+    .X(_4204_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6079_ (
-    .A(\registers[6] [10]),
-    .B(_0897_),
+  sky130_fd_sc_hd__mux2_1 _6079_ (
+    .A0(\registers[6] [10]),
+    .A1(_0897_),
     .S(_0003_),
-    .Y(_4735_)
+    .X(_4735_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6080_ (
-    .A(\registers[1] [23]),
-    .B(_0367_),
+  sky130_fd_sc_hd__mux2_1 _6080_ (
+    .A0(\registers[1] [23]),
+    .A1(_0367_),
     .S(_0020_),
-    .Y(_4205_)
+    .X(_4205_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6081_ (
-    .A(\registers[6] [11]),
-    .B(_0898_),
+  sky130_fd_sc_hd__mux2_1 _6081_ (
+    .A0(\registers[6] [11]),
+    .A1(_0898_),
     .S(_0003_),
-    .Y(_4736_)
+    .X(_4736_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6082_ (
-    .A(\registers[1] [24]),
-    .B(_0368_),
+  sky130_fd_sc_hd__mux2_1 _6082_ (
+    .A0(\registers[1] [24]),
+    .A1(_0368_),
     .S(_0020_),
-    .Y(_4206_)
+    .X(_4206_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6083_ (
-    .A(\registers[6] [12]),
-    .B(_0899_),
+  sky130_fd_sc_hd__mux2_1 _6083_ (
+    .A0(\registers[6] [12]),
+    .A1(_0899_),
     .S(_0003_),
-    .Y(_4737_)
+    .X(_4737_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6084_ (
-    .A(\registers[1] [25]),
-    .B(_0369_),
+  sky130_fd_sc_hd__mux2_1 _6084_ (
+    .A0(\registers[1] [25]),
+    .A1(_0369_),
     .S(_0020_),
-    .Y(_4207_)
+    .X(_4207_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6085_ (
-    .A(\registers[6] [13]),
-    .B(_0900_),
+  sky130_fd_sc_hd__mux2_1 _6085_ (
+    .A0(\registers[6] [13]),
+    .A1(_0900_),
     .S(_0003_),
-    .Y(_4738_)
+    .X(_4738_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6086_ (
-    .A(\registers[1] [26]),
-    .B(_0370_),
+  sky130_fd_sc_hd__mux2_1 _6086_ (
+    .A0(\registers[1] [26]),
+    .A1(_0370_),
     .S(_0020_),
-    .Y(_4208_)
+    .X(_4208_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6087_ (
-    .A(\registers[6] [14]),
-    .B(_0901_),
+  sky130_fd_sc_hd__mux2_1 _6087_ (
+    .A0(\registers[6] [14]),
+    .A1(_0901_),
     .S(_0003_),
-    .Y(_4739_)
+    .X(_4739_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6088_ (
-    .A(\registers[1] [27]),
-    .B(_0371_),
+  sky130_fd_sc_hd__mux2_1 _6088_ (
+    .A0(\registers[1] [27]),
+    .A1(_0371_),
     .S(_0020_),
-    .Y(_4209_)
+    .X(_4209_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6089_ (
-    .A(\registers[6] [15]),
-    .B(_0902_),
+  sky130_fd_sc_hd__mux2_1 _6089_ (
+    .A0(\registers[6] [15]),
+    .A1(_0902_),
     .S(_0003_),
-    .Y(_4740_)
+    .X(_4740_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6090_ (
-    .A(\registers[1] [28]),
-    .B(_0372_),
+  sky130_fd_sc_hd__mux2_1 _6090_ (
+    .A0(\registers[1] [28]),
+    .A1(_0372_),
     .S(_0020_),
-    .Y(_4210_)
+    .X(_4210_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6091_ (
-    .A(\registers[6] [16]),
-    .B(_0903_),
+  sky130_fd_sc_hd__mux2_1 _6091_ (
+    .A0(\registers[6] [16]),
+    .A1(_0903_),
     .S(_0003_),
-    .Y(_4741_)
+    .X(_4741_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6092_ (
-    .A(\registers[1] [29]),
-    .B(_0373_),
+  sky130_fd_sc_hd__mux2_1 _6092_ (
+    .A0(\registers[1] [29]),
+    .A1(_0373_),
     .S(_0020_),
-    .Y(_4211_)
+    .X(_4211_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6093_ (
-    .A(\registers[6] [17]),
-    .B(_0904_),
+  sky130_fd_sc_hd__mux2_1 _6093_ (
+    .A0(\registers[6] [17]),
+    .A1(_0904_),
     .S(_0003_),
-    .Y(_4742_)
+    .X(_4742_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6094_ (
-    .A(\registers[1] [30]),
-    .B(_0375_),
+  sky130_fd_sc_hd__mux2_1 _6094_ (
+    .A0(\registers[1] [30]),
+    .A1(_0375_),
     .S(_0020_),
-    .Y(_4213_)
+    .X(_4213_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6095_ (
-    .A(\registers[6] [18]),
-    .B(_0905_),
+  sky130_fd_sc_hd__mux2_1 _6095_ (
+    .A0(\registers[6] [18]),
+    .A1(_0905_),
     .S(_0003_),
-    .Y(_4743_)
+    .X(_4743_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6096_ (
-    .A(\registers[1] [31]),
-    .B(_0376_),
+  sky130_fd_sc_hd__mux2_1 _6096_ (
+    .A0(\registers[1] [31]),
+    .A1(_0376_),
     .S(_0020_),
-    .Y(_4214_)
+    .X(_4214_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6097_ (
-    .A(\registers[6] [19]),
-    .B(_0906_),
+  sky130_fd_sc_hd__mux2_1 _6097_ (
+    .A0(\registers[6] [19]),
+    .A1(_0906_),
     .S(_0003_),
-    .Y(_4744_)
+    .X(_4744_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6098_ (
-    .A(\registers[19] [1]),
-    .B(_0331_),
+  sky130_fd_sc_hd__mux2_1 _6098_ (
+    .A0(\registers[19] [1]),
+    .A1(_0331_),
     .S(_0021_),
-    .Y(_4169_)
+    .X(_4169_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6099_ (
-    .A(\registers[6] [20]),
-    .B(_0908_),
+  sky130_fd_sc_hd__mux2_1 _6099_ (
+    .A0(\registers[6] [20]),
+    .A1(_0908_),
     .S(_0003_),
-    .Y(_4746_)
+    .X(_4746_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6100_ (
-    .A(\registers[19] [2]),
-    .B(_0342_),
+  sky130_fd_sc_hd__mux2_1 _6100_ (
+    .A0(\registers[19] [2]),
+    .A1(_0342_),
     .S(_0021_),
-    .Y(_4180_)
+    .X(_4180_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6101_ (
-    .A(\registers[6] [21]),
-    .B(_0909_),
+  sky130_fd_sc_hd__mux2_1 _6101_ (
+    .A0(\registers[6] [21]),
+    .A1(_0909_),
     .S(_0003_),
-    .Y(_4747_)
+    .X(_4747_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6102_ (
-    .A(\registers[19] [3]),
-    .B(_0345_),
+  sky130_fd_sc_hd__mux2_1 _6102_ (
+    .A0(\registers[19] [3]),
+    .A1(_0345_),
     .S(_0021_),
-    .Y(_4183_)
+    .X(_4183_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6103_ (
-    .A(\registers[6] [22]),
-    .B(_0910_),
+  sky130_fd_sc_hd__mux2_1 _6103_ (
+    .A0(\registers[6] [22]),
+    .A1(_0910_),
     .S(_0003_),
-    .Y(_4748_)
+    .X(_4748_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6104_ (
-    .A(\registers[19] [4]),
-    .B(_0346_),
+  sky130_fd_sc_hd__mux2_1 _6104_ (
+    .A0(\registers[19] [4]),
+    .A1(_0346_),
     .S(_0021_),
-    .Y(_4184_)
+    .X(_4184_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6105_ (
-    .A(\registers[6] [23]),
-    .B(_0911_),
+  sky130_fd_sc_hd__mux2_1 _6105_ (
+    .A0(\registers[6] [23]),
+    .A1(_0911_),
     .S(_0003_),
-    .Y(_4749_)
+    .X(_4749_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6106_ (
-    .A(\registers[19] [5]),
-    .B(_0347_),
+  sky130_fd_sc_hd__mux2_1 _6106_ (
+    .A0(\registers[19] [5]),
+    .A1(_0347_),
     .S(_0021_),
-    .Y(_4185_)
+    .X(_4185_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6107_ (
-    .A(\registers[6] [24]),
-    .B(_0912_),
+  sky130_fd_sc_hd__mux2_1 _6107_ (
+    .A0(\registers[6] [24]),
+    .A1(_0912_),
     .S(_0003_),
-    .Y(_4750_)
+    .X(_4750_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6108_ (
-    .A(\registers[19] [6]),
-    .B(_0348_),
+  sky130_fd_sc_hd__mux2_1 _6108_ (
+    .A0(\registers[19] [6]),
+    .A1(_0348_),
     .S(_0021_),
-    .Y(_4186_)
+    .X(_4186_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6109_ (
-    .A(\registers[6] [25]),
-    .B(_0913_),
+  sky130_fd_sc_hd__mux2_1 _6109_ (
+    .A0(\registers[6] [25]),
+    .A1(_0913_),
     .S(_0003_),
-    .Y(_4751_)
+    .X(_4751_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6110_ (
-    .A(\registers[19] [7]),
-    .B(_0349_),
+  sky130_fd_sc_hd__mux2_1 _6110_ (
+    .A0(\registers[19] [7]),
+    .A1(_0349_),
     .S(_0021_),
-    .Y(_4187_)
+    .X(_4187_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6111_ (
-    .A(\registers[6] [26]),
-    .B(_0914_),
+  sky130_fd_sc_hd__mux2_1 _6111_ (
+    .A0(\registers[6] [26]),
+    .A1(_0914_),
     .S(_0003_),
-    .Y(_4752_)
+    .X(_4752_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6112_ (
-    .A(\registers[19] [8]),
-    .B(_0350_),
+  sky130_fd_sc_hd__mux2_1 _6112_ (
+    .A0(\registers[19] [8]),
+    .A1(_0350_),
     .S(_0021_),
-    .Y(_4188_)
+    .X(_4188_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6113_ (
-    .A(\registers[6] [27]),
-    .B(_0915_),
+  sky130_fd_sc_hd__mux2_1 _6113_ (
+    .A0(\registers[6] [27]),
+    .A1(_0915_),
     .S(_0003_),
-    .Y(_4753_)
+    .X(_4753_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6114_ (
-    .A(\registers[19] [9]),
-    .B(_0351_),
+  sky130_fd_sc_hd__mux2_1 _6114_ (
+    .A0(\registers[19] [9]),
+    .A1(_0351_),
     .S(_0021_),
-    .Y(_4189_)
+    .X(_4189_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6115_ (
-    .A(\registers[6] [28]),
-    .B(_0916_),
+  sky130_fd_sc_hd__mux2_1 _6115_ (
+    .A0(\registers[6] [28]),
+    .A1(_0916_),
     .S(_0003_),
-    .Y(_4754_)
+    .X(_4754_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6116_ (
-    .A(\registers[19] [10]),
-    .B(_0321_),
+  sky130_fd_sc_hd__mux2_1 _6116_ (
+    .A0(\registers[19] [10]),
+    .A1(_0321_),
     .S(_0021_),
-    .Y(_4159_)
+    .X(_4159_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6117_ (
-    .A(\registers[6] [29]),
-    .B(_0917_),
+  sky130_fd_sc_hd__mux2_1 _6117_ (
+    .A0(\registers[6] [29]),
+    .A1(_0917_),
     .S(_0003_),
-    .Y(_4755_)
+    .X(_4755_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6118_ (
-    .A(\registers[19] [11]),
-    .B(_0322_),
+  sky130_fd_sc_hd__mux2_1 _6118_ (
+    .A0(\registers[19] [11]),
+    .A1(_0322_),
     .S(_0021_),
-    .Y(_4160_)
+    .X(_4160_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6119_ (
-    .A(\registers[6] [30]),
-    .B(_0919_),
+  sky130_fd_sc_hd__mux2_1 _6119_ (
+    .A0(\registers[6] [30]),
+    .A1(_0919_),
     .S(_0003_),
-    .Y(_4757_)
+    .X(_4757_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6120_ (
-    .A(\registers[19] [12]),
-    .B(_0323_),
+  sky130_fd_sc_hd__mux2_1 _6120_ (
+    .A0(\registers[19] [12]),
+    .A1(_0323_),
     .S(_0021_),
-    .Y(_4161_)
+    .X(_4161_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6121_ (
-    .A(\registers[6] [31]),
-    .B(_0920_),
+  sky130_fd_sc_hd__mux2_1 _6121_ (
+    .A0(\registers[6] [31]),
+    .A1(_0920_),
     .S(_0003_),
-    .Y(_4758_)
+    .X(_4758_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6122_ (
-    .A(\registers[19] [13]),
-    .B(_0324_),
+  sky130_fd_sc_hd__mux2_1 _6122_ (
+    .A0(\registers[19] [13]),
+    .A1(_0324_),
     .S(_0021_),
-    .Y(_4162_)
+    .X(_4162_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6123_ (
-    .A(\registers[5] [1]),
-    .B(_0875_),
+  sky130_fd_sc_hd__mux2_1 _6123_ (
+    .A0(\registers[5] [1]),
+    .A1(_0875_),
     .S(_0004_),
-    .Y(_4713_)
+    .X(_4713_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6124_ (
-    .A(\registers[19] [14]),
-    .B(_0325_),
+  sky130_fd_sc_hd__mux2_1 _6124_ (
+    .A0(\registers[19] [14]),
+    .A1(_0325_),
     .S(_0021_),
-    .Y(_4163_)
+    .X(_4163_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6125_ (
-    .A(\registers[5] [2]),
-    .B(_0886_),
+  sky130_fd_sc_hd__mux2_1 _6125_ (
+    .A0(\registers[5] [2]),
+    .A1(_0886_),
     .S(_0004_),
-    .Y(_4724_)
+    .X(_4724_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6126_ (
-    .A(\registers[19] [15]),
-    .B(_0326_),
+  sky130_fd_sc_hd__mux2_1 _6126_ (
+    .A0(\registers[19] [15]),
+    .A1(_0326_),
     .S(_0021_),
-    .Y(_4164_)
+    .X(_4164_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6127_ (
-    .A(\registers[5] [3]),
-    .B(_0889_),
+  sky130_fd_sc_hd__mux2_1 _6127_ (
+    .A0(\registers[5] [3]),
+    .A1(_0889_),
     .S(_0004_),
-    .Y(_4727_)
+    .X(_4727_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6128_ (
-    .A(\registers[19] [16]),
-    .B(_0327_),
+  sky130_fd_sc_hd__mux2_1 _6128_ (
+    .A0(\registers[19] [16]),
+    .A1(_0327_),
     .S(_0021_),
-    .Y(_4165_)
+    .X(_4165_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6129_ (
-    .A(\registers[5] [4]),
-    .B(_0890_),
+  sky130_fd_sc_hd__mux2_1 _6129_ (
+    .A0(\registers[5] [4]),
+    .A1(_0890_),
     .S(_0004_),
-    .Y(_4728_)
+    .X(_4728_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6130_ (
-    .A(\registers[19] [17]),
-    .B(_0328_),
+  sky130_fd_sc_hd__mux2_1 _6130_ (
+    .A0(\registers[19] [17]),
+    .A1(_0328_),
     .S(_0021_),
-    .Y(_4166_)
+    .X(_4166_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6131_ (
-    .A(\registers[5] [5]),
-    .B(_0891_),
+  sky130_fd_sc_hd__mux2_1 _6131_ (
+    .A0(\registers[5] [5]),
+    .A1(_0891_),
     .S(_0004_),
-    .Y(_4729_)
+    .X(_4729_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6132_ (
-    .A(\registers[19] [18]),
-    .B(_0329_),
+  sky130_fd_sc_hd__mux2_1 _6132_ (
+    .A0(\registers[19] [18]),
+    .A1(_0329_),
     .S(_0021_),
-    .Y(_4167_)
+    .X(_4167_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6133_ (
-    .A(\registers[5] [6]),
-    .B(_0892_),
+  sky130_fd_sc_hd__mux2_1 _6133_ (
+    .A0(\registers[5] [6]),
+    .A1(_0892_),
     .S(_0004_),
-    .Y(_4730_)
+    .X(_4730_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6134_ (
-    .A(\registers[19] [19]),
-    .B(_0330_),
+  sky130_fd_sc_hd__mux2_1 _6134_ (
+    .A0(\registers[19] [19]),
+    .A1(_0330_),
     .S(_0021_),
-    .Y(_4168_)
+    .X(_4168_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6135_ (
-    .A(\registers[5] [7]),
-    .B(_0893_),
+  sky130_fd_sc_hd__mux2_1 _6135_ (
+    .A0(\registers[5] [7]),
+    .A1(_0893_),
     .S(_0004_),
-    .Y(_4731_)
+    .X(_4731_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6136_ (
-    .A(\registers[19] [20]),
-    .B(_0332_),
+  sky130_fd_sc_hd__mux2_1 _6136_ (
+    .A0(\registers[19] [20]),
+    .A1(_0332_),
     .S(_0021_),
-    .Y(_4170_)
+    .X(_4170_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6137_ (
-    .A(\registers[5] [8]),
-    .B(_0894_),
+  sky130_fd_sc_hd__mux2_1 _6137_ (
+    .A0(\registers[5] [8]),
+    .A1(_0894_),
     .S(_0004_),
-    .Y(_4732_)
+    .X(_4732_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6138_ (
-    .A(\registers[19] [21]),
-    .B(_0333_),
+  sky130_fd_sc_hd__mux2_1 _6138_ (
+    .A0(\registers[19] [21]),
+    .A1(_0333_),
     .S(_0021_),
-    .Y(_4171_)
+    .X(_4171_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6139_ (
-    .A(\registers[5] [9]),
-    .B(_0895_),
+  sky130_fd_sc_hd__mux2_1 _6139_ (
+    .A0(\registers[5] [9]),
+    .A1(_0895_),
     .S(_0004_),
-    .Y(_4733_)
+    .X(_4733_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6140_ (
-    .A(\registers[19] [22]),
-    .B(_0334_),
+  sky130_fd_sc_hd__mux2_1 _6140_ (
+    .A0(\registers[19] [22]),
+    .A1(_0334_),
     .S(_0021_),
-    .Y(_4172_)
+    .X(_4172_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6141_ (
-    .A(\registers[5] [10]),
-    .B(_0865_),
+  sky130_fd_sc_hd__mux2_1 _6141_ (
+    .A0(\registers[5] [10]),
+    .A1(_0865_),
     .S(_0004_),
-    .Y(_4703_)
+    .X(_4703_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6142_ (
-    .A(\registers[19] [23]),
-    .B(_0335_),
+  sky130_fd_sc_hd__mux2_1 _6142_ (
+    .A0(\registers[19] [23]),
+    .A1(_0335_),
     .S(_0021_),
-    .Y(_4173_)
+    .X(_4173_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6143_ (
-    .A(\registers[5] [11]),
-    .B(_0866_),
+  sky130_fd_sc_hd__mux2_1 _6143_ (
+    .A0(\registers[5] [11]),
+    .A1(_0866_),
     .S(_0004_),
-    .Y(_4704_)
+    .X(_4704_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6144_ (
-    .A(\registers[19] [24]),
-    .B(_0336_),
+  sky130_fd_sc_hd__mux2_1 _6144_ (
+    .A0(\registers[19] [24]),
+    .A1(_0336_),
     .S(_0021_),
-    .Y(_4174_)
+    .X(_4174_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6145_ (
-    .A(\registers[5] [12]),
-    .B(_0867_),
+  sky130_fd_sc_hd__mux2_1 _6145_ (
+    .A0(\registers[5] [12]),
+    .A1(_0867_),
     .S(_0004_),
-    .Y(_4705_)
+    .X(_4705_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6146_ (
-    .A(\registers[19] [25]),
-    .B(_0337_),
+  sky130_fd_sc_hd__mux2_1 _6146_ (
+    .A0(\registers[19] [25]),
+    .A1(_0337_),
     .S(_0021_),
-    .Y(_4175_)
+    .X(_4175_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6147_ (
-    .A(\registers[5] [13]),
-    .B(_0868_),
+  sky130_fd_sc_hd__mux2_1 _6147_ (
+    .A0(\registers[5] [13]),
+    .A1(_0868_),
     .S(_0004_),
-    .Y(_4706_)
+    .X(_4706_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6148_ (
-    .A(\registers[19] [26]),
-    .B(_0338_),
+  sky130_fd_sc_hd__mux2_1 _6148_ (
+    .A0(\registers[19] [26]),
+    .A1(_0338_),
     .S(_0021_),
-    .Y(_4176_)
+    .X(_4176_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6149_ (
-    .A(\registers[5] [14]),
-    .B(_0869_),
+  sky130_fd_sc_hd__mux2_1 _6149_ (
+    .A0(\registers[5] [14]),
+    .A1(_0869_),
     .S(_0004_),
-    .Y(_4707_)
+    .X(_4707_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6150_ (
-    .A(\registers[19] [27]),
-    .B(_0339_),
+  sky130_fd_sc_hd__mux2_1 _6150_ (
+    .A0(\registers[19] [27]),
+    .A1(_0339_),
     .S(_0021_),
-    .Y(_4177_)
+    .X(_4177_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6151_ (
-    .A(\registers[5] [15]),
-    .B(_0870_),
+  sky130_fd_sc_hd__mux2_1 _6151_ (
+    .A0(\registers[5] [15]),
+    .A1(_0870_),
     .S(_0004_),
-    .Y(_4708_)
+    .X(_4708_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6152_ (
-    .A(\registers[19] [28]),
-    .B(_0340_),
+  sky130_fd_sc_hd__mux2_1 _6152_ (
+    .A0(\registers[19] [28]),
+    .A1(_0340_),
     .S(_0021_),
-    .Y(_4178_)
+    .X(_4178_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6153_ (
-    .A(\registers[5] [16]),
-    .B(_0871_),
+  sky130_fd_sc_hd__mux2_1 _6153_ (
+    .A0(\registers[5] [16]),
+    .A1(_0871_),
     .S(_0004_),
-    .Y(_4709_)
+    .X(_4709_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6154_ (
-    .A(\registers[19] [29]),
-    .B(_0341_),
+  sky130_fd_sc_hd__mux2_1 _6154_ (
+    .A0(\registers[19] [29]),
+    .A1(_0341_),
     .S(_0021_),
-    .Y(_4179_)
+    .X(_4179_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6155_ (
-    .A(\registers[5] [17]),
-    .B(_0872_),
+  sky130_fd_sc_hd__mux2_1 _6155_ (
+    .A0(\registers[5] [17]),
+    .A1(_0872_),
     .S(_0004_),
-    .Y(_4710_)
+    .X(_4710_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6156_ (
-    .A(\registers[19] [30]),
-    .B(_0343_),
+  sky130_fd_sc_hd__mux2_1 _6156_ (
+    .A0(\registers[19] [30]),
+    .A1(_0343_),
     .S(_0021_),
-    .Y(_4181_)
+    .X(_4181_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6157_ (
-    .A(\registers[5] [18]),
-    .B(_0873_),
+  sky130_fd_sc_hd__mux2_1 _6157_ (
+    .A0(\registers[5] [18]),
+    .A1(_0873_),
     .S(_0004_),
-    .Y(_4711_)
+    .X(_4711_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6158_ (
-    .A(\registers[19] [31]),
-    .B(_0344_),
+  sky130_fd_sc_hd__mux2_1 _6158_ (
+    .A0(\registers[19] [31]),
+    .A1(_0344_),
     .S(_0021_),
-    .Y(_4182_)
+    .X(_4182_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6159_ (
-    .A(\registers[5] [19]),
-    .B(_0874_),
+  sky130_fd_sc_hd__mux2_1 _6159_ (
+    .A0(\registers[5] [19]),
+    .A1(_0874_),
     .S(_0004_),
-    .Y(_4712_)
+    .X(_4712_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6160_ (
-    .A(\registers[18] [1]),
-    .B(_0299_),
+  sky130_fd_sc_hd__mux2_1 _6160_ (
+    .A0(\registers[18] [1]),
+    .A1(_0299_),
     .S(_0022_),
-    .Y(_4137_)
+    .X(_4137_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6161_ (
-    .A(\registers[5] [20]),
-    .B(_0876_),
+  sky130_fd_sc_hd__mux2_1 _6161_ (
+    .A0(\registers[5] [20]),
+    .A1(_0876_),
     .S(_0004_),
-    .Y(_4714_)
+    .X(_4714_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6162_ (
-    .A(\registers[18] [2]),
-    .B(_0310_),
+  sky130_fd_sc_hd__mux2_1 _6162_ (
+    .A0(\registers[18] [2]),
+    .A1(_0310_),
     .S(_0022_),
-    .Y(_4148_)
+    .X(_4148_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6163_ (
-    .A(\registers[5] [21]),
-    .B(_0877_),
+  sky130_fd_sc_hd__mux2_1 _6163_ (
+    .A0(\registers[5] [21]),
+    .A1(_0877_),
     .S(_0004_),
-    .Y(_4715_)
+    .X(_4715_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6164_ (
-    .A(\registers[18] [3]),
-    .B(_0313_),
+  sky130_fd_sc_hd__mux2_1 _6164_ (
+    .A0(\registers[18] [3]),
+    .A1(_0313_),
     .S(_0022_),
-    .Y(_4151_)
+    .X(_4151_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6165_ (
-    .A(\registers[5] [22]),
-    .B(_0878_),
+  sky130_fd_sc_hd__mux2_1 _6165_ (
+    .A0(\registers[5] [22]),
+    .A1(_0878_),
     .S(_0004_),
-    .Y(_4716_)
+    .X(_4716_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6166_ (
-    .A(\registers[18] [4]),
-    .B(_0314_),
+  sky130_fd_sc_hd__mux2_1 _6166_ (
+    .A0(\registers[18] [4]),
+    .A1(_0314_),
     .S(_0022_),
-    .Y(_4152_)
+    .X(_4152_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6167_ (
-    .A(\registers[5] [23]),
-    .B(_0879_),
+  sky130_fd_sc_hd__mux2_1 _6167_ (
+    .A0(\registers[5] [23]),
+    .A1(_0879_),
     .S(_0004_),
-    .Y(_4717_)
+    .X(_4717_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6168_ (
-    .A(\registers[18] [5]),
-    .B(_0315_),
+  sky130_fd_sc_hd__mux2_1 _6168_ (
+    .A0(\registers[18] [5]),
+    .A1(_0315_),
     .S(_0022_),
-    .Y(_4153_)
+    .X(_4153_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6169_ (
-    .A(\registers[5] [24]),
-    .B(_0880_),
+  sky130_fd_sc_hd__mux2_1 _6169_ (
+    .A0(\registers[5] [24]),
+    .A1(_0880_),
     .S(_0004_),
-    .Y(_4718_)
+    .X(_4718_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6170_ (
-    .A(\registers[18] [6]),
-    .B(_0316_),
+  sky130_fd_sc_hd__mux2_1 _6170_ (
+    .A0(\registers[18] [6]),
+    .A1(_0316_),
     .S(_0022_),
-    .Y(_4154_)
+    .X(_4154_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6171_ (
-    .A(\registers[5] [25]),
-    .B(_0881_),
+  sky130_fd_sc_hd__mux2_1 _6171_ (
+    .A0(\registers[5] [25]),
+    .A1(_0881_),
     .S(_0004_),
-    .Y(_4719_)
+    .X(_4719_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6172_ (
-    .A(\registers[18] [7]),
-    .B(_0317_),
+  sky130_fd_sc_hd__mux2_1 _6172_ (
+    .A0(\registers[18] [7]),
+    .A1(_0317_),
     .S(_0022_),
-    .Y(_4155_)
+    .X(_4155_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6173_ (
-    .A(\registers[5] [26]),
-    .B(_0882_),
+  sky130_fd_sc_hd__mux2_1 _6173_ (
+    .A0(\registers[5] [26]),
+    .A1(_0882_),
     .S(_0004_),
-    .Y(_4720_)
+    .X(_4720_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6174_ (
-    .A(\registers[18] [8]),
-    .B(_0318_),
+  sky130_fd_sc_hd__mux2_1 _6174_ (
+    .A0(\registers[18] [8]),
+    .A1(_0318_),
     .S(_0022_),
-    .Y(_4156_)
+    .X(_4156_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6175_ (
-    .A(\registers[5] [27]),
-    .B(_0883_),
+  sky130_fd_sc_hd__mux2_1 _6175_ (
+    .A0(\registers[5] [27]),
+    .A1(_0883_),
     .S(_0004_),
-    .Y(_4721_)
+    .X(_4721_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6176_ (
-    .A(\registers[18] [9]),
-    .B(_0319_),
+  sky130_fd_sc_hd__mux2_1 _6176_ (
+    .A0(\registers[18] [9]),
+    .A1(_0319_),
     .S(_0022_),
-    .Y(_4157_)
+    .X(_4157_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6177_ (
-    .A(\registers[5] [28]),
-    .B(_0884_),
+  sky130_fd_sc_hd__mux2_1 _6177_ (
+    .A0(\registers[5] [28]),
+    .A1(_0884_),
     .S(_0004_),
-    .Y(_4722_)
+    .X(_4722_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6178_ (
-    .A(\registers[18] [10]),
-    .B(_0289_),
+  sky130_fd_sc_hd__mux2_1 _6178_ (
+    .A0(\registers[18] [10]),
+    .A1(_0289_),
     .S(_0022_),
-    .Y(_4127_)
+    .X(_4127_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6179_ (
-    .A(\registers[5] [29]),
-    .B(_0885_),
+  sky130_fd_sc_hd__mux2_1 _6179_ (
+    .A0(\registers[5] [29]),
+    .A1(_0885_),
     .S(_0004_),
-    .Y(_4723_)
+    .X(_4723_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6180_ (
-    .A(\registers[18] [11]),
-    .B(_0290_),
+  sky130_fd_sc_hd__mux2_1 _6180_ (
+    .A0(\registers[18] [11]),
+    .A1(_0290_),
     .S(_0022_),
-    .Y(_4128_)
+    .X(_4128_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6181_ (
-    .A(\registers[5] [30]),
-    .B(_0887_),
+  sky130_fd_sc_hd__mux2_1 _6181_ (
+    .A0(\registers[5] [30]),
+    .A1(_0887_),
     .S(_0004_),
-    .Y(_4725_)
+    .X(_4725_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6182_ (
-    .A(\registers[18] [12]),
-    .B(_0291_),
+  sky130_fd_sc_hd__mux2_1 _6182_ (
+    .A0(\registers[18] [12]),
+    .A1(_0291_),
     .S(_0022_),
-    .Y(_4129_)
+    .X(_4129_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6183_ (
-    .A(\registers[5] [31]),
-    .B(_0888_),
+  sky130_fd_sc_hd__mux2_1 _6183_ (
+    .A0(\registers[5] [31]),
+    .A1(_0888_),
     .S(_0004_),
-    .Y(_4726_)
+    .X(_4726_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6184_ (
-    .A(\registers[18] [13]),
-    .B(_0292_),
+  sky130_fd_sc_hd__mux2_1 _6184_ (
+    .A0(\registers[18] [13]),
+    .A1(_0292_),
     .S(_0022_),
-    .Y(_4130_)
+    .X(_4130_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6185_ (
-    .A(\registers[4] [1]),
-    .B(_0843_),
+  sky130_fd_sc_hd__mux2_1 _6185_ (
+    .A0(\registers[4] [1]),
+    .A1(_0843_),
     .S(_0005_),
-    .Y(_4681_)
+    .X(_4681_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6186_ (
-    .A(\registers[18] [14]),
-    .B(_0293_),
+  sky130_fd_sc_hd__mux2_1 _6186_ (
+    .A0(\registers[18] [14]),
+    .A1(_0293_),
     .S(_0022_),
-    .Y(_4131_)
+    .X(_4131_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6187_ (
-    .A(\registers[4] [2]),
-    .B(_0854_),
+  sky130_fd_sc_hd__mux2_1 _6187_ (
+    .A0(\registers[4] [2]),
+    .A1(_0854_),
     .S(_0005_),
-    .Y(_4692_)
+    .X(_4692_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6188_ (
-    .A(\registers[18] [15]),
-    .B(_0294_),
+  sky130_fd_sc_hd__mux2_1 _6188_ (
+    .A0(\registers[18] [15]),
+    .A1(_0294_),
     .S(_0022_),
-    .Y(_4132_)
+    .X(_4132_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6189_ (
-    .A(\registers[4] [3]),
-    .B(_0857_),
+  sky130_fd_sc_hd__mux2_1 _6189_ (
+    .A0(\registers[4] [3]),
+    .A1(_0857_),
     .S(_0005_),
-    .Y(_4695_)
+    .X(_4695_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6190_ (
-    .A(\registers[18] [16]),
-    .B(_0295_),
+  sky130_fd_sc_hd__mux2_1 _6190_ (
+    .A0(\registers[18] [16]),
+    .A1(_0295_),
     .S(_0022_),
-    .Y(_4133_)
+    .X(_4133_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6191_ (
-    .A(\registers[4] [4]),
-    .B(_0858_),
+  sky130_fd_sc_hd__mux2_1 _6191_ (
+    .A0(\registers[4] [4]),
+    .A1(_0858_),
     .S(_0005_),
-    .Y(_4696_)
+    .X(_4696_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6192_ (
-    .A(\registers[18] [17]),
-    .B(_0296_),
+  sky130_fd_sc_hd__mux2_1 _6192_ (
+    .A0(\registers[18] [17]),
+    .A1(_0296_),
     .S(_0022_),
-    .Y(_4134_)
+    .X(_4134_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6193_ (
-    .A(\registers[4] [5]),
-    .B(_0859_),
+  sky130_fd_sc_hd__mux2_1 _6193_ (
+    .A0(\registers[4] [5]),
+    .A1(_0859_),
     .S(_0005_),
-    .Y(_4697_)
+    .X(_4697_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6194_ (
-    .A(\registers[18] [18]),
-    .B(_0297_),
+  sky130_fd_sc_hd__mux2_1 _6194_ (
+    .A0(\registers[18] [18]),
+    .A1(_0297_),
     .S(_0022_),
-    .Y(_4135_)
+    .X(_4135_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6195_ (
-    .A(\registers[4] [6]),
-    .B(_0860_),
+  sky130_fd_sc_hd__mux2_1 _6195_ (
+    .A0(\registers[4] [6]),
+    .A1(_0860_),
     .S(_0005_),
-    .Y(_4698_)
+    .X(_4698_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6196_ (
-    .A(\registers[18] [19]),
-    .B(_0298_),
+  sky130_fd_sc_hd__mux2_1 _6196_ (
+    .A0(\registers[18] [19]),
+    .A1(_0298_),
     .S(_0022_),
-    .Y(_4136_)
+    .X(_4136_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6197_ (
-    .A(\registers[4] [7]),
-    .B(_0861_),
+  sky130_fd_sc_hd__mux2_1 _6197_ (
+    .A0(\registers[4] [7]),
+    .A1(_0861_),
     .S(_0005_),
-    .Y(_4699_)
+    .X(_4699_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6198_ (
-    .A(\registers[18] [20]),
-    .B(_0300_),
+  sky130_fd_sc_hd__mux2_1 _6198_ (
+    .A0(\registers[18] [20]),
+    .A1(_0300_),
     .S(_0022_),
-    .Y(_4138_)
+    .X(_4138_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6199_ (
-    .A(\registers[4] [8]),
-    .B(_0862_),
+  sky130_fd_sc_hd__mux2_1 _6199_ (
+    .A0(\registers[4] [8]),
+    .A1(_0862_),
     .S(_0005_),
-    .Y(_4700_)
+    .X(_4700_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6200_ (
-    .A(\registers[18] [21]),
-    .B(_0301_),
+  sky130_fd_sc_hd__mux2_1 _6200_ (
+    .A0(\registers[18] [21]),
+    .A1(_0301_),
     .S(_0022_),
-    .Y(_4139_)
+    .X(_4139_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6201_ (
-    .A(\registers[4] [9]),
-    .B(_0863_),
+  sky130_fd_sc_hd__mux2_1 _6201_ (
+    .A0(\registers[4] [9]),
+    .A1(_0863_),
     .S(_0005_),
-    .Y(_4701_)
+    .X(_4701_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6202_ (
-    .A(\registers[18] [22]),
-    .B(_0302_),
+  sky130_fd_sc_hd__mux2_1 _6202_ (
+    .A0(\registers[18] [22]),
+    .A1(_0302_),
     .S(_0022_),
-    .Y(_4140_)
+    .X(_4140_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6203_ (
-    .A(\registers[4] [10]),
-    .B(_0833_),
+  sky130_fd_sc_hd__mux2_1 _6203_ (
+    .A0(\registers[4] [10]),
+    .A1(_0833_),
     .S(_0005_),
-    .Y(_4671_)
+    .X(_4671_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6204_ (
-    .A(\registers[18] [23]),
-    .B(_0303_),
+  sky130_fd_sc_hd__mux2_1 _6204_ (
+    .A0(\registers[18] [23]),
+    .A1(_0303_),
     .S(_0022_),
-    .Y(_4141_)
+    .X(_4141_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6205_ (
-    .A(\registers[4] [11]),
-    .B(_0834_),
+  sky130_fd_sc_hd__mux2_1 _6205_ (
+    .A0(\registers[4] [11]),
+    .A1(_0834_),
     .S(_0005_),
-    .Y(_4672_)
+    .X(_4672_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6206_ (
-    .A(\registers[18] [24]),
-    .B(_0304_),
+  sky130_fd_sc_hd__mux2_1 _6206_ (
+    .A0(\registers[18] [24]),
+    .A1(_0304_),
     .S(_0022_),
-    .Y(_4142_)
+    .X(_4142_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6207_ (
-    .A(\registers[4] [12]),
-    .B(_0835_),
+  sky130_fd_sc_hd__mux2_1 _6207_ (
+    .A0(\registers[4] [12]),
+    .A1(_0835_),
     .S(_0005_),
-    .Y(_4673_)
+    .X(_4673_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6208_ (
-    .A(\registers[18] [25]),
-    .B(_0305_),
+  sky130_fd_sc_hd__mux2_1 _6208_ (
+    .A0(\registers[18] [25]),
+    .A1(_0305_),
     .S(_0022_),
-    .Y(_4143_)
+    .X(_4143_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6209_ (
-    .A(\registers[4] [13]),
-    .B(_0836_),
+  sky130_fd_sc_hd__mux2_1 _6209_ (
+    .A0(\registers[4] [13]),
+    .A1(_0836_),
     .S(_0005_),
-    .Y(_4674_)
+    .X(_4674_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6210_ (
-    .A(\registers[18] [26]),
-    .B(_0306_),
+  sky130_fd_sc_hd__mux2_1 _6210_ (
+    .A0(\registers[18] [26]),
+    .A1(_0306_),
     .S(_0022_),
-    .Y(_4144_)
+    .X(_4144_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6211_ (
-    .A(\registers[4] [14]),
-    .B(_0837_),
+  sky130_fd_sc_hd__mux2_1 _6211_ (
+    .A0(\registers[4] [14]),
+    .A1(_0837_),
     .S(_0005_),
-    .Y(_4675_)
+    .X(_4675_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6212_ (
-    .A(\registers[18] [27]),
-    .B(_0307_),
+  sky130_fd_sc_hd__mux2_1 _6212_ (
+    .A0(\registers[18] [27]),
+    .A1(_0307_),
     .S(_0022_),
-    .Y(_4145_)
+    .X(_4145_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6213_ (
-    .A(\registers[4] [15]),
-    .B(_0838_),
+  sky130_fd_sc_hd__mux2_1 _6213_ (
+    .A0(\registers[4] [15]),
+    .A1(_0838_),
     .S(_0005_),
-    .Y(_4676_)
+    .X(_4676_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6214_ (
-    .A(\registers[18] [28]),
-    .B(_0308_),
+  sky130_fd_sc_hd__mux2_1 _6214_ (
+    .A0(\registers[18] [28]),
+    .A1(_0308_),
     .S(_0022_),
-    .Y(_4146_)
+    .X(_4146_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6215_ (
-    .A(\registers[4] [16]),
-    .B(_0839_),
+  sky130_fd_sc_hd__mux2_1 _6215_ (
+    .A0(\registers[4] [16]),
+    .A1(_0839_),
     .S(_0005_),
-    .Y(_4677_)
+    .X(_4677_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6216_ (
-    .A(\registers[18] [29]),
-    .B(_0309_),
+  sky130_fd_sc_hd__mux2_1 _6216_ (
+    .A0(\registers[18] [29]),
+    .A1(_0309_),
     .S(_0022_),
-    .Y(_4147_)
+    .X(_4147_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6217_ (
-    .A(\registers[4] [17]),
-    .B(_0840_),
+  sky130_fd_sc_hd__mux2_1 _6217_ (
+    .A0(\registers[4] [17]),
+    .A1(_0840_),
     .S(_0005_),
-    .Y(_4678_)
+    .X(_4678_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6218_ (
-    .A(\registers[18] [30]),
-    .B(_0311_),
+  sky130_fd_sc_hd__mux2_1 _6218_ (
+    .A0(\registers[18] [30]),
+    .A1(_0311_),
     .S(_0022_),
-    .Y(_4149_)
+    .X(_4149_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6219_ (
-    .A(\registers[4] [18]),
-    .B(_0841_),
+  sky130_fd_sc_hd__mux2_1 _6219_ (
+    .A0(\registers[4] [18]),
+    .A1(_0841_),
     .S(_0005_),
-    .Y(_4679_)
+    .X(_4679_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6220_ (
-    .A(\registers[18] [31]),
-    .B(_0312_),
+  sky130_fd_sc_hd__mux2_1 _6220_ (
+    .A0(\registers[18] [31]),
+    .A1(_0312_),
     .S(_0022_),
-    .Y(_4150_)
+    .X(_4150_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6221_ (
-    .A(\registers[4] [19]),
-    .B(_0842_),
+  sky130_fd_sc_hd__mux2_1 _6221_ (
+    .A0(\registers[4] [19]),
+    .A1(_0842_),
     .S(_0005_),
-    .Y(_4680_)
+    .X(_4680_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6222_ (
-    .A(\registers[17] [1]),
-    .B(_0267_),
+  sky130_fd_sc_hd__mux2_1 _6222_ (
+    .A0(\registers[17] [1]),
+    .A1(_0267_),
     .S(_0023_),
-    .Y(_4105_)
+    .X(_4105_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6223_ (
-    .A(\registers[4] [20]),
-    .B(_0844_),
+  sky130_fd_sc_hd__mux2_1 _6223_ (
+    .A0(\registers[4] [20]),
+    .A1(_0844_),
     .S(_0005_),
-    .Y(_4682_)
+    .X(_4682_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6224_ (
-    .A(\registers[17] [2]),
-    .B(_0278_),
+  sky130_fd_sc_hd__mux2_1 _6224_ (
+    .A0(\registers[17] [2]),
+    .A1(_0278_),
     .S(_0023_),
-    .Y(_4116_)
+    .X(_4116_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6225_ (
-    .A(\registers[4] [21]),
-    .B(_0845_),
+  sky130_fd_sc_hd__mux2_1 _6225_ (
+    .A0(\registers[4] [21]),
+    .A1(_0845_),
     .S(_0005_),
-    .Y(_4683_)
+    .X(_4683_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6226_ (
-    .A(\registers[17] [3]),
-    .B(_0281_),
+  sky130_fd_sc_hd__mux2_1 _6226_ (
+    .A0(\registers[17] [3]),
+    .A1(_0281_),
     .S(_0023_),
-    .Y(_4119_)
+    .X(_4119_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6227_ (
-    .A(\registers[4] [22]),
-    .B(_0846_),
+  sky130_fd_sc_hd__mux2_1 _6227_ (
+    .A0(\registers[4] [22]),
+    .A1(_0846_),
     .S(_0005_),
-    .Y(_4684_)
+    .X(_4684_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6228_ (
-    .A(\registers[17] [4]),
-    .B(_0282_),
+  sky130_fd_sc_hd__mux2_1 _6228_ (
+    .A0(\registers[17] [4]),
+    .A1(_0282_),
     .S(_0023_),
-    .Y(_4120_)
+    .X(_4120_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6229_ (
-    .A(\registers[4] [23]),
-    .B(_0847_),
+  sky130_fd_sc_hd__mux2_1 _6229_ (
+    .A0(\registers[4] [23]),
+    .A1(_0847_),
     .S(_0005_),
-    .Y(_4685_)
+    .X(_4685_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6230_ (
-    .A(\registers[17] [5]),
-    .B(_0283_),
+  sky130_fd_sc_hd__mux2_1 _6230_ (
+    .A0(\registers[17] [5]),
+    .A1(_0283_),
     .S(_0023_),
-    .Y(_4121_)
+    .X(_4121_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6231_ (
-    .A(\registers[4] [24]),
-    .B(_0848_),
+  sky130_fd_sc_hd__mux2_1 _6231_ (
+    .A0(\registers[4] [24]),
+    .A1(_0848_),
     .S(_0005_),
-    .Y(_4686_)
+    .X(_4686_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6232_ (
-    .A(\registers[17] [6]),
-    .B(_0284_),
+  sky130_fd_sc_hd__mux2_1 _6232_ (
+    .A0(\registers[17] [6]),
+    .A1(_0284_),
     .S(_0023_),
-    .Y(_4122_)
+    .X(_4122_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6233_ (
-    .A(\registers[4] [25]),
-    .B(_0849_),
+  sky130_fd_sc_hd__mux2_1 _6233_ (
+    .A0(\registers[4] [25]),
+    .A1(_0849_),
     .S(_0005_),
-    .Y(_4687_)
+    .X(_4687_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6234_ (
-    .A(\registers[17] [7]),
-    .B(_0285_),
+  sky130_fd_sc_hd__mux2_1 _6234_ (
+    .A0(\registers[17] [7]),
+    .A1(_0285_),
     .S(_0023_),
-    .Y(_4123_)
+    .X(_4123_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6235_ (
-    .A(\registers[4] [26]),
-    .B(_0850_),
+  sky130_fd_sc_hd__mux2_1 _6235_ (
+    .A0(\registers[4] [26]),
+    .A1(_0850_),
     .S(_0005_),
-    .Y(_4688_)
+    .X(_4688_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6236_ (
-    .A(\registers[17] [8]),
-    .B(_0286_),
+  sky130_fd_sc_hd__mux2_1 _6236_ (
+    .A0(\registers[17] [8]),
+    .A1(_0286_),
     .S(_0023_),
-    .Y(_4124_)
+    .X(_4124_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6237_ (
-    .A(\registers[4] [27]),
-    .B(_0851_),
+  sky130_fd_sc_hd__mux2_1 _6237_ (
+    .A0(\registers[4] [27]),
+    .A1(_0851_),
     .S(_0005_),
-    .Y(_4689_)
+    .X(_4689_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6238_ (
-    .A(\registers[17] [9]),
-    .B(_0287_),
+  sky130_fd_sc_hd__mux2_1 _6238_ (
+    .A0(\registers[17] [9]),
+    .A1(_0287_),
     .S(_0023_),
-    .Y(_4125_)
+    .X(_4125_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6239_ (
-    .A(\registers[4] [28]),
-    .B(_0852_),
+  sky130_fd_sc_hd__mux2_1 _6239_ (
+    .A0(\registers[4] [28]),
+    .A1(_0852_),
     .S(_0005_),
-    .Y(_4690_)
+    .X(_4690_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6240_ (
-    .A(\registers[17] [10]),
-    .B(_0257_),
+  sky130_fd_sc_hd__mux2_1 _6240_ (
+    .A0(\registers[17] [10]),
+    .A1(_0257_),
     .S(_0023_),
-    .Y(_4095_)
+    .X(_4095_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6241_ (
-    .A(\registers[4] [29]),
-    .B(_0853_),
+  sky130_fd_sc_hd__mux2_1 _6241_ (
+    .A0(\registers[4] [29]),
+    .A1(_0853_),
     .S(_0005_),
-    .Y(_4691_)
+    .X(_4691_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6242_ (
-    .A(\registers[17] [11]),
-    .B(_0258_),
+  sky130_fd_sc_hd__mux2_1 _6242_ (
+    .A0(\registers[17] [11]),
+    .A1(_0258_),
     .S(_0023_),
-    .Y(_4096_)
+    .X(_4096_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6243_ (
-    .A(\registers[4] [30]),
-    .B(_0855_),
+  sky130_fd_sc_hd__mux2_1 _6243_ (
+    .A0(\registers[4] [30]),
+    .A1(_0855_),
     .S(_0005_),
-    .Y(_4693_)
+    .X(_4693_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6244_ (
-    .A(\registers[17] [12]),
-    .B(_0259_),
+  sky130_fd_sc_hd__mux2_1 _6244_ (
+    .A0(\registers[17] [12]),
+    .A1(_0259_),
     .S(_0023_),
-    .Y(_4097_)
+    .X(_4097_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6245_ (
-    .A(\registers[4] [31]),
-    .B(_0856_),
+  sky130_fd_sc_hd__mux2_1 _6245_ (
+    .A0(\registers[4] [31]),
+    .A1(_0856_),
     .S(_0005_),
-    .Y(_4694_)
+    .X(_4694_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6246_ (
-    .A(\registers[17] [13]),
-    .B(_0260_),
+  sky130_fd_sc_hd__mux2_1 _6246_ (
+    .A0(\registers[17] [13]),
+    .A1(_0260_),
     .S(_0023_),
-    .Y(_4098_)
+    .X(_4098_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6247_ (
-    .A(\registers[3] [1]),
-    .B(_0811_),
+  sky130_fd_sc_hd__mux2_1 _6247_ (
+    .A0(\registers[3] [1]),
+    .A1(_0811_),
     .S(_0006_),
-    .Y(_4649_)
+    .X(_4649_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6248_ (
-    .A(\registers[17] [14]),
-    .B(_0261_),
+  sky130_fd_sc_hd__mux2_1 _6248_ (
+    .A0(\registers[17] [14]),
+    .A1(_0261_),
     .S(_0023_),
-    .Y(_4099_)
+    .X(_4099_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6249_ (
-    .A(\registers[3] [2]),
-    .B(_0822_),
+  sky130_fd_sc_hd__mux2_1 _6249_ (
+    .A0(\registers[3] [2]),
+    .A1(_0822_),
     .S(_0006_),
-    .Y(_4660_)
+    .X(_4660_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6250_ (
-    .A(\registers[17] [15]),
-    .B(_0262_),
+  sky130_fd_sc_hd__mux2_1 _6250_ (
+    .A0(\registers[17] [15]),
+    .A1(_0262_),
     .S(_0023_),
-    .Y(_4100_)
+    .X(_4100_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6251_ (
-    .A(\registers[3] [3]),
-    .B(_0825_),
+  sky130_fd_sc_hd__mux2_1 _6251_ (
+    .A0(\registers[3] [3]),
+    .A1(_0825_),
     .S(_0006_),
-    .Y(_4663_)
+    .X(_4663_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6252_ (
-    .A(\registers[17] [16]),
-    .B(_0263_),
+  sky130_fd_sc_hd__mux2_1 _6252_ (
+    .A0(\registers[17] [16]),
+    .A1(_0263_),
     .S(_0023_),
-    .Y(_4101_)
+    .X(_4101_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6253_ (
-    .A(\registers[3] [4]),
-    .B(_0826_),
+  sky130_fd_sc_hd__mux2_1 _6253_ (
+    .A0(\registers[3] [4]),
+    .A1(_0826_),
     .S(_0006_),
-    .Y(_4664_)
+    .X(_4664_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6254_ (
-    .A(\registers[17] [17]),
-    .B(_0264_),
+  sky130_fd_sc_hd__mux2_1 _6254_ (
+    .A0(\registers[17] [17]),
+    .A1(_0264_),
     .S(_0023_),
-    .Y(_4102_)
+    .X(_4102_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6255_ (
-    .A(\registers[3] [5]),
-    .B(_0827_),
+  sky130_fd_sc_hd__mux2_1 _6255_ (
+    .A0(\registers[3] [5]),
+    .A1(_0827_),
     .S(_0006_),
-    .Y(_4665_)
+    .X(_4665_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6256_ (
-    .A(\registers[17] [18]),
-    .B(_0265_),
+  sky130_fd_sc_hd__mux2_1 _6256_ (
+    .A0(\registers[17] [18]),
+    .A1(_0265_),
     .S(_0023_),
-    .Y(_4103_)
+    .X(_4103_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6257_ (
-    .A(\registers[3] [6]),
-    .B(_0828_),
+  sky130_fd_sc_hd__mux2_1 _6257_ (
+    .A0(\registers[3] [6]),
+    .A1(_0828_),
     .S(_0006_),
-    .Y(_4666_)
+    .X(_4666_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6258_ (
-    .A(\registers[17] [19]),
-    .B(_0266_),
+  sky130_fd_sc_hd__mux2_1 _6258_ (
+    .A0(\registers[17] [19]),
+    .A1(_0266_),
     .S(_0023_),
-    .Y(_4104_)
+    .X(_4104_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6259_ (
-    .A(\registers[3] [7]),
-    .B(_0829_),
+  sky130_fd_sc_hd__mux2_1 _6259_ (
+    .A0(\registers[3] [7]),
+    .A1(_0829_),
     .S(_0006_),
-    .Y(_4667_)
+    .X(_4667_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6260_ (
-    .A(\registers[17] [20]),
-    .B(_0268_),
+  sky130_fd_sc_hd__mux2_1 _6260_ (
+    .A0(\registers[17] [20]),
+    .A1(_0268_),
     .S(_0023_),
-    .Y(_4106_)
+    .X(_4106_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6261_ (
-    .A(\registers[3] [8]),
-    .B(_0830_),
+  sky130_fd_sc_hd__mux2_1 _6261_ (
+    .A0(\registers[3] [8]),
+    .A1(_0830_),
     .S(_0006_),
-    .Y(_4668_)
+    .X(_4668_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6262_ (
-    .A(\registers[17] [21]),
-    .B(_0269_),
+  sky130_fd_sc_hd__mux2_1 _6262_ (
+    .A0(\registers[17] [21]),
+    .A1(_0269_),
     .S(_0023_),
-    .Y(_4107_)
+    .X(_4107_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6263_ (
-    .A(\registers[3] [9]),
-    .B(_0831_),
+  sky130_fd_sc_hd__mux2_1 _6263_ (
+    .A0(\registers[3] [9]),
+    .A1(_0831_),
     .S(_0006_),
-    .Y(_4669_)
+    .X(_4669_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6264_ (
-    .A(\registers[17] [22]),
-    .B(_0270_),
+  sky130_fd_sc_hd__mux2_1 _6264_ (
+    .A0(\registers[17] [22]),
+    .A1(_0270_),
     .S(_0023_),
-    .Y(_4108_)
+    .X(_4108_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6265_ (
-    .A(\registers[3] [10]),
-    .B(_0801_),
+  sky130_fd_sc_hd__mux2_1 _6265_ (
+    .A0(\registers[3] [10]),
+    .A1(_0801_),
     .S(_0006_),
-    .Y(_4639_)
+    .X(_4639_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6266_ (
-    .A(\registers[17] [23]),
-    .B(_0271_),
+  sky130_fd_sc_hd__mux2_1 _6266_ (
+    .A0(\registers[17] [23]),
+    .A1(_0271_),
     .S(_0023_),
-    .Y(_4109_)
+    .X(_4109_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6267_ (
-    .A(\registers[3] [11]),
-    .B(_0802_),
+  sky130_fd_sc_hd__mux2_1 _6267_ (
+    .A0(\registers[3] [11]),
+    .A1(_0802_),
     .S(_0006_),
-    .Y(_4640_)
+    .X(_4640_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6268_ (
-    .A(\registers[17] [24]),
-    .B(_0272_),
+  sky130_fd_sc_hd__mux2_1 _6268_ (
+    .A0(\registers[17] [24]),
+    .A1(_0272_),
     .S(_0023_),
-    .Y(_4110_)
+    .X(_4110_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6269_ (
-    .A(\registers[3] [12]),
-    .B(_0803_),
+  sky130_fd_sc_hd__mux2_1 _6269_ (
+    .A0(\registers[3] [12]),
+    .A1(_0803_),
     .S(_0006_),
-    .Y(_4641_)
+    .X(_4641_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6270_ (
-    .A(\registers[17] [25]),
-    .B(_0273_),
+  sky130_fd_sc_hd__mux2_1 _6270_ (
+    .A0(\registers[17] [25]),
+    .A1(_0273_),
     .S(_0023_),
-    .Y(_4111_)
+    .X(_4111_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6271_ (
-    .A(\registers[3] [13]),
-    .B(_0804_),
+  sky130_fd_sc_hd__mux2_1 _6271_ (
+    .A0(\registers[3] [13]),
+    .A1(_0804_),
     .S(_0006_),
-    .Y(_4642_)
+    .X(_4642_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6272_ (
-    .A(\registers[17] [26]),
-    .B(_0274_),
+  sky130_fd_sc_hd__mux2_1 _6272_ (
+    .A0(\registers[17] [26]),
+    .A1(_0274_),
     .S(_0023_),
-    .Y(_4112_)
+    .X(_4112_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6273_ (
-    .A(\registers[3] [14]),
-    .B(_0805_),
+  sky130_fd_sc_hd__mux2_1 _6273_ (
+    .A0(\registers[3] [14]),
+    .A1(_0805_),
     .S(_0006_),
-    .Y(_4643_)
+    .X(_4643_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6274_ (
-    .A(\registers[17] [27]),
-    .B(_0275_),
+  sky130_fd_sc_hd__mux2_1 _6274_ (
+    .A0(\registers[17] [27]),
+    .A1(_0275_),
     .S(_0023_),
-    .Y(_4113_)
+    .X(_4113_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6275_ (
-    .A(\registers[3] [15]),
-    .B(_0806_),
+  sky130_fd_sc_hd__mux2_1 _6275_ (
+    .A0(\registers[3] [15]),
+    .A1(_0806_),
     .S(_0006_),
-    .Y(_4644_)
+    .X(_4644_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6276_ (
-    .A(\registers[17] [28]),
-    .B(_0276_),
+  sky130_fd_sc_hd__mux2_1 _6276_ (
+    .A0(\registers[17] [28]),
+    .A1(_0276_),
     .S(_0023_),
-    .Y(_4114_)
+    .X(_4114_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6277_ (
-    .A(\registers[3] [16]),
-    .B(_0807_),
+  sky130_fd_sc_hd__mux2_1 _6277_ (
+    .A0(\registers[3] [16]),
+    .A1(_0807_),
     .S(_0006_),
-    .Y(_4645_)
+    .X(_4645_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6278_ (
-    .A(\registers[17] [29]),
-    .B(_0277_),
+  sky130_fd_sc_hd__mux2_1 _6278_ (
+    .A0(\registers[17] [29]),
+    .A1(_0277_),
     .S(_0023_),
-    .Y(_4115_)
+    .X(_4115_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6279_ (
-    .A(\registers[3] [17]),
-    .B(_0808_),
+  sky130_fd_sc_hd__mux2_1 _6279_ (
+    .A0(\registers[3] [17]),
+    .A1(_0808_),
     .S(_0006_),
-    .Y(_4646_)
+    .X(_4646_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6280_ (
-    .A(\registers[17] [30]),
-    .B(_0279_),
+  sky130_fd_sc_hd__mux2_1 _6280_ (
+    .A0(\registers[17] [30]),
+    .A1(_0279_),
     .S(_0023_),
-    .Y(_4117_)
+    .X(_4117_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6281_ (
-    .A(\registers[3] [18]),
-    .B(_0809_),
+  sky130_fd_sc_hd__mux2_1 _6281_ (
+    .A0(\registers[3] [18]),
+    .A1(_0809_),
     .S(_0006_),
-    .Y(_4647_)
+    .X(_4647_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6282_ (
-    .A(\registers[17] [31]),
-    .B(_0280_),
+  sky130_fd_sc_hd__mux2_1 _6282_ (
+    .A0(\registers[17] [31]),
+    .A1(_0280_),
     .S(_0023_),
-    .Y(_4118_)
+    .X(_4118_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6283_ (
-    .A(\registers[3] [19]),
-    .B(_0810_),
+  sky130_fd_sc_hd__mux2_1 _6283_ (
+    .A0(\registers[3] [19]),
+    .A1(_0810_),
     .S(_0006_),
-    .Y(_4648_)
+    .X(_4648_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6284_ (
-    .A(\registers[16] [1]),
-    .B(_0235_),
+  sky130_fd_sc_hd__mux2_1 _6284_ (
+    .A0(\registers[16] [1]),
+    .A1(_0235_),
     .S(_0024_),
-    .Y(_4073_)
+    .X(_4073_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6285_ (
-    .A(\registers[3] [20]),
-    .B(_0812_),
+  sky130_fd_sc_hd__mux2_1 _6285_ (
+    .A0(\registers[3] [20]),
+    .A1(_0812_),
     .S(_0006_),
-    .Y(_4650_)
+    .X(_4650_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6286_ (
-    .A(\registers[16] [2]),
-    .B(_0246_),
+  sky130_fd_sc_hd__mux2_1 _6286_ (
+    .A0(\registers[16] [2]),
+    .A1(_0246_),
     .S(_0024_),
-    .Y(_4084_)
+    .X(_4084_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6287_ (
-    .A(\registers[3] [21]),
-    .B(_0813_),
+  sky130_fd_sc_hd__mux2_1 _6287_ (
+    .A0(\registers[3] [21]),
+    .A1(_0813_),
     .S(_0006_),
-    .Y(_4651_)
+    .X(_4651_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6288_ (
-    .A(\registers[16] [3]),
-    .B(_0249_),
+  sky130_fd_sc_hd__mux2_1 _6288_ (
+    .A0(\registers[16] [3]),
+    .A1(_0249_),
     .S(_0024_),
-    .Y(_4087_)
+    .X(_4087_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6289_ (
-    .A(\registers[3] [22]),
-    .B(_0814_),
+  sky130_fd_sc_hd__mux2_1 _6289_ (
+    .A0(\registers[3] [22]),
+    .A1(_0814_),
     .S(_0006_),
-    .Y(_4652_)
+    .X(_4652_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6290_ (
-    .A(\registers[16] [4]),
-    .B(_0250_),
+  sky130_fd_sc_hd__mux2_1 _6290_ (
+    .A0(\registers[16] [4]),
+    .A1(_0250_),
     .S(_0024_),
-    .Y(_4088_)
+    .X(_4088_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6291_ (
-    .A(\registers[3] [23]),
-    .B(_0815_),
+  sky130_fd_sc_hd__mux2_1 _6291_ (
+    .A0(\registers[3] [23]),
+    .A1(_0815_),
     .S(_0006_),
-    .Y(_4653_)
+    .X(_4653_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6292_ (
-    .A(\registers[16] [5]),
-    .B(_0251_),
+  sky130_fd_sc_hd__mux2_1 _6292_ (
+    .A0(\registers[16] [5]),
+    .A1(_0251_),
     .S(_0024_),
-    .Y(_4089_)
+    .X(_4089_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6293_ (
-    .A(\registers[3] [24]),
-    .B(_0816_),
+  sky130_fd_sc_hd__mux2_1 _6293_ (
+    .A0(\registers[3] [24]),
+    .A1(_0816_),
     .S(_0006_),
-    .Y(_4654_)
+    .X(_4654_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6294_ (
-    .A(\registers[16] [6]),
-    .B(_0252_),
+  sky130_fd_sc_hd__mux2_1 _6294_ (
+    .A0(\registers[16] [6]),
+    .A1(_0252_),
     .S(_0024_),
-    .Y(_4090_)
+    .X(_4090_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6295_ (
-    .A(\registers[3] [25]),
-    .B(_0817_),
+  sky130_fd_sc_hd__mux2_1 _6295_ (
+    .A0(\registers[3] [25]),
+    .A1(_0817_),
     .S(_0006_),
-    .Y(_4655_)
+    .X(_4655_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6296_ (
-    .A(\registers[16] [7]),
-    .B(_0253_),
+  sky130_fd_sc_hd__mux2_1 _6296_ (
+    .A0(\registers[16] [7]),
+    .A1(_0253_),
     .S(_0024_),
-    .Y(_4091_)
+    .X(_4091_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6297_ (
-    .A(\registers[3] [26]),
-    .B(_0818_),
+  sky130_fd_sc_hd__mux2_1 _6297_ (
+    .A0(\registers[3] [26]),
+    .A1(_0818_),
     .S(_0006_),
-    .Y(_4656_)
+    .X(_4656_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6298_ (
-    .A(\registers[16] [8]),
-    .B(_0254_),
+  sky130_fd_sc_hd__mux2_1 _6298_ (
+    .A0(\registers[16] [8]),
+    .A1(_0254_),
     .S(_0024_),
-    .Y(_4092_)
+    .X(_4092_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6299_ (
-    .A(\registers[3] [27]),
-    .B(_0819_),
+  sky130_fd_sc_hd__mux2_1 _6299_ (
+    .A0(\registers[3] [27]),
+    .A1(_0819_),
     .S(_0006_),
-    .Y(_4657_)
+    .X(_4657_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6300_ (
-    .A(\registers[16] [9]),
-    .B(_0255_),
+  sky130_fd_sc_hd__mux2_1 _6300_ (
+    .A0(\registers[16] [9]),
+    .A1(_0255_),
     .S(_0024_),
-    .Y(_4093_)
+    .X(_4093_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6301_ (
-    .A(\registers[3] [28]),
-    .B(_0820_),
+  sky130_fd_sc_hd__mux2_1 _6301_ (
+    .A0(\registers[3] [28]),
+    .A1(_0820_),
     .S(_0006_),
-    .Y(_4658_)
+    .X(_4658_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6302_ (
-    .A(\registers[16] [10]),
-    .B(_0225_),
+  sky130_fd_sc_hd__mux2_1 _6302_ (
+    .A0(\registers[16] [10]),
+    .A1(_0225_),
     .S(_0024_),
-    .Y(_4063_)
+    .X(_4063_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6303_ (
-    .A(\registers[3] [29]),
-    .B(_0821_),
+  sky130_fd_sc_hd__mux2_1 _6303_ (
+    .A0(\registers[3] [29]),
+    .A1(_0821_),
     .S(_0006_),
-    .Y(_4659_)
+    .X(_4659_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6304_ (
-    .A(\registers[16] [11]),
-    .B(_0226_),
+  sky130_fd_sc_hd__mux2_1 _6304_ (
+    .A0(\registers[16] [11]),
+    .A1(_0226_),
     .S(_0024_),
-    .Y(_4064_)
+    .X(_4064_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6305_ (
-    .A(\registers[3] [30]),
-    .B(_0823_),
+  sky130_fd_sc_hd__mux2_1 _6305_ (
+    .A0(\registers[3] [30]),
+    .A1(_0823_),
     .S(_0006_),
-    .Y(_4661_)
+    .X(_4661_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6306_ (
-    .A(\registers[16] [12]),
-    .B(_0227_),
+  sky130_fd_sc_hd__mux2_1 _6306_ (
+    .A0(\registers[16] [12]),
+    .A1(_0227_),
     .S(_0024_),
-    .Y(_4065_)
+    .X(_4065_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6307_ (
-    .A(\registers[3] [31]),
-    .B(_0824_),
+  sky130_fd_sc_hd__mux2_1 _6307_ (
+    .A0(\registers[3] [31]),
+    .A1(_0824_),
     .S(_0006_),
-    .Y(_4662_)
+    .X(_4662_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6308_ (
-    .A(\registers[16] [13]),
-    .B(_0228_),
+  sky130_fd_sc_hd__mux2_1 _6308_ (
+    .A0(\registers[16] [13]),
+    .A1(_0228_),
     .S(_0024_),
-    .Y(_4066_)
+    .X(_4066_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6309_ (
-    .A(\registers[31] [1]),
-    .B(_0779_),
+  sky130_fd_sc_hd__mux2_1 _6309_ (
+    .A0(\registers[31] [1]),
+    .A1(_0779_),
     .S(_0007_),
-    .Y(_4617_)
+    .X(_4617_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6310_ (
-    .A(\registers[16] [14]),
-    .B(_0229_),
+  sky130_fd_sc_hd__mux2_1 _6310_ (
+    .A0(\registers[16] [14]),
+    .A1(_0229_),
     .S(_0024_),
-    .Y(_4067_)
+    .X(_4067_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6311_ (
-    .A(\registers[31] [2]),
-    .B(_0790_),
+  sky130_fd_sc_hd__mux2_1 _6311_ (
+    .A0(\registers[31] [2]),
+    .A1(_0790_),
     .S(_0007_),
-    .Y(_4628_)
+    .X(_4628_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6312_ (
-    .A(\registers[16] [15]),
-    .B(_0230_),
+  sky130_fd_sc_hd__mux2_1 _6312_ (
+    .A0(\registers[16] [15]),
+    .A1(_0230_),
     .S(_0024_),
-    .Y(_4068_)
+    .X(_4068_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6313_ (
-    .A(\registers[31] [3]),
-    .B(_0793_),
+  sky130_fd_sc_hd__mux2_1 _6313_ (
+    .A0(\registers[31] [3]),
+    .A1(_0793_),
     .S(_0007_),
-    .Y(_4631_)
+    .X(_4631_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6314_ (
-    .A(\registers[16] [16]),
-    .B(_0231_),
+  sky130_fd_sc_hd__mux2_1 _6314_ (
+    .A0(\registers[16] [16]),
+    .A1(_0231_),
     .S(_0024_),
-    .Y(_4069_)
+    .X(_4069_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6315_ (
-    .A(\registers[31] [4]),
-    .B(_0794_),
+  sky130_fd_sc_hd__mux2_1 _6315_ (
+    .A0(\registers[31] [4]),
+    .A1(_0794_),
     .S(_0007_),
-    .Y(_4632_)
+    .X(_4632_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6316_ (
-    .A(\registers[16] [17]),
-    .B(_0232_),
+  sky130_fd_sc_hd__mux2_1 _6316_ (
+    .A0(\registers[16] [17]),
+    .A1(_0232_),
     .S(_0024_),
-    .Y(_4070_)
+    .X(_4070_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6317_ (
-    .A(\registers[31] [5]),
-    .B(_0795_),
+  sky130_fd_sc_hd__mux2_1 _6317_ (
+    .A0(\registers[31] [5]),
+    .A1(_0795_),
     .S(_0007_),
-    .Y(_4633_)
+    .X(_4633_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6318_ (
-    .A(\registers[16] [18]),
-    .B(_0233_),
+  sky130_fd_sc_hd__mux2_1 _6318_ (
+    .A0(\registers[16] [18]),
+    .A1(_0233_),
     .S(_0024_),
-    .Y(_4071_)
+    .X(_4071_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6319_ (
-    .A(\registers[31] [6]),
-    .B(_0796_),
+  sky130_fd_sc_hd__mux2_1 _6319_ (
+    .A0(\registers[31] [6]),
+    .A1(_0796_),
     .S(_0007_),
-    .Y(_4634_)
+    .X(_4634_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6320_ (
-    .A(\registers[16] [19]),
-    .B(_0234_),
+  sky130_fd_sc_hd__mux2_1 _6320_ (
+    .A0(\registers[16] [19]),
+    .A1(_0234_),
     .S(_0024_),
-    .Y(_4072_)
+    .X(_4072_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6321_ (
-    .A(\registers[31] [7]),
-    .B(_0797_),
+  sky130_fd_sc_hd__mux2_1 _6321_ (
+    .A0(\registers[31] [7]),
+    .A1(_0797_),
     .S(_0007_),
-    .Y(_4635_)
+    .X(_4635_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6322_ (
-    .A(\registers[16] [20]),
-    .B(_0236_),
+  sky130_fd_sc_hd__mux2_1 _6322_ (
+    .A0(\registers[16] [20]),
+    .A1(_0236_),
     .S(_0024_),
-    .Y(_4074_)
+    .X(_4074_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6323_ (
-    .A(\registers[31] [8]),
-    .B(_0798_),
+  sky130_fd_sc_hd__mux2_1 _6323_ (
+    .A0(\registers[31] [8]),
+    .A1(_0798_),
     .S(_0007_),
-    .Y(_4636_)
+    .X(_4636_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6324_ (
-    .A(\registers[16] [21]),
-    .B(_0237_),
+  sky130_fd_sc_hd__mux2_1 _6324_ (
+    .A0(\registers[16] [21]),
+    .A1(_0237_),
     .S(_0024_),
-    .Y(_4075_)
+    .X(_4075_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6325_ (
-    .A(\registers[31] [9]),
-    .B(_0799_),
+  sky130_fd_sc_hd__mux2_1 _6325_ (
+    .A0(\registers[31] [9]),
+    .A1(_0799_),
     .S(_0007_),
-    .Y(_4637_)
+    .X(_4637_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6326_ (
-    .A(\registers[16] [22]),
-    .B(_0238_),
+  sky130_fd_sc_hd__mux2_1 _6326_ (
+    .A0(\registers[16] [22]),
+    .A1(_0238_),
     .S(_0024_),
-    .Y(_4076_)
+    .X(_4076_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6327_ (
-    .A(\registers[31] [10]),
-    .B(_0769_),
+  sky130_fd_sc_hd__mux2_1 _6327_ (
+    .A0(\registers[31] [10]),
+    .A1(_0769_),
     .S(_0007_),
-    .Y(_4607_)
+    .X(_4607_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6328_ (
-    .A(\registers[16] [23]),
-    .B(_0239_),
+  sky130_fd_sc_hd__mux2_1 _6328_ (
+    .A0(\registers[16] [23]),
+    .A1(_0239_),
     .S(_0024_),
-    .Y(_4077_)
+    .X(_4077_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6329_ (
-    .A(\registers[31] [11]),
-    .B(_0770_),
+  sky130_fd_sc_hd__mux2_1 _6329_ (
+    .A0(\registers[31] [11]),
+    .A1(_0770_),
     .S(_0007_),
-    .Y(_4608_)
+    .X(_4608_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6330_ (
-    .A(\registers[16] [24]),
-    .B(_0240_),
+  sky130_fd_sc_hd__mux2_1 _6330_ (
+    .A0(\registers[16] [24]),
+    .A1(_0240_),
     .S(_0024_),
-    .Y(_4078_)
+    .X(_4078_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6331_ (
-    .A(\registers[31] [12]),
-    .B(_0771_),
+  sky130_fd_sc_hd__mux2_1 _6331_ (
+    .A0(\registers[31] [12]),
+    .A1(_0771_),
     .S(_0007_),
-    .Y(_4609_)
+    .X(_4609_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6332_ (
-    .A(\registers[16] [25]),
-    .B(_0241_),
+  sky130_fd_sc_hd__mux2_1 _6332_ (
+    .A0(\registers[16] [25]),
+    .A1(_0241_),
     .S(_0024_),
-    .Y(_4079_)
+    .X(_4079_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6333_ (
-    .A(\registers[31] [13]),
-    .B(_0772_),
+  sky130_fd_sc_hd__mux2_1 _6333_ (
+    .A0(\registers[31] [13]),
+    .A1(_0772_),
     .S(_0007_),
-    .Y(_4610_)
+    .X(_4610_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6334_ (
-    .A(\registers[16] [26]),
-    .B(_0242_),
+  sky130_fd_sc_hd__mux2_1 _6334_ (
+    .A0(\registers[16] [26]),
+    .A1(_0242_),
     .S(_0024_),
-    .Y(_4080_)
+    .X(_4080_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6335_ (
-    .A(\registers[31] [14]),
-    .B(_0773_),
+  sky130_fd_sc_hd__mux2_1 _6335_ (
+    .A0(\registers[31] [14]),
+    .A1(_0773_),
     .S(_0007_),
-    .Y(_4611_)
+    .X(_4611_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6336_ (
-    .A(\registers[16] [27]),
-    .B(_0243_),
+  sky130_fd_sc_hd__mux2_1 _6336_ (
+    .A0(\registers[16] [27]),
+    .A1(_0243_),
     .S(_0024_),
-    .Y(_4081_)
+    .X(_4081_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6337_ (
-    .A(\registers[31] [15]),
-    .B(_0774_),
+  sky130_fd_sc_hd__mux2_1 _6337_ (
+    .A0(\registers[31] [15]),
+    .A1(_0774_),
     .S(_0007_),
-    .Y(_4612_)
+    .X(_4612_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6338_ (
-    .A(\registers[16] [28]),
-    .B(_0244_),
+  sky130_fd_sc_hd__mux2_1 _6338_ (
+    .A0(\registers[16] [28]),
+    .A1(_0244_),
     .S(_0024_),
-    .Y(_4082_)
+    .X(_4082_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6339_ (
-    .A(\registers[31] [16]),
-    .B(_0775_),
+  sky130_fd_sc_hd__mux2_1 _6339_ (
+    .A0(\registers[31] [16]),
+    .A1(_0775_),
     .S(_0007_),
-    .Y(_4613_)
+    .X(_4613_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6340_ (
-    .A(\registers[16] [29]),
-    .B(_0245_),
+  sky130_fd_sc_hd__mux2_1 _6340_ (
+    .A0(\registers[16] [29]),
+    .A1(_0245_),
     .S(_0024_),
-    .Y(_4083_)
+    .X(_4083_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6341_ (
-    .A(\registers[31] [17]),
-    .B(_0776_),
+  sky130_fd_sc_hd__mux2_1 _6341_ (
+    .A0(\registers[31] [17]),
+    .A1(_0776_),
     .S(_0007_),
-    .Y(_4614_)
+    .X(_4614_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6342_ (
-    .A(\registers[16] [30]),
-    .B(_0247_),
+  sky130_fd_sc_hd__mux2_1 _6342_ (
+    .A0(\registers[16] [30]),
+    .A1(_0247_),
     .S(_0024_),
-    .Y(_4085_)
+    .X(_4085_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6343_ (
-    .A(\registers[31] [18]),
-    .B(_0777_),
+  sky130_fd_sc_hd__mux2_1 _6343_ (
+    .A0(\registers[31] [18]),
+    .A1(_0777_),
     .S(_0007_),
-    .Y(_4615_)
+    .X(_4615_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6344_ (
-    .A(\registers[16] [31]),
-    .B(_0248_),
+  sky130_fd_sc_hd__mux2_1 _6344_ (
+    .A0(\registers[16] [31]),
+    .A1(_0248_),
     .S(_0024_),
-    .Y(_4086_)
+    .X(_4086_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6345_ (
-    .A(\registers[31] [19]),
-    .B(_0778_),
+  sky130_fd_sc_hd__mux2_1 _6345_ (
+    .A0(\registers[31] [19]),
+    .A1(_0778_),
     .S(_0007_),
-    .Y(_4616_)
+    .X(_4616_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6346_ (
-    .A(\registers[15] [1]),
-    .B(_0203_),
+  sky130_fd_sc_hd__mux2_1 _6346_ (
+    .A0(\registers[15] [1]),
+    .A1(_0203_),
     .S(_0025_),
-    .Y(_4041_)
+    .X(_4041_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6347_ (
-    .A(\registers[31] [20]),
-    .B(_0780_),
+  sky130_fd_sc_hd__mux2_1 _6347_ (
+    .A0(\registers[31] [20]),
+    .A1(_0780_),
     .S(_0007_),
-    .Y(_4618_)
+    .X(_4618_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6348_ (
-    .A(\registers[15] [2]),
-    .B(_0214_),
+  sky130_fd_sc_hd__mux2_1 _6348_ (
+    .A0(\registers[15] [2]),
+    .A1(_0214_),
     .S(_0025_),
-    .Y(_4052_)
+    .X(_4052_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6349_ (
-    .A(\registers[31] [21]),
-    .B(_0781_),
+  sky130_fd_sc_hd__mux2_1 _6349_ (
+    .A0(\registers[31] [21]),
+    .A1(_0781_),
     .S(_0007_),
-    .Y(_4619_)
+    .X(_4619_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6350_ (
-    .A(\registers[15] [3]),
-    .B(_0217_),
+  sky130_fd_sc_hd__mux2_1 _6350_ (
+    .A0(\registers[15] [3]),
+    .A1(_0217_),
     .S(_0025_),
-    .Y(_4055_)
+    .X(_4055_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6351_ (
-    .A(\registers[31] [22]),
-    .B(_0782_),
+  sky130_fd_sc_hd__mux2_1 _6351_ (
+    .A0(\registers[31] [22]),
+    .A1(_0782_),
     .S(_0007_),
-    .Y(_4620_)
+    .X(_4620_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6352_ (
-    .A(\registers[15] [4]),
-    .B(_0218_),
+  sky130_fd_sc_hd__mux2_1 _6352_ (
+    .A0(\registers[15] [4]),
+    .A1(_0218_),
     .S(_0025_),
-    .Y(_4056_)
+    .X(_4056_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6353_ (
-    .A(\registers[31] [23]),
-    .B(_0783_),
+  sky130_fd_sc_hd__mux2_1 _6353_ (
+    .A0(\registers[31] [23]),
+    .A1(_0783_),
     .S(_0007_),
-    .Y(_4621_)
+    .X(_4621_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6354_ (
-    .A(\registers[15] [5]),
-    .B(_0219_),
+  sky130_fd_sc_hd__mux2_1 _6354_ (
+    .A0(\registers[15] [5]),
+    .A1(_0219_),
     .S(_0025_),
-    .Y(_4057_)
+    .X(_4057_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6355_ (
-    .A(\registers[31] [24]),
-    .B(_0784_),
+  sky130_fd_sc_hd__mux2_1 _6355_ (
+    .A0(\registers[31] [24]),
+    .A1(_0784_),
     .S(_0007_),
-    .Y(_4622_)
+    .X(_4622_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6356_ (
-    .A(\registers[15] [6]),
-    .B(_0220_),
+  sky130_fd_sc_hd__mux2_1 _6356_ (
+    .A0(\registers[15] [6]),
+    .A1(_0220_),
     .S(_0025_),
-    .Y(_4058_)
+    .X(_4058_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6357_ (
-    .A(\registers[31] [25]),
-    .B(_0785_),
+  sky130_fd_sc_hd__mux2_1 _6357_ (
+    .A0(\registers[31] [25]),
+    .A1(_0785_),
     .S(_0007_),
-    .Y(_4623_)
+    .X(_4623_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6358_ (
-    .A(\registers[15] [7]),
-    .B(_0221_),
+  sky130_fd_sc_hd__mux2_1 _6358_ (
+    .A0(\registers[15] [7]),
+    .A1(_0221_),
     .S(_0025_),
-    .Y(_4059_)
+    .X(_4059_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6359_ (
-    .A(\registers[31] [26]),
-    .B(_0786_),
+  sky130_fd_sc_hd__mux2_1 _6359_ (
+    .A0(\registers[31] [26]),
+    .A1(_0786_),
     .S(_0007_),
-    .Y(_4624_)
+    .X(_4624_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6360_ (
-    .A(\registers[15] [8]),
-    .B(_0222_),
+  sky130_fd_sc_hd__mux2_1 _6360_ (
+    .A0(\registers[15] [8]),
+    .A1(_0222_),
     .S(_0025_),
-    .Y(_4060_)
+    .X(_4060_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6361_ (
-    .A(\registers[31] [27]),
-    .B(_0787_),
+  sky130_fd_sc_hd__mux2_1 _6361_ (
+    .A0(\registers[31] [27]),
+    .A1(_0787_),
     .S(_0007_),
-    .Y(_4625_)
+    .X(_4625_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6362_ (
-    .A(\registers[15] [9]),
-    .B(_0223_),
+  sky130_fd_sc_hd__mux2_1 _6362_ (
+    .A0(\registers[15] [9]),
+    .A1(_0223_),
     .S(_0025_),
-    .Y(_4061_)
+    .X(_4061_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6363_ (
-    .A(\registers[31] [28]),
-    .B(_0788_),
+  sky130_fd_sc_hd__mux2_1 _6363_ (
+    .A0(\registers[31] [28]),
+    .A1(_0788_),
     .S(_0007_),
-    .Y(_4626_)
+    .X(_4626_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6364_ (
-    .A(\registers[15] [10]),
-    .B(_0193_),
+  sky130_fd_sc_hd__mux2_1 _6364_ (
+    .A0(\registers[15] [10]),
+    .A1(_0193_),
     .S(_0025_),
-    .Y(_4031_)
+    .X(_4031_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6365_ (
-    .A(\registers[31] [29]),
-    .B(_0789_),
+  sky130_fd_sc_hd__mux2_1 _6365_ (
+    .A0(\registers[31] [29]),
+    .A1(_0789_),
     .S(_0007_),
-    .Y(_4627_)
+    .X(_4627_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6366_ (
-    .A(\registers[15] [11]),
-    .B(_0194_),
+  sky130_fd_sc_hd__mux2_1 _6366_ (
+    .A0(\registers[15] [11]),
+    .A1(_0194_),
     .S(_0025_),
-    .Y(_4032_)
+    .X(_4032_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6367_ (
-    .A(\registers[31] [30]),
-    .B(_0791_),
+  sky130_fd_sc_hd__mux2_1 _6367_ (
+    .A0(\registers[31] [30]),
+    .A1(_0791_),
     .S(_0007_),
-    .Y(_4629_)
+    .X(_4629_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6368_ (
-    .A(\registers[15] [12]),
-    .B(_0195_),
+  sky130_fd_sc_hd__mux2_1 _6368_ (
+    .A0(\registers[15] [12]),
+    .A1(_0195_),
     .S(_0025_),
-    .Y(_4033_)
+    .X(_4033_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6369_ (
-    .A(\registers[31] [31]),
-    .B(_0792_),
+  sky130_fd_sc_hd__mux2_1 _6369_ (
+    .A0(\registers[31] [31]),
+    .A1(_0792_),
     .S(_0007_),
-    .Y(_4630_)
+    .X(_4630_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6370_ (
-    .A(\registers[15] [13]),
-    .B(_0196_),
+  sky130_fd_sc_hd__mux2_1 _6370_ (
+    .A0(\registers[15] [13]),
+    .A1(_0196_),
     .S(_0025_),
-    .Y(_4034_)
+    .X(_4034_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6371_ (
-    .A(\registers[30] [1]),
-    .B(_0747_),
+  sky130_fd_sc_hd__mux2_1 _6371_ (
+    .A0(\registers[30] [1]),
+    .A1(_0747_),
     .S(_0008_),
-    .Y(_4585_)
+    .X(_4585_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6372_ (
-    .A(\registers[15] [14]),
-    .B(_0197_),
+  sky130_fd_sc_hd__mux2_1 _6372_ (
+    .A0(\registers[15] [14]),
+    .A1(_0197_),
     .S(_0025_),
-    .Y(_4035_)
+    .X(_4035_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6373_ (
-    .A(\registers[30] [2]),
-    .B(_0758_),
+  sky130_fd_sc_hd__mux2_1 _6373_ (
+    .A0(\registers[30] [2]),
+    .A1(_0758_),
     .S(_0008_),
-    .Y(_4596_)
+    .X(_4596_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6374_ (
-    .A(\registers[15] [15]),
-    .B(_0198_),
+  sky130_fd_sc_hd__mux2_1 _6374_ (
+    .A0(\registers[15] [15]),
+    .A1(_0198_),
     .S(_0025_),
-    .Y(_4036_)
+    .X(_4036_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6375_ (
-    .A(\registers[30] [3]),
-    .B(_0761_),
+  sky130_fd_sc_hd__mux2_1 _6375_ (
+    .A0(\registers[30] [3]),
+    .A1(_0761_),
     .S(_0008_),
-    .Y(_4599_)
+    .X(_4599_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6376_ (
-    .A(\registers[15] [16]),
-    .B(_0199_),
+  sky130_fd_sc_hd__mux2_1 _6376_ (
+    .A0(\registers[15] [16]),
+    .A1(_0199_),
     .S(_0025_),
-    .Y(_4037_)
+    .X(_4037_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6377_ (
-    .A(\registers[30] [4]),
-    .B(_0762_),
+  sky130_fd_sc_hd__mux2_1 _6377_ (
+    .A0(\registers[30] [4]),
+    .A1(_0762_),
     .S(_0008_),
-    .Y(_4600_)
+    .X(_4600_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6378_ (
-    .A(\registers[15] [17]),
-    .B(_0200_),
+  sky130_fd_sc_hd__mux2_1 _6378_ (
+    .A0(\registers[15] [17]),
+    .A1(_0200_),
     .S(_0025_),
-    .Y(_4038_)
+    .X(_4038_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6379_ (
-    .A(\registers[30] [5]),
-    .B(_0763_),
+  sky130_fd_sc_hd__mux2_1 _6379_ (
+    .A0(\registers[30] [5]),
+    .A1(_0763_),
     .S(_0008_),
-    .Y(_4601_)
+    .X(_4601_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6380_ (
-    .A(\registers[15] [18]),
-    .B(_0201_),
+  sky130_fd_sc_hd__mux2_1 _6380_ (
+    .A0(\registers[15] [18]),
+    .A1(_0201_),
     .S(_0025_),
-    .Y(_4039_)
+    .X(_4039_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6381_ (
-    .A(\registers[30] [6]),
-    .B(_0764_),
+  sky130_fd_sc_hd__mux2_1 _6381_ (
+    .A0(\registers[30] [6]),
+    .A1(_0764_),
     .S(_0008_),
-    .Y(_4602_)
+    .X(_4602_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6382_ (
-    .A(\registers[15] [19]),
-    .B(_0202_),
+  sky130_fd_sc_hd__mux2_1 _6382_ (
+    .A0(\registers[15] [19]),
+    .A1(_0202_),
     .S(_0025_),
-    .Y(_4040_)
+    .X(_4040_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6383_ (
-    .A(\registers[30] [7]),
-    .B(_0765_),
+  sky130_fd_sc_hd__mux2_1 _6383_ (
+    .A0(\registers[30] [7]),
+    .A1(_0765_),
     .S(_0008_),
-    .Y(_4603_)
+    .X(_4603_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6384_ (
-    .A(\registers[15] [20]),
-    .B(_0204_),
+  sky130_fd_sc_hd__mux2_1 _6384_ (
+    .A0(\registers[15] [20]),
+    .A1(_0204_),
     .S(_0025_),
-    .Y(_4042_)
+    .X(_4042_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6385_ (
-    .A(\registers[30] [8]),
-    .B(_0766_),
+  sky130_fd_sc_hd__mux2_1 _6385_ (
+    .A0(\registers[30] [8]),
+    .A1(_0766_),
     .S(_0008_),
-    .Y(_4604_)
+    .X(_4604_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6386_ (
-    .A(\registers[15] [21]),
-    .B(_0205_),
+  sky130_fd_sc_hd__mux2_1 _6386_ (
+    .A0(\registers[15] [21]),
+    .A1(_0205_),
     .S(_0025_),
-    .Y(_4043_)
+    .X(_4043_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6387_ (
-    .A(\registers[30] [9]),
-    .B(_0767_),
+  sky130_fd_sc_hd__mux2_1 _6387_ (
+    .A0(\registers[30] [9]),
+    .A1(_0767_),
     .S(_0008_),
-    .Y(_4605_)
+    .X(_4605_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6388_ (
-    .A(\registers[15] [22]),
-    .B(_0206_),
+  sky130_fd_sc_hd__mux2_1 _6388_ (
+    .A0(\registers[15] [22]),
+    .A1(_0206_),
     .S(_0025_),
-    .Y(_4044_)
+    .X(_4044_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6389_ (
-    .A(\registers[30] [10]),
-    .B(_0737_),
+  sky130_fd_sc_hd__mux2_1 _6389_ (
+    .A0(\registers[30] [10]),
+    .A1(_0737_),
     .S(_0008_),
-    .Y(_4575_)
+    .X(_4575_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6390_ (
-    .A(\registers[15] [23]),
-    .B(_0207_),
+  sky130_fd_sc_hd__mux2_1 _6390_ (
+    .A0(\registers[15] [23]),
+    .A1(_0207_),
     .S(_0025_),
-    .Y(_4045_)
+    .X(_4045_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6391_ (
-    .A(\registers[30] [11]),
-    .B(_0738_),
+  sky130_fd_sc_hd__mux2_1 _6391_ (
+    .A0(\registers[30] [11]),
+    .A1(_0738_),
     .S(_0008_),
-    .Y(_4576_)
+    .X(_4576_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6392_ (
-    .A(\registers[15] [24]),
-    .B(_0208_),
+  sky130_fd_sc_hd__mux2_1 _6392_ (
+    .A0(\registers[15] [24]),
+    .A1(_0208_),
     .S(_0025_),
-    .Y(_4046_)
+    .X(_4046_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6393_ (
-    .A(\registers[30] [12]),
-    .B(_0739_),
+  sky130_fd_sc_hd__mux2_1 _6393_ (
+    .A0(\registers[30] [12]),
+    .A1(_0739_),
     .S(_0008_),
-    .Y(_4577_)
+    .X(_4577_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6394_ (
-    .A(\registers[15] [25]),
-    .B(_0209_),
+  sky130_fd_sc_hd__mux2_1 _6394_ (
+    .A0(\registers[15] [25]),
+    .A1(_0209_),
     .S(_0025_),
-    .Y(_4047_)
+    .X(_4047_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6395_ (
-    .A(\registers[30] [13]),
-    .B(_0740_),
+  sky130_fd_sc_hd__mux2_1 _6395_ (
+    .A0(\registers[30] [13]),
+    .A1(_0740_),
     .S(_0008_),
-    .Y(_4578_)
+    .X(_4578_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6396_ (
-    .A(\registers[15] [26]),
-    .B(_0210_),
+  sky130_fd_sc_hd__mux2_1 _6396_ (
+    .A0(\registers[15] [26]),
+    .A1(_0210_),
     .S(_0025_),
-    .Y(_4048_)
+    .X(_4048_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6397_ (
-    .A(\registers[30] [14]),
-    .B(_0741_),
+  sky130_fd_sc_hd__mux2_1 _6397_ (
+    .A0(\registers[30] [14]),
+    .A1(_0741_),
     .S(_0008_),
-    .Y(_4579_)
+    .X(_4579_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6398_ (
-    .A(\registers[15] [27]),
-    .B(_0211_),
+  sky130_fd_sc_hd__mux2_1 _6398_ (
+    .A0(\registers[15] [27]),
+    .A1(_0211_),
     .S(_0025_),
-    .Y(_4049_)
+    .X(_4049_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6399_ (
-    .A(\registers[30] [15]),
-    .B(_0742_),
+  sky130_fd_sc_hd__mux2_1 _6399_ (
+    .A0(\registers[30] [15]),
+    .A1(_0742_),
     .S(_0008_),
-    .Y(_4580_)
+    .X(_4580_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6400_ (
-    .A(\registers[15] [28]),
-    .B(_0212_),
+  sky130_fd_sc_hd__mux2_1 _6400_ (
+    .A0(\registers[15] [28]),
+    .A1(_0212_),
     .S(_0025_),
-    .Y(_4050_)
+    .X(_4050_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6401_ (
-    .A(\registers[30] [16]),
-    .B(_0743_),
+  sky130_fd_sc_hd__mux2_1 _6401_ (
+    .A0(\registers[30] [16]),
+    .A1(_0743_),
     .S(_0008_),
-    .Y(_4581_)
+    .X(_4581_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6402_ (
-    .A(\registers[15] [29]),
-    .B(_0213_),
+  sky130_fd_sc_hd__mux2_1 _6402_ (
+    .A0(\registers[15] [29]),
+    .A1(_0213_),
     .S(_0025_),
-    .Y(_4051_)
+    .X(_4051_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6403_ (
-    .A(\registers[30] [17]),
-    .B(_0744_),
+  sky130_fd_sc_hd__mux2_1 _6403_ (
+    .A0(\registers[30] [17]),
+    .A1(_0744_),
     .S(_0008_),
-    .Y(_4582_)
+    .X(_4582_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6404_ (
-    .A(\registers[15] [30]),
-    .B(_0215_),
+  sky130_fd_sc_hd__mux2_1 _6404_ (
+    .A0(\registers[15] [30]),
+    .A1(_0215_),
     .S(_0025_),
-    .Y(_4053_)
+    .X(_4053_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6405_ (
-    .A(\registers[30] [18]),
-    .B(_0745_),
+  sky130_fd_sc_hd__mux2_1 _6405_ (
+    .A0(\registers[30] [18]),
+    .A1(_0745_),
     .S(_0008_),
-    .Y(_4583_)
+    .X(_4583_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6406_ (
-    .A(\registers[15] [31]),
-    .B(_0216_),
+  sky130_fd_sc_hd__mux2_1 _6406_ (
+    .A0(\registers[15] [31]),
+    .A1(_0216_),
     .S(_0025_),
-    .Y(_4054_)
+    .X(_4054_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6407_ (
-    .A(\registers[30] [19]),
-    .B(_0746_),
+  sky130_fd_sc_hd__mux2_1 _6407_ (
+    .A0(\registers[30] [19]),
+    .A1(_0746_),
     .S(_0008_),
-    .Y(_4584_)
+    .X(_4584_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6408_ (
-    .A(\registers[14] [1]),
-    .B(_0171_),
+  sky130_fd_sc_hd__mux2_1 _6408_ (
+    .A0(\registers[14] [1]),
+    .A1(_0171_),
     .S(_0026_),
-    .Y(_4009_)
+    .X(_4009_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6409_ (
-    .A(\registers[30] [20]),
-    .B(_0748_),
+  sky130_fd_sc_hd__mux2_1 _6409_ (
+    .A0(\registers[30] [20]),
+    .A1(_0748_),
     .S(_0008_),
-    .Y(_4586_)
+    .X(_4586_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6410_ (
-    .A(\registers[14] [2]),
-    .B(_0182_),
+  sky130_fd_sc_hd__mux2_1 _6410_ (
+    .A0(\registers[14] [2]),
+    .A1(_0182_),
     .S(_0026_),
-    .Y(_4020_)
+    .X(_4020_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6411_ (
-    .A(\registers[30] [21]),
-    .B(_0749_),
+  sky130_fd_sc_hd__mux2_1 _6411_ (
+    .A0(\registers[30] [21]),
+    .A1(_0749_),
     .S(_0008_),
-    .Y(_4587_)
+    .X(_4587_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6412_ (
-    .A(\registers[14] [3]),
-    .B(_0185_),
+  sky130_fd_sc_hd__mux2_1 _6412_ (
+    .A0(\registers[14] [3]),
+    .A1(_0185_),
     .S(_0026_),
-    .Y(_4023_)
+    .X(_4023_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6413_ (
-    .A(\registers[30] [22]),
-    .B(_0750_),
+  sky130_fd_sc_hd__mux2_1 _6413_ (
+    .A0(\registers[30] [22]),
+    .A1(_0750_),
     .S(_0008_),
-    .Y(_4588_)
+    .X(_4588_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6414_ (
-    .A(\registers[14] [4]),
-    .B(_0186_),
+  sky130_fd_sc_hd__mux2_1 _6414_ (
+    .A0(\registers[14] [4]),
+    .A1(_0186_),
     .S(_0026_),
-    .Y(_4024_)
+    .X(_4024_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6415_ (
-    .A(\registers[30] [23]),
-    .B(_0751_),
+  sky130_fd_sc_hd__mux2_1 _6415_ (
+    .A0(\registers[30] [23]),
+    .A1(_0751_),
     .S(_0008_),
-    .Y(_4589_)
+    .X(_4589_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6416_ (
-    .A(\registers[14] [5]),
-    .B(_0187_),
+  sky130_fd_sc_hd__mux2_1 _6416_ (
+    .A0(\registers[14] [5]),
+    .A1(_0187_),
     .S(_0026_),
-    .Y(_4025_)
+    .X(_4025_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6417_ (
-    .A(\registers[30] [24]),
-    .B(_0752_),
+  sky130_fd_sc_hd__mux2_1 _6417_ (
+    .A0(\registers[30] [24]),
+    .A1(_0752_),
     .S(_0008_),
-    .Y(_4590_)
+    .X(_4590_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6418_ (
-    .A(\registers[14] [6]),
-    .B(_0188_),
+  sky130_fd_sc_hd__mux2_1 _6418_ (
+    .A0(\registers[14] [6]),
+    .A1(_0188_),
     .S(_0026_),
-    .Y(_4026_)
+    .X(_4026_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6419_ (
-    .A(\registers[30] [25]),
-    .B(_0753_),
+  sky130_fd_sc_hd__mux2_1 _6419_ (
+    .A0(\registers[30] [25]),
+    .A1(_0753_),
     .S(_0008_),
-    .Y(_4591_)
+    .X(_4591_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6420_ (
-    .A(\registers[14] [7]),
-    .B(_0189_),
+  sky130_fd_sc_hd__mux2_1 _6420_ (
+    .A0(\registers[14] [7]),
+    .A1(_0189_),
     .S(_0026_),
-    .Y(_4027_)
+    .X(_4027_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6421_ (
-    .A(\registers[30] [26]),
-    .B(_0754_),
+  sky130_fd_sc_hd__mux2_1 _6421_ (
+    .A0(\registers[30] [26]),
+    .A1(_0754_),
     .S(_0008_),
-    .Y(_4592_)
+    .X(_4592_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6422_ (
-    .A(\registers[14] [8]),
-    .B(_0190_),
+  sky130_fd_sc_hd__mux2_1 _6422_ (
+    .A0(\registers[14] [8]),
+    .A1(_0190_),
     .S(_0026_),
-    .Y(_4028_)
+    .X(_4028_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6423_ (
-    .A(\registers[30] [27]),
-    .B(_0755_),
+  sky130_fd_sc_hd__mux2_1 _6423_ (
+    .A0(\registers[30] [27]),
+    .A1(_0755_),
     .S(_0008_),
-    .Y(_4593_)
+    .X(_4593_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6424_ (
-    .A(\registers[14] [9]),
-    .B(_0191_),
+  sky130_fd_sc_hd__mux2_1 _6424_ (
+    .A0(\registers[14] [9]),
+    .A1(_0191_),
     .S(_0026_),
-    .Y(_4029_)
+    .X(_4029_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6425_ (
-    .A(\registers[30] [28]),
-    .B(_0756_),
+  sky130_fd_sc_hd__mux2_1 _6425_ (
+    .A0(\registers[30] [28]),
+    .A1(_0756_),
     .S(_0008_),
-    .Y(_4594_)
+    .X(_4594_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6426_ (
-    .A(\registers[14] [10]),
-    .B(_0161_),
+  sky130_fd_sc_hd__mux2_1 _6426_ (
+    .A0(\registers[14] [10]),
+    .A1(_0161_),
     .S(_0026_),
-    .Y(_3999_)
+    .X(_3999_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6427_ (
-    .A(\registers[30] [29]),
-    .B(_0757_),
+  sky130_fd_sc_hd__mux2_1 _6427_ (
+    .A0(\registers[30] [29]),
+    .A1(_0757_),
     .S(_0008_),
-    .Y(_4595_)
+    .X(_4595_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6428_ (
-    .A(\registers[14] [11]),
-    .B(_0162_),
+  sky130_fd_sc_hd__mux2_1 _6428_ (
+    .A0(\registers[14] [11]),
+    .A1(_0162_),
     .S(_0026_),
-    .Y(_4000_)
+    .X(_4000_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6429_ (
-    .A(\registers[30] [30]),
-    .B(_0759_),
+  sky130_fd_sc_hd__mux2_1 _6429_ (
+    .A0(\registers[30] [30]),
+    .A1(_0759_),
     .S(_0008_),
-    .Y(_4597_)
+    .X(_4597_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6430_ (
-    .A(\registers[14] [12]),
-    .B(_0163_),
+  sky130_fd_sc_hd__mux2_1 _6430_ (
+    .A0(\registers[14] [12]),
+    .A1(_0163_),
     .S(_0026_),
-    .Y(_4001_)
+    .X(_4001_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6431_ (
-    .A(\registers[30] [31]),
-    .B(_0760_),
+  sky130_fd_sc_hd__mux2_1 _6431_ (
+    .A0(\registers[30] [31]),
+    .A1(_0760_),
     .S(_0008_),
-    .Y(_4598_)
+    .X(_4598_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6432_ (
-    .A(\registers[14] [13]),
-    .B(_0164_),
+  sky130_fd_sc_hd__mux2_1 _6432_ (
+    .A0(\registers[14] [13]),
+    .A1(_0164_),
     .S(_0026_),
-    .Y(_4002_)
+    .X(_4002_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6433_ (
-    .A(\registers[2] [1]),
-    .B(_0715_),
+  sky130_fd_sc_hd__mux2_1 _6433_ (
+    .A0(\registers[2] [1]),
+    .A1(_0715_),
     .S(_0009_),
-    .Y(_4553_)
+    .X(_4553_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6434_ (
-    .A(\registers[14] [14]),
-    .B(_0165_),
+  sky130_fd_sc_hd__mux2_1 _6434_ (
+    .A0(\registers[14] [14]),
+    .A1(_0165_),
     .S(_0026_),
-    .Y(_4003_)
+    .X(_4003_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6435_ (
-    .A(\registers[2] [2]),
-    .B(_0726_),
+  sky130_fd_sc_hd__mux2_1 _6435_ (
+    .A0(\registers[2] [2]),
+    .A1(_0726_),
     .S(_0009_),
-    .Y(_4564_)
+    .X(_4564_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6436_ (
-    .A(\registers[14] [15]),
-    .B(_0166_),
+  sky130_fd_sc_hd__mux2_1 _6436_ (
+    .A0(\registers[14] [15]),
+    .A1(_0166_),
     .S(_0026_),
-    .Y(_4004_)
+    .X(_4004_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6437_ (
-    .A(\registers[2] [3]),
-    .B(_0729_),
+  sky130_fd_sc_hd__mux2_1 _6437_ (
+    .A0(\registers[2] [3]),
+    .A1(_0729_),
     .S(_0009_),
-    .Y(_4567_)
+    .X(_4567_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6438_ (
-    .A(\registers[14] [16]),
-    .B(_0167_),
+  sky130_fd_sc_hd__mux2_1 _6438_ (
+    .A0(\registers[14] [16]),
+    .A1(_0167_),
     .S(_0026_),
-    .Y(_4005_)
+    .X(_4005_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6439_ (
-    .A(\registers[2] [4]),
-    .B(_0730_),
+  sky130_fd_sc_hd__mux2_1 _6439_ (
+    .A0(\registers[2] [4]),
+    .A1(_0730_),
     .S(_0009_),
-    .Y(_4568_)
+    .X(_4568_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6440_ (
-    .A(\registers[14] [17]),
-    .B(_0168_),
+  sky130_fd_sc_hd__mux2_1 _6440_ (
+    .A0(\registers[14] [17]),
+    .A1(_0168_),
     .S(_0026_),
-    .Y(_4006_)
+    .X(_4006_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6441_ (
-    .A(\registers[2] [5]),
-    .B(_0731_),
+  sky130_fd_sc_hd__mux2_1 _6441_ (
+    .A0(\registers[2] [5]),
+    .A1(_0731_),
     .S(_0009_),
-    .Y(_4569_)
+    .X(_4569_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6442_ (
-    .A(\registers[14] [18]),
-    .B(_0169_),
+  sky130_fd_sc_hd__mux2_1 _6442_ (
+    .A0(\registers[14] [18]),
+    .A1(_0169_),
     .S(_0026_),
-    .Y(_4007_)
+    .X(_4007_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6443_ (
-    .A(\registers[2] [6]),
-    .B(_0732_),
+  sky130_fd_sc_hd__mux2_1 _6443_ (
+    .A0(\registers[2] [6]),
+    .A1(_0732_),
     .S(_0009_),
-    .Y(_4570_)
+    .X(_4570_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6444_ (
-    .A(\registers[14] [19]),
-    .B(_0170_),
+  sky130_fd_sc_hd__mux2_1 _6444_ (
+    .A0(\registers[14] [19]),
+    .A1(_0170_),
     .S(_0026_),
-    .Y(_4008_)
+    .X(_4008_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6445_ (
-    .A(\registers[2] [7]),
-    .B(_0733_),
+  sky130_fd_sc_hd__mux2_1 _6445_ (
+    .A0(\registers[2] [7]),
+    .A1(_0733_),
     .S(_0009_),
-    .Y(_4571_)
+    .X(_4571_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6446_ (
-    .A(\registers[14] [20]),
-    .B(_0172_),
+  sky130_fd_sc_hd__mux2_1 _6446_ (
+    .A0(\registers[14] [20]),
+    .A1(_0172_),
     .S(_0026_),
-    .Y(_4010_)
+    .X(_4010_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6447_ (
-    .A(\registers[2] [8]),
-    .B(_0734_),
+  sky130_fd_sc_hd__mux2_1 _6447_ (
+    .A0(\registers[2] [8]),
+    .A1(_0734_),
     .S(_0009_),
-    .Y(_4572_)
+    .X(_4572_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6448_ (
-    .A(\registers[14] [21]),
-    .B(_0173_),
+  sky130_fd_sc_hd__mux2_1 _6448_ (
+    .A0(\registers[14] [21]),
+    .A1(_0173_),
     .S(_0026_),
-    .Y(_4011_)
+    .X(_4011_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6449_ (
-    .A(\registers[2] [9]),
-    .B(_0735_),
+  sky130_fd_sc_hd__mux2_1 _6449_ (
+    .A0(\registers[2] [9]),
+    .A1(_0735_),
     .S(_0009_),
-    .Y(_4573_)
+    .X(_4573_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6450_ (
-    .A(\registers[14] [22]),
-    .B(_0174_),
+  sky130_fd_sc_hd__mux2_1 _6450_ (
+    .A0(\registers[14] [22]),
+    .A1(_0174_),
     .S(_0026_),
-    .Y(_4012_)
+    .X(_4012_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6451_ (
-    .A(\registers[2] [10]),
-    .B(_0705_),
+  sky130_fd_sc_hd__mux2_1 _6451_ (
+    .A0(\registers[2] [10]),
+    .A1(_0705_),
     .S(_0009_),
-    .Y(_4543_)
+    .X(_4543_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6452_ (
-    .A(\registers[14] [23]),
-    .B(_0175_),
+  sky130_fd_sc_hd__mux2_1 _6452_ (
+    .A0(\registers[14] [23]),
+    .A1(_0175_),
     .S(_0026_),
-    .Y(_4013_)
+    .X(_4013_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6453_ (
-    .A(\registers[2] [11]),
-    .B(_0706_),
+  sky130_fd_sc_hd__mux2_1 _6453_ (
+    .A0(\registers[2] [11]),
+    .A1(_0706_),
     .S(_0009_),
-    .Y(_4544_)
+    .X(_4544_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6454_ (
-    .A(\registers[14] [24]),
-    .B(_0176_),
+  sky130_fd_sc_hd__mux2_1 _6454_ (
+    .A0(\registers[14] [24]),
+    .A1(_0176_),
     .S(_0026_),
-    .Y(_4014_)
+    .X(_4014_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6455_ (
-    .A(\registers[2] [12]),
-    .B(_0707_),
+  sky130_fd_sc_hd__mux2_1 _6455_ (
+    .A0(\registers[2] [12]),
+    .A1(_0707_),
     .S(_0009_),
-    .Y(_4545_)
+    .X(_4545_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6456_ (
-    .A(\registers[14] [25]),
-    .B(_0177_),
+  sky130_fd_sc_hd__mux2_1 _6456_ (
+    .A0(\registers[14] [25]),
+    .A1(_0177_),
     .S(_0026_),
-    .Y(_4015_)
+    .X(_4015_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6457_ (
-    .A(\registers[2] [13]),
-    .B(_0708_),
+  sky130_fd_sc_hd__mux2_1 _6457_ (
+    .A0(\registers[2] [13]),
+    .A1(_0708_),
     .S(_0009_),
-    .Y(_4546_)
+    .X(_4546_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6458_ (
-    .A(\registers[14] [26]),
-    .B(_0178_),
+  sky130_fd_sc_hd__mux2_1 _6458_ (
+    .A0(\registers[14] [26]),
+    .A1(_0178_),
     .S(_0026_),
-    .Y(_4016_)
+    .X(_4016_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6459_ (
-    .A(\registers[2] [14]),
-    .B(_0709_),
+  sky130_fd_sc_hd__mux2_1 _6459_ (
+    .A0(\registers[2] [14]),
+    .A1(_0709_),
     .S(_0009_),
-    .Y(_4547_)
+    .X(_4547_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6460_ (
-    .A(\registers[14] [27]),
-    .B(_0179_),
+  sky130_fd_sc_hd__mux2_1 _6460_ (
+    .A0(\registers[14] [27]),
+    .A1(_0179_),
     .S(_0026_),
-    .Y(_4017_)
+    .X(_4017_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6461_ (
-    .A(\registers[2] [15]),
-    .B(_0710_),
+  sky130_fd_sc_hd__mux2_1 _6461_ (
+    .A0(\registers[2] [15]),
+    .A1(_0710_),
     .S(_0009_),
-    .Y(_4548_)
+    .X(_4548_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6462_ (
-    .A(\registers[14] [28]),
-    .B(_0180_),
+  sky130_fd_sc_hd__mux2_1 _6462_ (
+    .A0(\registers[14] [28]),
+    .A1(_0180_),
     .S(_0026_),
-    .Y(_4018_)
+    .X(_4018_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6463_ (
-    .A(\registers[2] [16]),
-    .B(_0711_),
+  sky130_fd_sc_hd__mux2_1 _6463_ (
+    .A0(\registers[2] [16]),
+    .A1(_0711_),
     .S(_0009_),
-    .Y(_4549_)
+    .X(_4549_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6464_ (
-    .A(\registers[14] [29]),
-    .B(_0181_),
+  sky130_fd_sc_hd__mux2_1 _6464_ (
+    .A0(\registers[14] [29]),
+    .A1(_0181_),
     .S(_0026_),
-    .Y(_4019_)
+    .X(_4019_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6465_ (
-    .A(\registers[2] [17]),
-    .B(_0712_),
+  sky130_fd_sc_hd__mux2_1 _6465_ (
+    .A0(\registers[2] [17]),
+    .A1(_0712_),
     .S(_0009_),
-    .Y(_4550_)
+    .X(_4550_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6466_ (
-    .A(\registers[14] [30]),
-    .B(_0183_),
+  sky130_fd_sc_hd__mux2_1 _6466_ (
+    .A0(\registers[14] [30]),
+    .A1(_0183_),
     .S(_0026_),
-    .Y(_4021_)
+    .X(_4021_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6467_ (
-    .A(\registers[2] [18]),
-    .B(_0713_),
+  sky130_fd_sc_hd__mux2_1 _6467_ (
+    .A0(\registers[2] [18]),
+    .A1(_0713_),
     .S(_0009_),
-    .Y(_4551_)
+    .X(_4551_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6468_ (
-    .A(\registers[14] [31]),
-    .B(_0184_),
+  sky130_fd_sc_hd__mux2_1 _6468_ (
+    .A0(\registers[14] [31]),
+    .A1(_0184_),
     .S(_0026_),
-    .Y(_4022_)
+    .X(_4022_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6469_ (
-    .A(\registers[2] [19]),
-    .B(_0714_),
+  sky130_fd_sc_hd__mux2_1 _6469_ (
+    .A0(\registers[2] [19]),
+    .A1(_0714_),
     .S(_0009_),
-    .Y(_4552_)
+    .X(_4552_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6470_ (
-    .A(\registers[13] [1]),
-    .B(_0139_),
+  sky130_fd_sc_hd__mux2_1 _6470_ (
+    .A0(\registers[13] [1]),
+    .A1(_0139_),
     .S(_0027_),
-    .Y(_3977_)
+    .X(_3977_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6471_ (
-    .A(\registers[2] [20]),
-    .B(_0716_),
+  sky130_fd_sc_hd__mux2_1 _6471_ (
+    .A0(\registers[2] [20]),
+    .A1(_0716_),
     .S(_0009_),
-    .Y(_4554_)
+    .X(_4554_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6472_ (
-    .A(\registers[13] [2]),
-    .B(_0150_),
+  sky130_fd_sc_hd__mux2_1 _6472_ (
+    .A0(\registers[13] [2]),
+    .A1(_0150_),
     .S(_0027_),
-    .Y(_3988_)
+    .X(_3988_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6473_ (
-    .A(\registers[2] [21]),
-    .B(_0717_),
+  sky130_fd_sc_hd__mux2_1 _6473_ (
+    .A0(\registers[2] [21]),
+    .A1(_0717_),
     .S(_0009_),
-    .Y(_4555_)
+    .X(_4555_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6474_ (
-    .A(\registers[13] [3]),
-    .B(_0153_),
+  sky130_fd_sc_hd__mux2_1 _6474_ (
+    .A0(\registers[13] [3]),
+    .A1(_0153_),
     .S(_0027_),
-    .Y(_3991_)
+    .X(_3991_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6475_ (
-    .A(\registers[2] [22]),
-    .B(_0718_),
+  sky130_fd_sc_hd__mux2_1 _6475_ (
+    .A0(\registers[2] [22]),
+    .A1(_0718_),
     .S(_0009_),
-    .Y(_4556_)
+    .X(_4556_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6476_ (
-    .A(\registers[13] [4]),
-    .B(_0154_),
+  sky130_fd_sc_hd__mux2_1 _6476_ (
+    .A0(\registers[13] [4]),
+    .A1(_0154_),
     .S(_0027_),
-    .Y(_3992_)
+    .X(_3992_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6477_ (
-    .A(\registers[2] [23]),
-    .B(_0719_),
+  sky130_fd_sc_hd__mux2_1 _6477_ (
+    .A0(\registers[2] [23]),
+    .A1(_0719_),
     .S(_0009_),
-    .Y(_4557_)
+    .X(_4557_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6478_ (
-    .A(\registers[13] [5]),
-    .B(_0155_),
+  sky130_fd_sc_hd__mux2_1 _6478_ (
+    .A0(\registers[13] [5]),
+    .A1(_0155_),
     .S(_0027_),
-    .Y(_3993_)
+    .X(_3993_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6479_ (
-    .A(\registers[2] [24]),
-    .B(_0720_),
+  sky130_fd_sc_hd__mux2_1 _6479_ (
+    .A0(\registers[2] [24]),
+    .A1(_0720_),
     .S(_0009_),
-    .Y(_4558_)
+    .X(_4558_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6480_ (
-    .A(\registers[13] [6]),
-    .B(_0156_),
+  sky130_fd_sc_hd__mux2_1 _6480_ (
+    .A0(\registers[13] [6]),
+    .A1(_0156_),
     .S(_0027_),
-    .Y(_3994_)
+    .X(_3994_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6481_ (
-    .A(\registers[2] [25]),
-    .B(_0721_),
+  sky130_fd_sc_hd__mux2_1 _6481_ (
+    .A0(\registers[2] [25]),
+    .A1(_0721_),
     .S(_0009_),
-    .Y(_4559_)
+    .X(_4559_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6482_ (
-    .A(\registers[13] [7]),
-    .B(_0157_),
+  sky130_fd_sc_hd__mux2_1 _6482_ (
+    .A0(\registers[13] [7]),
+    .A1(_0157_),
     .S(_0027_),
-    .Y(_3995_)
+    .X(_3995_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6483_ (
-    .A(\registers[2] [26]),
-    .B(_0722_),
+  sky130_fd_sc_hd__mux2_1 _6483_ (
+    .A0(\registers[2] [26]),
+    .A1(_0722_),
     .S(_0009_),
-    .Y(_4560_)
+    .X(_4560_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6484_ (
-    .A(\registers[13] [8]),
-    .B(_0158_),
+  sky130_fd_sc_hd__mux2_1 _6484_ (
+    .A0(\registers[13] [8]),
+    .A1(_0158_),
     .S(_0027_),
-    .Y(_3996_)
+    .X(_3996_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6485_ (
-    .A(\registers[2] [27]),
-    .B(_0723_),
+  sky130_fd_sc_hd__mux2_1 _6485_ (
+    .A0(\registers[2] [27]),
+    .A1(_0723_),
     .S(_0009_),
-    .Y(_4561_)
+    .X(_4561_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6486_ (
-    .A(\registers[13] [9]),
-    .B(_0159_),
+  sky130_fd_sc_hd__mux2_1 _6486_ (
+    .A0(\registers[13] [9]),
+    .A1(_0159_),
     .S(_0027_),
-    .Y(_3997_)
+    .X(_3997_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6487_ (
-    .A(\registers[2] [28]),
-    .B(_0724_),
+  sky130_fd_sc_hd__mux2_1 _6487_ (
+    .A0(\registers[2] [28]),
+    .A1(_0724_),
     .S(_0009_),
-    .Y(_4562_)
+    .X(_4562_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6488_ (
-    .A(\registers[13] [10]),
-    .B(_0129_),
+  sky130_fd_sc_hd__mux2_1 _6488_ (
+    .A0(\registers[13] [10]),
+    .A1(_0129_),
     .S(_0027_),
-    .Y(_3967_)
+    .X(_3967_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6489_ (
-    .A(\registers[2] [29]),
-    .B(_0725_),
+  sky130_fd_sc_hd__mux2_1 _6489_ (
+    .A0(\registers[2] [29]),
+    .A1(_0725_),
     .S(_0009_),
-    .Y(_4563_)
+    .X(_4563_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6490_ (
-    .A(\registers[13] [11]),
-    .B(_0130_),
+  sky130_fd_sc_hd__mux2_1 _6490_ (
+    .A0(\registers[13] [11]),
+    .A1(_0130_),
     .S(_0027_),
-    .Y(_3968_)
+    .X(_3968_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6491_ (
-    .A(\registers[2] [30]),
-    .B(_0727_),
+  sky130_fd_sc_hd__mux2_1 _6491_ (
+    .A0(\registers[2] [30]),
+    .A1(_0727_),
     .S(_0009_),
-    .Y(_4565_)
+    .X(_4565_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6492_ (
-    .A(\registers[13] [12]),
-    .B(_0131_),
+  sky130_fd_sc_hd__mux2_1 _6492_ (
+    .A0(\registers[13] [12]),
+    .A1(_0131_),
     .S(_0027_),
-    .Y(_3969_)
+    .X(_3969_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6493_ (
-    .A(\registers[2] [31]),
-    .B(_0728_),
+  sky130_fd_sc_hd__mux2_1 _6493_ (
+    .A0(\registers[2] [31]),
+    .A1(_0728_),
     .S(_0009_),
-    .Y(_4566_)
+    .X(_4566_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6494_ (
-    .A(\registers[13] [13]),
-    .B(_0132_),
+  sky130_fd_sc_hd__mux2_1 _6494_ (
+    .A0(\registers[13] [13]),
+    .A1(_0132_),
     .S(_0027_),
-    .Y(_3970_)
+    .X(_3970_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6495_ (
-    .A(\registers[29] [1]),
-    .B(_0683_),
+  sky130_fd_sc_hd__mux2_1 _6495_ (
+    .A0(\registers[29] [1]),
+    .A1(_0683_),
     .S(_0010_),
-    .Y(_4521_)
+    .X(_4521_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6496_ (
-    .A(\registers[13] [14]),
-    .B(_0133_),
+  sky130_fd_sc_hd__mux2_1 _6496_ (
+    .A0(\registers[13] [14]),
+    .A1(_0133_),
     .S(_0027_),
-    .Y(_3971_)
+    .X(_3971_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6497_ (
-    .A(\registers[29] [2]),
-    .B(_0694_),
+  sky130_fd_sc_hd__mux2_1 _6497_ (
+    .A0(\registers[29] [2]),
+    .A1(_0694_),
     .S(_0010_),
-    .Y(_4532_)
+    .X(_4532_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6498_ (
-    .A(\registers[13] [15]),
-    .B(_0134_),
+  sky130_fd_sc_hd__mux2_1 _6498_ (
+    .A0(\registers[13] [15]),
+    .A1(_0134_),
     .S(_0027_),
-    .Y(_3972_)
+    .X(_3972_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6499_ (
-    .A(\registers[29] [3]),
-    .B(_0697_),
+  sky130_fd_sc_hd__mux2_1 _6499_ (
+    .A0(\registers[29] [3]),
+    .A1(_0697_),
     .S(_0010_),
-    .Y(_4535_)
+    .X(_4535_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6500_ (
-    .A(\registers[13] [16]),
-    .B(_0135_),
+  sky130_fd_sc_hd__mux2_1 _6500_ (
+    .A0(\registers[13] [16]),
+    .A1(_0135_),
     .S(_0027_),
-    .Y(_3973_)
+    .X(_3973_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6501_ (
-    .A(\registers[29] [4]),
-    .B(_0698_),
+  sky130_fd_sc_hd__mux2_1 _6501_ (
+    .A0(\registers[29] [4]),
+    .A1(_0698_),
     .S(_0010_),
-    .Y(_4536_)
+    .X(_4536_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6502_ (
-    .A(\registers[13] [17]),
-    .B(_0136_),
+  sky130_fd_sc_hd__mux2_1 _6502_ (
+    .A0(\registers[13] [17]),
+    .A1(_0136_),
     .S(_0027_),
-    .Y(_3974_)
+    .X(_3974_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6503_ (
-    .A(\registers[29] [5]),
-    .B(_0699_),
+  sky130_fd_sc_hd__mux2_1 _6503_ (
+    .A0(\registers[29] [5]),
+    .A1(_0699_),
     .S(_0010_),
-    .Y(_4537_)
+    .X(_4537_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6504_ (
-    .A(\registers[13] [18]),
-    .B(_0137_),
+  sky130_fd_sc_hd__mux2_1 _6504_ (
+    .A0(\registers[13] [18]),
+    .A1(_0137_),
     .S(_0027_),
-    .Y(_3975_)
+    .X(_3975_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6505_ (
-    .A(\registers[29] [6]),
-    .B(_0700_),
+  sky130_fd_sc_hd__mux2_1 _6505_ (
+    .A0(\registers[29] [6]),
+    .A1(_0700_),
     .S(_0010_),
-    .Y(_4538_)
+    .X(_4538_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6506_ (
-    .A(\registers[13] [19]),
-    .B(_0138_),
+  sky130_fd_sc_hd__mux2_1 _6506_ (
+    .A0(\registers[13] [19]),
+    .A1(_0138_),
     .S(_0027_),
-    .Y(_3976_)
+    .X(_3976_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6507_ (
-    .A(\registers[29] [7]),
-    .B(_0701_),
+  sky130_fd_sc_hd__mux2_1 _6507_ (
+    .A0(\registers[29] [7]),
+    .A1(_0701_),
     .S(_0010_),
-    .Y(_4539_)
+    .X(_4539_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6508_ (
-    .A(\registers[13] [20]),
-    .B(_0140_),
+  sky130_fd_sc_hd__mux2_1 _6508_ (
+    .A0(\registers[13] [20]),
+    .A1(_0140_),
     .S(_0027_),
-    .Y(_3978_)
+    .X(_3978_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6509_ (
-    .A(\registers[29] [8]),
-    .B(_0702_),
+  sky130_fd_sc_hd__mux2_1 _6509_ (
+    .A0(\registers[29] [8]),
+    .A1(_0702_),
     .S(_0010_),
-    .Y(_4540_)
+    .X(_4540_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6510_ (
-    .A(\registers[13] [21]),
-    .B(_0141_),
+  sky130_fd_sc_hd__mux2_1 _6510_ (
+    .A0(\registers[13] [21]),
+    .A1(_0141_),
     .S(_0027_),
-    .Y(_3979_)
+    .X(_3979_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6511_ (
-    .A(\registers[29] [9]),
-    .B(_0703_),
+  sky130_fd_sc_hd__mux2_1 _6511_ (
+    .A0(\registers[29] [9]),
+    .A1(_0703_),
     .S(_0010_),
-    .Y(_4541_)
+    .X(_4541_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6512_ (
-    .A(\registers[13] [22]),
-    .B(_0142_),
+  sky130_fd_sc_hd__mux2_1 _6512_ (
+    .A0(\registers[13] [22]),
+    .A1(_0142_),
     .S(_0027_),
-    .Y(_3980_)
+    .X(_3980_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6513_ (
-    .A(\registers[29] [10]),
-    .B(_0673_),
+  sky130_fd_sc_hd__mux2_1 _6513_ (
+    .A0(\registers[29] [10]),
+    .A1(_0673_),
     .S(_0010_),
-    .Y(_4511_)
+    .X(_4511_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6514_ (
-    .A(\registers[13] [23]),
-    .B(_0143_),
+  sky130_fd_sc_hd__mux2_1 _6514_ (
+    .A0(\registers[13] [23]),
+    .A1(_0143_),
     .S(_0027_),
-    .Y(_3981_)
+    .X(_3981_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6515_ (
-    .A(\registers[29] [11]),
-    .B(_0674_),
+  sky130_fd_sc_hd__mux2_1 _6515_ (
+    .A0(\registers[29] [11]),
+    .A1(_0674_),
     .S(_0010_),
-    .Y(_4512_)
+    .X(_4512_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6516_ (
-    .A(\registers[13] [24]),
-    .B(_0144_),
+  sky130_fd_sc_hd__mux2_1 _6516_ (
+    .A0(\registers[13] [24]),
+    .A1(_0144_),
     .S(_0027_),
-    .Y(_3982_)
+    .X(_3982_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6517_ (
-    .A(\registers[29] [12]),
-    .B(_0675_),
+  sky130_fd_sc_hd__mux2_1 _6517_ (
+    .A0(\registers[29] [12]),
+    .A1(_0675_),
     .S(_0010_),
-    .Y(_4513_)
+    .X(_4513_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6518_ (
-    .A(\registers[13] [25]),
-    .B(_0145_),
+  sky130_fd_sc_hd__mux2_1 _6518_ (
+    .A0(\registers[13] [25]),
+    .A1(_0145_),
     .S(_0027_),
-    .Y(_3983_)
+    .X(_3983_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6519_ (
-    .A(\registers[29] [13]),
-    .B(_0676_),
+  sky130_fd_sc_hd__mux2_1 _6519_ (
+    .A0(\registers[29] [13]),
+    .A1(_0676_),
     .S(_0010_),
-    .Y(_4514_)
+    .X(_4514_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6520_ (
-    .A(\registers[13] [26]),
-    .B(_0146_),
+  sky130_fd_sc_hd__mux2_1 _6520_ (
+    .A0(\registers[13] [26]),
+    .A1(_0146_),
     .S(_0027_),
-    .Y(_3984_)
+    .X(_3984_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6521_ (
-    .A(\registers[29] [14]),
-    .B(_0677_),
+  sky130_fd_sc_hd__mux2_1 _6521_ (
+    .A0(\registers[29] [14]),
+    .A1(_0677_),
     .S(_0010_),
-    .Y(_4515_)
+    .X(_4515_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6522_ (
-    .A(\registers[13] [27]),
-    .B(_0147_),
+  sky130_fd_sc_hd__mux2_1 _6522_ (
+    .A0(\registers[13] [27]),
+    .A1(_0147_),
     .S(_0027_),
-    .Y(_3985_)
+    .X(_3985_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6523_ (
-    .A(\registers[29] [15]),
-    .B(_0678_),
+  sky130_fd_sc_hd__mux2_1 _6523_ (
+    .A0(\registers[29] [15]),
+    .A1(_0678_),
     .S(_0010_),
-    .Y(_4516_)
+    .X(_4516_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6524_ (
-    .A(\registers[13] [28]),
-    .B(_0148_),
+  sky130_fd_sc_hd__mux2_1 _6524_ (
+    .A0(\registers[13] [28]),
+    .A1(_0148_),
     .S(_0027_),
-    .Y(_3986_)
+    .X(_3986_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6525_ (
-    .A(\registers[29] [16]),
-    .B(_0679_),
+  sky130_fd_sc_hd__mux2_1 _6525_ (
+    .A0(\registers[29] [16]),
+    .A1(_0679_),
     .S(_0010_),
-    .Y(_4517_)
+    .X(_4517_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6526_ (
-    .A(\registers[13] [29]),
-    .B(_0149_),
+  sky130_fd_sc_hd__mux2_1 _6526_ (
+    .A0(\registers[13] [29]),
+    .A1(_0149_),
     .S(_0027_),
-    .Y(_3987_)
+    .X(_3987_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6527_ (
-    .A(\registers[29] [17]),
-    .B(_0680_),
+  sky130_fd_sc_hd__mux2_1 _6527_ (
+    .A0(\registers[29] [17]),
+    .A1(_0680_),
     .S(_0010_),
-    .Y(_4518_)
+    .X(_4518_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6528_ (
-    .A(\registers[13] [30]),
-    .B(_0151_),
+  sky130_fd_sc_hd__mux2_1 _6528_ (
+    .A0(\registers[13] [30]),
+    .A1(_0151_),
     .S(_0027_),
-    .Y(_3989_)
+    .X(_3989_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6529_ (
-    .A(\registers[29] [18]),
-    .B(_0681_),
+  sky130_fd_sc_hd__mux2_1 _6529_ (
+    .A0(\registers[29] [18]),
+    .A1(_0681_),
     .S(_0010_),
-    .Y(_4519_)
+    .X(_4519_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6530_ (
-    .A(\registers[13] [31]),
-    .B(_0152_),
+  sky130_fd_sc_hd__mux2_1 _6530_ (
+    .A0(\registers[13] [31]),
+    .A1(_0152_),
     .S(_0027_),
-    .Y(_3990_)
+    .X(_3990_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6531_ (
-    .A(\registers[29] [19]),
-    .B(_0682_),
+  sky130_fd_sc_hd__mux2_1 _6531_ (
+    .A0(\registers[29] [19]),
+    .A1(_0682_),
     .S(_0010_),
-    .Y(_4520_)
+    .X(_4520_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6532_ (
-    .A(\registers[12] [1]),
-    .B(_0107_),
+  sky130_fd_sc_hd__mux2_1 _6532_ (
+    .A0(\registers[12] [1]),
+    .A1(_0107_),
     .S(_0028_),
-    .Y(_3945_)
+    .X(_3945_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6533_ (
-    .A(\registers[29] [20]),
-    .B(_0684_),
+  sky130_fd_sc_hd__mux2_1 _6533_ (
+    .A0(\registers[29] [20]),
+    .A1(_0684_),
     .S(_0010_),
-    .Y(_4522_)
+    .X(_4522_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6534_ (
-    .A(\registers[12] [2]),
-    .B(_0118_),
+  sky130_fd_sc_hd__mux2_1 _6534_ (
+    .A0(\registers[12] [2]),
+    .A1(_0118_),
     .S(_0028_),
-    .Y(_3956_)
+    .X(_3956_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6535_ (
-    .A(\registers[29] [21]),
-    .B(_0685_),
+  sky130_fd_sc_hd__mux2_1 _6535_ (
+    .A0(\registers[29] [21]),
+    .A1(_0685_),
     .S(_0010_),
-    .Y(_4523_)
+    .X(_4523_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6536_ (
-    .A(\registers[12] [3]),
-    .B(_0121_),
+  sky130_fd_sc_hd__mux2_1 _6536_ (
+    .A0(\registers[12] [3]),
+    .A1(_0121_),
     .S(_0028_),
-    .Y(_3959_)
+    .X(_3959_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6537_ (
-    .A(\registers[29] [22]),
-    .B(_0686_),
+  sky130_fd_sc_hd__mux2_1 _6537_ (
+    .A0(\registers[29] [22]),
+    .A1(_0686_),
     .S(_0010_),
-    .Y(_4524_)
+    .X(_4524_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6538_ (
-    .A(\registers[12] [4]),
-    .B(_0122_),
+  sky130_fd_sc_hd__mux2_1 _6538_ (
+    .A0(\registers[12] [4]),
+    .A1(_0122_),
     .S(_0028_),
-    .Y(_3960_)
+    .X(_3960_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6539_ (
-    .A(\registers[29] [23]),
-    .B(_0687_),
+  sky130_fd_sc_hd__mux2_1 _6539_ (
+    .A0(\registers[29] [23]),
+    .A1(_0687_),
     .S(_0010_),
-    .Y(_4525_)
+    .X(_4525_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6540_ (
-    .A(\registers[12] [5]),
-    .B(_0123_),
+  sky130_fd_sc_hd__mux2_1 _6540_ (
+    .A0(\registers[12] [5]),
+    .A1(_0123_),
     .S(_0028_),
-    .Y(_3961_)
+    .X(_3961_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6541_ (
-    .A(\registers[29] [24]),
-    .B(_0688_),
+  sky130_fd_sc_hd__mux2_1 _6541_ (
+    .A0(\registers[29] [24]),
+    .A1(_0688_),
     .S(_0010_),
-    .Y(_4526_)
+    .X(_4526_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6542_ (
-    .A(\registers[12] [6]),
-    .B(_0124_),
+  sky130_fd_sc_hd__mux2_1 _6542_ (
+    .A0(\registers[12] [6]),
+    .A1(_0124_),
     .S(_0028_),
-    .Y(_3962_)
+    .X(_3962_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6543_ (
-    .A(\registers[29] [25]),
-    .B(_0689_),
+  sky130_fd_sc_hd__mux2_1 _6543_ (
+    .A0(\registers[29] [25]),
+    .A1(_0689_),
     .S(_0010_),
-    .Y(_4527_)
+    .X(_4527_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6544_ (
-    .A(\registers[12] [7]),
-    .B(_0125_),
+  sky130_fd_sc_hd__mux2_1 _6544_ (
+    .A0(\registers[12] [7]),
+    .A1(_0125_),
     .S(_0028_),
-    .Y(_3963_)
+    .X(_3963_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6545_ (
-    .A(\registers[29] [26]),
-    .B(_0690_),
+  sky130_fd_sc_hd__mux2_1 _6545_ (
+    .A0(\registers[29] [26]),
+    .A1(_0690_),
     .S(_0010_),
-    .Y(_4528_)
+    .X(_4528_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6546_ (
-    .A(\registers[12] [8]),
-    .B(_0126_),
+  sky130_fd_sc_hd__mux2_1 _6546_ (
+    .A0(\registers[12] [8]),
+    .A1(_0126_),
     .S(_0028_),
-    .Y(_3964_)
+    .X(_3964_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6547_ (
-    .A(\registers[29] [27]),
-    .B(_0691_),
+  sky130_fd_sc_hd__mux2_1 _6547_ (
+    .A0(\registers[29] [27]),
+    .A1(_0691_),
     .S(_0010_),
-    .Y(_4529_)
+    .X(_4529_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6548_ (
-    .A(\registers[12] [9]),
-    .B(_0127_),
+  sky130_fd_sc_hd__mux2_1 _6548_ (
+    .A0(\registers[12] [9]),
+    .A1(_0127_),
     .S(_0028_),
-    .Y(_3965_)
+    .X(_3965_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6549_ (
-    .A(\registers[29] [28]),
-    .B(_0692_),
+  sky130_fd_sc_hd__mux2_1 _6549_ (
+    .A0(\registers[29] [28]),
+    .A1(_0692_),
     .S(_0010_),
-    .Y(_4530_)
+    .X(_4530_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6550_ (
-    .A(\registers[12] [10]),
-    .B(_0097_),
+  sky130_fd_sc_hd__mux2_1 _6550_ (
+    .A0(\registers[12] [10]),
+    .A1(_0097_),
     .S(_0028_),
-    .Y(_3935_)
+    .X(_3935_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6551_ (
-    .A(\registers[29] [29]),
-    .B(_0693_),
+  sky130_fd_sc_hd__mux2_1 _6551_ (
+    .A0(\registers[29] [29]),
+    .A1(_0693_),
     .S(_0010_),
-    .Y(_4531_)
+    .X(_4531_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6552_ (
-    .A(\registers[12] [11]),
-    .B(_0098_),
+  sky130_fd_sc_hd__mux2_1 _6552_ (
+    .A0(\registers[12] [11]),
+    .A1(_0098_),
     .S(_0028_),
-    .Y(_3936_)
+    .X(_3936_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6553_ (
-    .A(\registers[29] [30]),
-    .B(_0695_),
+  sky130_fd_sc_hd__mux2_1 _6553_ (
+    .A0(\registers[29] [30]),
+    .A1(_0695_),
     .S(_0010_),
-    .Y(_4533_)
+    .X(_4533_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6554_ (
-    .A(\registers[12] [12]),
-    .B(_0099_),
+  sky130_fd_sc_hd__mux2_1 _6554_ (
+    .A0(\registers[12] [12]),
+    .A1(_0099_),
     .S(_0028_),
-    .Y(_3937_)
+    .X(_3937_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6555_ (
-    .A(\registers[29] [31]),
-    .B(_0696_),
+  sky130_fd_sc_hd__mux2_1 _6555_ (
+    .A0(\registers[29] [31]),
+    .A1(_0696_),
     .S(_0010_),
-    .Y(_4534_)
+    .X(_4534_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6556_ (
-    .A(\registers[12] [13]),
-    .B(_0100_),
+  sky130_fd_sc_hd__mux2_1 _6556_ (
+    .A0(\registers[12] [13]),
+    .A1(_0100_),
     .S(_0028_),
-    .Y(_3938_)
+    .X(_3938_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6557_ (
-    .A(\registers[28] [1]),
-    .B(_0651_),
+  sky130_fd_sc_hd__mux2_1 _6557_ (
+    .A0(\registers[28] [1]),
+    .A1(_0651_),
     .S(_0011_),
-    .Y(_4489_)
+    .X(_4489_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6558_ (
-    .A(\registers[12] [14]),
-    .B(_0101_),
+  sky130_fd_sc_hd__mux2_1 _6558_ (
+    .A0(\registers[12] [14]),
+    .A1(_0101_),
     .S(_0028_),
-    .Y(_3939_)
+    .X(_3939_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6559_ (
-    .A(\registers[28] [2]),
-    .B(_0662_),
+  sky130_fd_sc_hd__mux2_1 _6559_ (
+    .A0(\registers[28] [2]),
+    .A1(_0662_),
     .S(_0011_),
-    .Y(_4500_)
+    .X(_4500_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6560_ (
-    .A(\registers[12] [15]),
-    .B(_0102_),
+  sky130_fd_sc_hd__mux2_1 _6560_ (
+    .A0(\registers[12] [15]),
+    .A1(_0102_),
     .S(_0028_),
-    .Y(_3940_)
+    .X(_3940_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6561_ (
-    .A(\registers[28] [3]),
-    .B(_0665_),
+  sky130_fd_sc_hd__mux2_1 _6561_ (
+    .A0(\registers[28] [3]),
+    .A1(_0665_),
     .S(_0011_),
-    .Y(_4503_)
+    .X(_4503_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6562_ (
-    .A(\registers[12] [16]),
-    .B(_0103_),
+  sky130_fd_sc_hd__mux2_1 _6562_ (
+    .A0(\registers[12] [16]),
+    .A1(_0103_),
     .S(_0028_),
-    .Y(_3941_)
+    .X(_3941_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6563_ (
-    .A(\registers[28] [4]),
-    .B(_0666_),
+  sky130_fd_sc_hd__mux2_1 _6563_ (
+    .A0(\registers[28] [4]),
+    .A1(_0666_),
     .S(_0011_),
-    .Y(_4504_)
+    .X(_4504_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6564_ (
-    .A(\registers[12] [17]),
-    .B(_0104_),
+  sky130_fd_sc_hd__mux2_1 _6564_ (
+    .A0(\registers[12] [17]),
+    .A1(_0104_),
     .S(_0028_),
-    .Y(_3942_)
+    .X(_3942_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6565_ (
-    .A(\registers[28] [5]),
-    .B(_0667_),
+  sky130_fd_sc_hd__mux2_1 _6565_ (
+    .A0(\registers[28] [5]),
+    .A1(_0667_),
     .S(_0011_),
-    .Y(_4505_)
+    .X(_4505_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6566_ (
-    .A(\registers[12] [18]),
-    .B(_0105_),
+  sky130_fd_sc_hd__mux2_1 _6566_ (
+    .A0(\registers[12] [18]),
+    .A1(_0105_),
     .S(_0028_),
-    .Y(_3943_)
+    .X(_3943_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6567_ (
-    .A(\registers[28] [6]),
-    .B(_0668_),
+  sky130_fd_sc_hd__mux2_1 _6567_ (
+    .A0(\registers[28] [6]),
+    .A1(_0668_),
     .S(_0011_),
-    .Y(_4506_)
+    .X(_4506_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6568_ (
-    .A(\registers[12] [19]),
-    .B(_0106_),
+  sky130_fd_sc_hd__mux2_1 _6568_ (
+    .A0(\registers[12] [19]),
+    .A1(_0106_),
     .S(_0028_),
-    .Y(_3944_)
+    .X(_3944_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6569_ (
-    .A(\registers[28] [7]),
-    .B(_0669_),
+  sky130_fd_sc_hd__mux2_1 _6569_ (
+    .A0(\registers[28] [7]),
+    .A1(_0669_),
     .S(_0011_),
-    .Y(_4507_)
+    .X(_4507_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6570_ (
-    .A(\registers[12] [20]),
-    .B(_0108_),
+  sky130_fd_sc_hd__mux2_1 _6570_ (
+    .A0(\registers[12] [20]),
+    .A1(_0108_),
     .S(_0028_),
-    .Y(_3946_)
+    .X(_3946_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6571_ (
-    .A(\registers[28] [8]),
-    .B(_0670_),
+  sky130_fd_sc_hd__mux2_1 _6571_ (
+    .A0(\registers[28] [8]),
+    .A1(_0670_),
     .S(_0011_),
-    .Y(_4508_)
+    .X(_4508_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6572_ (
-    .A(\registers[12] [21]),
-    .B(_0109_),
+  sky130_fd_sc_hd__mux2_1 _6572_ (
+    .A0(\registers[12] [21]),
+    .A1(_0109_),
     .S(_0028_),
-    .Y(_3947_)
+    .X(_3947_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6573_ (
-    .A(\registers[28] [9]),
-    .B(_0671_),
+  sky130_fd_sc_hd__mux2_1 _6573_ (
+    .A0(\registers[28] [9]),
+    .A1(_0671_),
     .S(_0011_),
-    .Y(_4509_)
+    .X(_4509_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6574_ (
-    .A(\registers[12] [22]),
-    .B(_0110_),
+  sky130_fd_sc_hd__mux2_1 _6574_ (
+    .A0(\registers[12] [22]),
+    .A1(_0110_),
     .S(_0028_),
-    .Y(_3948_)
+    .X(_3948_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6575_ (
-    .A(\registers[28] [10]),
-    .B(_0641_),
+  sky130_fd_sc_hd__mux2_1 _6575_ (
+    .A0(\registers[28] [10]),
+    .A1(_0641_),
     .S(_0011_),
-    .Y(_4479_)
+    .X(_4479_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6576_ (
-    .A(\registers[12] [23]),
-    .B(_0111_),
+  sky130_fd_sc_hd__mux2_1 _6576_ (
+    .A0(\registers[12] [23]),
+    .A1(_0111_),
     .S(_0028_),
-    .Y(_3949_)
+    .X(_3949_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6577_ (
-    .A(\registers[28] [11]),
-    .B(_0642_),
+  sky130_fd_sc_hd__mux2_1 _6577_ (
+    .A0(\registers[28] [11]),
+    .A1(_0642_),
     .S(_0011_),
-    .Y(_4480_)
+    .X(_4480_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6578_ (
-    .A(\registers[12] [24]),
-    .B(_0112_),
+  sky130_fd_sc_hd__mux2_1 _6578_ (
+    .A0(\registers[12] [24]),
+    .A1(_0112_),
     .S(_0028_),
-    .Y(_3950_)
+    .X(_3950_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6579_ (
-    .A(\registers[28] [12]),
-    .B(_0643_),
+  sky130_fd_sc_hd__mux2_1 _6579_ (
+    .A0(\registers[28] [12]),
+    .A1(_0643_),
     .S(_0011_),
-    .Y(_4481_)
+    .X(_4481_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6580_ (
-    .A(\registers[12] [25]),
-    .B(_0113_),
+  sky130_fd_sc_hd__mux2_1 _6580_ (
+    .A0(\registers[12] [25]),
+    .A1(_0113_),
     .S(_0028_),
-    .Y(_3951_)
+    .X(_3951_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6581_ (
-    .A(\registers[28] [13]),
-    .B(_0644_),
+  sky130_fd_sc_hd__mux2_1 _6581_ (
+    .A0(\registers[28] [13]),
+    .A1(_0644_),
     .S(_0011_),
-    .Y(_4482_)
+    .X(_4482_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6582_ (
-    .A(\registers[12] [26]),
-    .B(_0114_),
+  sky130_fd_sc_hd__mux2_1 _6582_ (
+    .A0(\registers[12] [26]),
+    .A1(_0114_),
     .S(_0028_),
-    .Y(_3952_)
+    .X(_3952_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6583_ (
-    .A(\registers[28] [14]),
-    .B(_0645_),
+  sky130_fd_sc_hd__mux2_1 _6583_ (
+    .A0(\registers[28] [14]),
+    .A1(_0645_),
     .S(_0011_),
-    .Y(_4483_)
+    .X(_4483_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6584_ (
-    .A(\registers[12] [27]),
-    .B(_0115_),
+  sky130_fd_sc_hd__mux2_1 _6584_ (
+    .A0(\registers[12] [27]),
+    .A1(_0115_),
     .S(_0028_),
-    .Y(_3953_)
+    .X(_3953_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6585_ (
-    .A(\registers[28] [15]),
-    .B(_0646_),
+  sky130_fd_sc_hd__mux2_1 _6585_ (
+    .A0(\registers[28] [15]),
+    .A1(_0646_),
     .S(_0011_),
-    .Y(_4484_)
+    .X(_4484_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6586_ (
-    .A(\registers[12] [28]),
-    .B(_0116_),
+  sky130_fd_sc_hd__mux2_1 _6586_ (
+    .A0(\registers[12] [28]),
+    .A1(_0116_),
     .S(_0028_),
-    .Y(_3954_)
+    .X(_3954_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6587_ (
-    .A(\registers[28] [16]),
-    .B(_0647_),
+  sky130_fd_sc_hd__mux2_1 _6587_ (
+    .A0(\registers[28] [16]),
+    .A1(_0647_),
     .S(_0011_),
-    .Y(_4485_)
+    .X(_4485_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6588_ (
-    .A(\registers[12] [29]),
-    .B(_0117_),
+  sky130_fd_sc_hd__mux2_1 _6588_ (
+    .A0(\registers[12] [29]),
+    .A1(_0117_),
     .S(_0028_),
-    .Y(_3955_)
+    .X(_3955_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6589_ (
-    .A(\registers[28] [17]),
-    .B(_0648_),
+  sky130_fd_sc_hd__mux2_1 _6589_ (
+    .A0(\registers[28] [17]),
+    .A1(_0648_),
     .S(_0011_),
-    .Y(_4486_)
+    .X(_4486_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6590_ (
-    .A(\registers[12] [30]),
-    .B(_0119_),
+  sky130_fd_sc_hd__mux2_1 _6590_ (
+    .A0(\registers[12] [30]),
+    .A1(_0119_),
     .S(_0028_),
-    .Y(_3957_)
+    .X(_3957_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6591_ (
-    .A(\registers[28] [18]),
-    .B(_0649_),
+  sky130_fd_sc_hd__mux2_1 _6591_ (
+    .A0(\registers[28] [18]),
+    .A1(_0649_),
     .S(_0011_),
-    .Y(_4487_)
+    .X(_4487_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6592_ (
-    .A(\registers[12] [31]),
-    .B(_0120_),
+  sky130_fd_sc_hd__mux2_1 _6592_ (
+    .A0(\registers[12] [31]),
+    .A1(_0120_),
     .S(_0028_),
-    .Y(_3958_)
+    .X(_3958_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6593_ (
-    .A(\registers[29] [0]),
-    .B(_0672_),
+  sky130_fd_sc_hd__mux2_1 _6593_ (
+    .A0(\registers[29] [0]),
+    .A1(_0672_),
     .S(_0010_),
-    .Y(_4510_)
+    .X(_4510_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6594_ (
-    .A(\registers[26] [2]),
-    .B(_0598_),
+  sky130_fd_sc_hd__mux2_1 _6594_ (
+    .A0(\registers[26] [2]),
+    .A1(_0598_),
     .S(_0013_),
-    .Y(_4436_)
+    .X(_4436_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6595_ (
-    .A(\registers[31] [0]),
-    .B(_0768_),
+  sky130_fd_sc_hd__mux2_1 _6595_ (
+    .A0(\registers[31] [0]),
+    .A1(_0768_),
     .S(_0007_),
-    .Y(_4606_)
+    .X(_4606_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6596_ (
-    .A(\registers[3] [0]),
-    .B(_0800_),
+  sky130_fd_sc_hd__mux2_1 _6596_ (
+    .A0(\registers[3] [0]),
+    .A1(_0800_),
     .S(_0006_),
-    .Y(_4638_)
+    .X(_4638_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6597_ (
-    .A(\registers[4] [0]),
-    .B(_0832_),
+  sky130_fd_sc_hd__mux2_1 _6597_ (
+    .A0(\registers[4] [0]),
+    .A1(_0832_),
     .S(_0005_),
-    .Y(_4670_)
+    .X(_4670_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6598_ (
-    .A(\registers[26] [1]),
-    .B(_0587_),
+  sky130_fd_sc_hd__mux2_1 _6598_ (
+    .A0(\registers[26] [1]),
+    .A1(_0587_),
     .S(_0013_),
-    .Y(_4425_)
+    .X(_4425_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6599_ (
-    .A(\registers[5] [0]),
-    .B(_0864_),
+  sky130_fd_sc_hd__mux2_1 _6599_ (
+    .A0(\registers[5] [0]),
+    .A1(_0864_),
     .S(_0004_),
-    .Y(_4702_)
+    .X(_4702_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6600_ (
-    .A(\registers[6] [0]),
-    .B(_0896_),
+  sky130_fd_sc_hd__mux2_1 _6600_ (
+    .A0(\registers[6] [0]),
+    .A1(_0896_),
     .S(_0003_),
-    .Y(_4734_)
+    .X(_4734_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6601_ (
-    .A(\registers[7] [0]),
-    .B(_0928_),
+  sky130_fd_sc_hd__mux2_1 _6601_ (
+    .A0(\registers[7] [0]),
+    .A1(_0928_),
     .S(_0002_),
-    .Y(_4766_)
+    .X(_4766_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6602_ (
-    .A(\registers[8] [0]),
-    .B(_0960_),
+  sky130_fd_sc_hd__mux2_1 _6602_ (
+    .A0(\registers[8] [0]),
+    .A1(_0960_),
     .S(_0001_),
-    .Y(_4798_)
+    .X(_4798_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6603_ (
-    .A(\registers[27] [31]),
-    .B(_0632_),
+  sky130_fd_sc_hd__mux2_1 _6603_ (
+    .A0(\registers[27] [31]),
+    .A1(_0632_),
     .S(_0012_),
-    .Y(_4470_)
+    .X(_4470_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6604_ (
-    .A(\registers[10] [0]),
-    .B(_0032_),
+  sky130_fd_sc_hd__mux2_1 _6604_ (
+    .A0(\registers[10] [0]),
+    .A1(_0032_),
     .S(_0030_),
-    .Y(_3870_)
+    .X(_3870_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6605_ (
-    .A(\registers[28] [21]),
-    .B(_0653_),
+  sky130_fd_sc_hd__mux2_1 _6605_ (
+    .A0(\registers[28] [21]),
+    .A1(_0653_),
     .S(_0011_),
-    .Y(_4491_)
+    .X(_4491_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6606_ (
-    .A(\registers[11] [1]),
-    .B(_0075_),
+  sky130_fd_sc_hd__mux2_1 _6606_ (
+    .A0(\registers[11] [1]),
+    .A1(_0075_),
     .S(_0029_),
-    .Y(_3913_)
+    .X(_3913_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6607_ (
-    .A(\registers[12] [0]),
-    .B(_0096_),
+  sky130_fd_sc_hd__mux2_1 _6607_ (
+    .A0(\registers[12] [0]),
+    .A1(_0096_),
     .S(_0028_),
-    .Y(_3934_)
+    .X(_3934_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6608_ (
-    .A(\registers[22] [8]),
-    .B(_0478_),
+  sky130_fd_sc_hd__mux2_1 _6608_ (
+    .A0(\registers[22] [8]),
+    .A1(_0478_),
     .S(_0017_),
-    .Y(_4316_)
+    .X(_4316_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6609_ (
-    .A(\registers[24] [8]),
-    .B(_0542_),
+  sky130_fd_sc_hd__mux2_1 _6609_ (
+    .A0(\registers[24] [8]),
+    .A1(_0542_),
     .S(_0015_),
-    .Y(_4380_)
+    .X(_4380_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6610_ (
-    .A(\registers[27] [30]),
-    .B(_0631_),
+  sky130_fd_sc_hd__mux2_1 _6610_ (
+    .A0(\registers[27] [30]),
+    .A1(_0631_),
     .S(_0012_),
-    .Y(_4469_)
+    .X(_4469_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6611_ (
-    .A(\registers[22] [9]),
-    .B(_0479_),
+  sky130_fd_sc_hd__mux2_1 _6611_ (
+    .A0(\registers[22] [9]),
+    .A1(_0479_),
     .S(_0017_),
-    .Y(_4317_)
+    .X(_4317_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6612_ (
-    .A(\registers[24] [7]),
-    .B(_0541_),
+  sky130_fd_sc_hd__mux2_1 _6612_ (
+    .A0(\registers[24] [7]),
+    .A1(_0541_),
     .S(_0015_),
-    .Y(_4379_)
+    .X(_4379_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6613_ (
-    .A(\registers[13] [0]),
-    .B(_0128_),
+  sky130_fd_sc_hd__mux2_1 _6613_ (
+    .A0(\registers[13] [0]),
+    .A1(_0128_),
     .S(_0027_),
-    .Y(_3966_)
+    .X(_3966_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6614_ (
-    .A(\registers[22] [10]),
-    .B(_0449_),
+  sky130_fd_sc_hd__mux2_1 _6614_ (
+    .A0(\registers[22] [10]),
+    .A1(_0449_),
     .S(_0017_),
-    .Y(_4287_)
+    .X(_4287_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6615_ (
-    .A(\registers[24] [6]),
-    .B(_0540_),
+  sky130_fd_sc_hd__mux2_1 _6615_ (
+    .A0(\registers[24] [6]),
+    .A1(_0540_),
     .S(_0015_),
-    .Y(_4378_)
+    .X(_4378_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6616_ (
-    .A(\registers[22] [11]),
-    .B(_0450_),
+  sky130_fd_sc_hd__mux2_1 _6616_ (
+    .A0(\registers[22] [11]),
+    .A1(_0450_),
     .S(_0017_),
-    .Y(_4288_)
+    .X(_4288_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6617_ (
-    .A(\registers[24] [5]),
-    .B(_0539_),
+  sky130_fd_sc_hd__mux2_1 _6617_ (
+    .A0(\registers[24] [5]),
+    .A1(_0539_),
     .S(_0015_),
-    .Y(_4377_)
+    .X(_4377_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6618_ (
-    .A(\registers[14] [0]),
-    .B(_0160_),
+  sky130_fd_sc_hd__mux2_1 _6618_ (
+    .A0(\registers[14] [0]),
+    .A1(_0160_),
     .S(_0026_),
-    .Y(_3998_)
+    .X(_3998_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6619_ (
-    .A(\registers[22] [12]),
-    .B(_0451_),
+  sky130_fd_sc_hd__mux2_1 _6619_ (
+    .A0(\registers[22] [12]),
+    .A1(_0451_),
     .S(_0017_),
-    .Y(_4289_)
+    .X(_4289_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6620_ (
-    .A(\registers[24] [4]),
-    .B(_0538_),
+  sky130_fd_sc_hd__mux2_1 _6620_ (
+    .A0(\registers[24] [4]),
+    .A1(_0538_),
     .S(_0015_),
-    .Y(_4376_)
+    .X(_4376_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6621_ (
-    .A(\registers[23] [18]),
-    .B(_0489_),
+  sky130_fd_sc_hd__mux2_1 _6621_ (
+    .A0(\registers[23] [18]),
+    .A1(_0489_),
     .S(_0016_),
-    .Y(_4327_)
+    .X(_4327_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6622_ (
-    .A(\registers[22] [13]),
-    .B(_0452_),
+  sky130_fd_sc_hd__mux2_1 _6622_ (
+    .A0(\registers[22] [13]),
+    .A1(_0452_),
     .S(_0017_),
-    .Y(_4290_)
+    .X(_4290_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6623_ (
-    .A(\registers[24] [3]),
-    .B(_0537_),
+  sky130_fd_sc_hd__mux2_1 _6623_ (
+    .A0(\registers[24] [3]),
+    .A1(_0537_),
     .S(_0015_),
-    .Y(_4375_)
+    .X(_4375_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6624_ (
-    .A(\registers[22] [14]),
-    .B(_0453_),
+  sky130_fd_sc_hd__mux2_1 _6624_ (
+    .A0(\registers[22] [14]),
+    .A1(_0453_),
     .S(_0017_),
-    .Y(_4291_)
+    .X(_4291_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6625_ (
-    .A(\registers[24] [2]),
-    .B(_0534_),
+  sky130_fd_sc_hd__mux2_1 _6625_ (
+    .A0(\registers[24] [2]),
+    .A1(_0534_),
     .S(_0015_),
-    .Y(_4372_)
+    .X(_4372_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6626_ (
-    .A(\registers[22] [15]),
-    .B(_0454_),
+  sky130_fd_sc_hd__mux2_1 _6626_ (
+    .A0(\registers[22] [15]),
+    .A1(_0454_),
     .S(_0017_),
-    .Y(_4292_)
+    .X(_4292_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6627_ (
-    .A(\registers[24] [1]),
-    .B(_0523_),
+  sky130_fd_sc_hd__mux2_1 _6627_ (
+    .A0(\registers[24] [1]),
+    .A1(_0523_),
     .S(_0015_),
-    .Y(_4361_)
+    .X(_4361_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6628_ (
-    .A(\registers[22] [16]),
-    .B(_0455_),
+  sky130_fd_sc_hd__mux2_1 _6628_ (
+    .A0(\registers[22] [16]),
+    .A1(_0455_),
     .S(_0017_),
-    .Y(_4293_)
+    .X(_4293_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6629_ (
-    .A(\registers[15] [0]),
-    .B(_0192_),
+  sky130_fd_sc_hd__mux2_1 _6629_ (
+    .A0(\registers[15] [0]),
+    .A1(_0192_),
     .S(_0025_),
-    .Y(_4030_)
+    .X(_4030_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6630_ (
-    .A(\registers[25] [31]),
-    .B(_0568_),
+  sky130_fd_sc_hd__mux2_1 _6630_ (
+    .A0(\registers[25] [31]),
+    .A1(_0568_),
     .S(_0014_),
-    .Y(_4406_)
+    .X(_4406_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6631_ (
-    .A(\registers[27] [29]),
-    .B(_0629_),
+  sky130_fd_sc_hd__mux2_1 _6631_ (
+    .A0(\registers[27] [29]),
+    .A1(_0629_),
     .S(_0012_),
-    .Y(_4467_)
+    .X(_4467_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6632_ (
-    .A(\registers[22] [17]),
-    .B(_0456_),
+  sky130_fd_sc_hd__mux2_1 _6632_ (
+    .A0(\registers[22] [17]),
+    .A1(_0456_),
     .S(_0017_),
-    .Y(_4294_)
+    .X(_4294_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6633_ (
-    .A(\registers[25] [30]),
-    .B(_0567_),
+  sky130_fd_sc_hd__mux2_1 _6633_ (
+    .A0(\registers[25] [30]),
+    .A1(_0567_),
     .S(_0014_),
-    .Y(_4405_)
+    .X(_4405_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6634_ (
-    .A(\registers[22] [18]),
-    .B(_0457_),
+  sky130_fd_sc_hd__mux2_1 _6634_ (
+    .A0(\registers[22] [18]),
+    .A1(_0457_),
     .S(_0017_),
-    .Y(_4295_)
+    .X(_4295_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6635_ (
-    .A(\registers[25] [29]),
-    .B(_0565_),
+  sky130_fd_sc_hd__mux2_1 _6635_ (
+    .A0(\registers[25] [29]),
+    .A1(_0565_),
     .S(_0014_),
-    .Y(_4403_)
+    .X(_4403_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6636_ (
-    .A(\registers[22] [19]),
-    .B(_0458_),
+  sky130_fd_sc_hd__mux2_1 _6636_ (
+    .A0(\registers[22] [19]),
+    .A1(_0458_),
     .S(_0017_),
-    .Y(_4296_)
+    .X(_4296_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6637_ (
-    .A(\registers[25] [28]),
-    .B(_0564_),
+  sky130_fd_sc_hd__mux2_1 _6637_ (
+    .A0(\registers[25] [28]),
+    .A1(_0564_),
     .S(_0014_),
-    .Y(_4402_)
+    .X(_4402_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6638_ (
-    .A(\registers[25] [27]),
-    .B(_0563_),
+  sky130_fd_sc_hd__mux2_1 _6638_ (
+    .A0(\registers[25] [27]),
+    .A1(_0563_),
     .S(_0014_),
-    .Y(_4401_)
+    .X(_4401_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6639_ (
-    .A(\registers[22] [20]),
-    .B(_0460_),
+  sky130_fd_sc_hd__mux2_1 _6639_ (
+    .A0(\registers[22] [20]),
+    .A1(_0460_),
     .S(_0017_),
-    .Y(_4298_)
+    .X(_4298_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6640_ (
-    .A(\registers[25] [26]),
-    .B(_0562_),
+  sky130_fd_sc_hd__mux2_1 _6640_ (
+    .A0(\registers[25] [26]),
+    .A1(_0562_),
     .S(_0014_),
-    .Y(_4400_)
+    .X(_4400_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6641_ (
-    .A(\registers[22] [21]),
-    .B(_0461_),
+  sky130_fd_sc_hd__mux2_1 _6641_ (
+    .A0(\registers[22] [21]),
+    .A1(_0461_),
     .S(_0017_),
-    .Y(_4299_)
+    .X(_4299_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6642_ (
-    .A(\registers[25] [25]),
-    .B(_0561_),
+  sky130_fd_sc_hd__mux2_1 _6642_ (
+    .A0(\registers[25] [25]),
+    .A1(_0561_),
     .S(_0014_),
-    .Y(_4399_)
+    .X(_4399_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6643_ (
-    .A(\registers[16] [0]),
-    .B(_0224_),
+  sky130_fd_sc_hd__mux2_1 _6643_ (
+    .A0(\registers[16] [0]),
+    .A1(_0224_),
     .S(_0024_),
-    .Y(_4062_)
+    .X(_4062_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6644_ (
-    .A(\registers[23] [17]),
-    .B(_0488_),
+  sky130_fd_sc_hd__mux2_1 _6644_ (
+    .A0(\registers[23] [17]),
+    .A1(_0488_),
     .S(_0016_),
-    .Y(_4326_)
+    .X(_4326_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6645_ (
-    .A(\registers[25] [24]),
-    .B(_0560_),
+  sky130_fd_sc_hd__mux2_1 _6645_ (
+    .A0(\registers[25] [24]),
+    .A1(_0560_),
     .S(_0014_),
-    .Y(_4398_)
+    .X(_4398_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6646_ (
-    .A(\registers[22] [22]),
-    .B(_0462_),
+  sky130_fd_sc_hd__mux2_1 _6646_ (
+    .A0(\registers[22] [22]),
+    .A1(_0462_),
     .S(_0017_),
-    .Y(_4300_)
+    .X(_4300_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6647_ (
-    .A(\registers[25] [23]),
-    .B(_0559_),
+  sky130_fd_sc_hd__mux2_1 _6647_ (
+    .A0(\registers[25] [23]),
+    .A1(_0559_),
     .S(_0014_),
-    .Y(_4397_)
+    .X(_4397_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6648_ (
-    .A(\registers[17] [0]),
-    .B(_0256_),
+  sky130_fd_sc_hd__mux2_1 _6648_ (
+    .A0(\registers[17] [0]),
+    .A1(_0256_),
     .S(_0023_),
-    .Y(_4094_)
+    .X(_4094_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6649_ (
-    .A(\registers[23] [9]),
-    .B(_0511_),
+  sky130_fd_sc_hd__mux2_1 _6649_ (
+    .A0(\registers[23] [9]),
+    .A1(_0511_),
     .S(_0016_),
-    .Y(_4349_)
+    .X(_4349_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6650_ (
-    .A(\registers[22] [23]),
-    .B(_0463_),
+  sky130_fd_sc_hd__mux2_1 _6650_ (
+    .A0(\registers[22] [23]),
+    .A1(_0463_),
     .S(_0017_),
-    .Y(_4301_)
+    .X(_4301_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6651_ (
-    .A(\registers[25] [22]),
-    .B(_0558_),
+  sky130_fd_sc_hd__mux2_1 _6651_ (
+    .A0(\registers[25] [22]),
+    .A1(_0558_),
     .S(_0014_),
-    .Y(_4396_)
+    .X(_4396_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6652_ (
-    .A(\registers[25] [21]),
-    .B(_0557_),
+  sky130_fd_sc_hd__mux2_1 _6652_ (
+    .A0(\registers[25] [21]),
+    .A1(_0557_),
     .S(_0014_),
-    .Y(_4395_)
+    .X(_4395_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6653_ (
-    .A(\registers[23] [10]),
-    .B(_0481_),
+  sky130_fd_sc_hd__mux2_1 _6653_ (
+    .A0(\registers[23] [10]),
+    .A1(_0481_),
     .S(_0016_),
-    .Y(_4319_)
+    .X(_4319_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6654_ (
-    .A(\registers[18] [0]),
-    .B(_0288_),
+  sky130_fd_sc_hd__mux2_1 _6654_ (
+    .A0(\registers[18] [0]),
+    .A1(_0288_),
     .S(_0022_),
-    .Y(_4126_)
+    .X(_4126_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6655_ (
-    .A(\registers[23] [11]),
-    .B(_0482_),
+  sky130_fd_sc_hd__mux2_1 _6655_ (
+    .A0(\registers[23] [11]),
+    .A1(_0482_),
     .S(_0016_),
-    .Y(_4320_)
+    .X(_4320_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6656_ (
-    .A(\registers[25] [20]),
-    .B(_0556_),
+  sky130_fd_sc_hd__mux2_1 _6656_ (
+    .A0(\registers[25] [20]),
+    .A1(_0556_),
     .S(_0014_),
-    .Y(_4394_)
+    .X(_4394_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6657_ (
-    .A(\registers[22] [24]),
-    .B(_0464_),
+  sky130_fd_sc_hd__mux2_1 _6657_ (
+    .A0(\registers[22] [24]),
+    .A1(_0464_),
     .S(_0017_),
-    .Y(_4302_)
+    .X(_4302_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6658_ (
-    .A(\registers[27] [28]),
-    .B(_0628_),
+  sky130_fd_sc_hd__mux2_1 _6658_ (
+    .A0(\registers[27] [28]),
+    .A1(_0628_),
     .S(_0012_),
-    .Y(_4466_)
+    .X(_4466_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6659_ (
-    .A(\registers[23] [13]),
-    .B(_0484_),
+  sky130_fd_sc_hd__mux2_1 _6659_ (
+    .A0(\registers[23] [13]),
+    .A1(_0484_),
     .S(_0016_),
-    .Y(_4322_)
+    .X(_4322_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6660_ (
-    .A(\registers[25] [19]),
-    .B(_0554_),
+  sky130_fd_sc_hd__mux2_1 _6660_ (
+    .A0(\registers[25] [19]),
+    .A1(_0554_),
     .S(_0014_),
-    .Y(_4392_)
+    .X(_4392_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6661_ (
-    .A(\registers[23] [14]),
-    .B(_0485_),
+  sky130_fd_sc_hd__mux2_1 _6661_ (
+    .A0(\registers[23] [14]),
+    .A1(_0485_),
     .S(_0016_),
-    .Y(_4323_)
+    .X(_4323_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6662_ (
-    .A(\registers[1] [0]),
-    .B(_0352_),
+  sky130_fd_sc_hd__mux2_1 _6662_ (
+    .A0(\registers[1] [0]),
+    .A1(_0352_),
     .S(_0020_),
-    .Y(_4190_)
+    .X(_4190_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6663_ (
-    .A(\registers[25] [18]),
-    .B(_0553_),
+  sky130_fd_sc_hd__mux2_1 _6663_ (
+    .A0(\registers[25] [18]),
+    .A1(_0553_),
     .S(_0014_),
-    .Y(_4391_)
+    .X(_4391_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6664_ (
-    .A(\registers[22] [25]),
-    .B(_0465_),
+  sky130_fd_sc_hd__mux2_1 _6664_ (
+    .A0(\registers[22] [25]),
+    .A1(_0465_),
     .S(_0017_),
-    .Y(_4303_)
+    .X(_4303_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6665_ (
-    .A(\registers[23] [16]),
-    .B(_0487_),
+  sky130_fd_sc_hd__mux2_1 _6665_ (
+    .A0(\registers[23] [16]),
+    .A1(_0487_),
     .S(_0016_),
-    .Y(_4325_)
+    .X(_4325_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6666_ (
-    .A(\registers[25] [17]),
-    .B(_0552_),
+  sky130_fd_sc_hd__mux2_1 _6666_ (
+    .A0(\registers[25] [17]),
+    .A1(_0552_),
     .S(_0014_),
-    .Y(_4390_)
+    .X(_4390_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6667_ (
-    .A(\registers[20] [0]),
-    .B(_0384_),
+  sky130_fd_sc_hd__mux2_1 _6667_ (
+    .A0(\registers[20] [0]),
+    .A1(_0384_),
     .S(_0019_),
-    .Y(_4222_)
+    .X(_4222_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6668_ (
-    .A(\registers[25] [16]),
-    .B(_0551_),
+  sky130_fd_sc_hd__mux2_1 _6668_ (
+    .A0(\registers[25] [16]),
+    .A1(_0551_),
     .S(_0014_),
-    .Y(_4389_)
+    .X(_4389_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6669_ (
-    .A(\registers[21] [0]),
-    .B(_0416_),
+  sky130_fd_sc_hd__mux2_1 _6669_ (
+    .A0(\registers[21] [0]),
+    .A1(_0416_),
     .S(_0018_),
-    .Y(_4254_)
+    .X(_4254_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6670_ (
-    .A(\registers[27] [27]),
-    .B(_0627_),
+  sky130_fd_sc_hd__mux2_1 _6670_ (
+    .A0(\registers[27] [27]),
+    .A1(_0627_),
     .S(_0012_),
-    .Y(_4465_)
+    .X(_4465_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6671_ (
-    .A(\registers[22] [0]),
-    .B(_0448_),
+  sky130_fd_sc_hd__mux2_1 _6671_ (
+    .A0(\registers[22] [0]),
+    .A1(_0448_),
     .S(_0017_),
-    .Y(_4286_)
+    .X(_4286_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6672_ (
-    .A(\registers[24] [24]),
-    .B(_0528_),
+  sky130_fd_sc_hd__mux2_1 _6672_ (
+    .A0(\registers[24] [24]),
+    .A1(_0528_),
     .S(_0015_),
-    .Y(_4366_)
+    .X(_4366_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6673_ (
-    .A(\registers[23] [0]),
-    .B(_0480_),
+  sky130_fd_sc_hd__mux2_1 _6673_ (
+    .A0(\registers[23] [0]),
+    .A1(_0480_),
     .S(_0016_),
-    .Y(_4318_)
+    .X(_4318_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6674_ (
-    .A(\registers[23] [27]),
-    .B(_0499_),
+  sky130_fd_sc_hd__mux2_1 _6674_ (
+    .A0(\registers[23] [27]),
+    .A1(_0499_),
     .S(_0016_),
-    .Y(_4337_)
+    .X(_4337_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6675_ (
-    .A(\registers[24] [23]),
-    .B(_0527_),
+  sky130_fd_sc_hd__mux2_1 _6675_ (
+    .A0(\registers[24] [23]),
+    .A1(_0527_),
     .S(_0015_),
-    .Y(_4365_)
+    .X(_4365_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6676_ (
-    .A(\registers[23] [28]),
-    .B(_0500_),
+  sky130_fd_sc_hd__mux2_1 _6676_ (
+    .A0(\registers[23] [28]),
+    .A1(_0500_),
     .S(_0016_),
-    .Y(_4338_)
+    .X(_4338_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6677_ (
-    .A(\registers[24] [22]),
-    .B(_0526_),
+  sky130_fd_sc_hd__mux2_1 _6677_ (
+    .A0(\registers[24] [22]),
+    .A1(_0526_),
     .S(_0015_),
-    .Y(_4364_)
+    .X(_4364_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6678_ (
-    .A(\registers[23] [29]),
-    .B(_0501_),
+  sky130_fd_sc_hd__mux2_1 _6678_ (
+    .A0(\registers[23] [29]),
+    .A1(_0501_),
     .S(_0016_),
-    .Y(_4339_)
+    .X(_4339_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6679_ (
-    .A(\registers[24] [21]),
-    .B(_0525_),
+  sky130_fd_sc_hd__mux2_1 _6679_ (
+    .A0(\registers[24] [21]),
+    .A1(_0525_),
     .S(_0015_),
-    .Y(_4363_)
+    .X(_4363_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6680_ (
-    .A(\registers[23] [30]),
-    .B(_0503_),
+  sky130_fd_sc_hd__mux2_1 _6680_ (
+    .A0(\registers[23] [30]),
+    .A1(_0503_),
     .S(_0016_),
-    .Y(_4341_)
+    .X(_4341_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6681_ (
-    .A(\registers[24] [20]),
-    .B(_0524_),
+  sky130_fd_sc_hd__mux2_1 _6681_ (
+    .A0(\registers[24] [20]),
+    .A1(_0524_),
     .S(_0015_),
-    .Y(_4362_)
+    .X(_4362_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6682_ (
-    .A(\registers[24] [19]),
-    .B(_0522_),
+  sky130_fd_sc_hd__mux2_1 _6682_ (
+    .A0(\registers[24] [19]),
+    .A1(_0522_),
     .S(_0015_),
-    .Y(_4360_)
+    .X(_4360_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6683_ (
-    .A(\registers[23] [31]),
-    .B(_0504_),
+  sky130_fd_sc_hd__mux2_1 _6683_ (
+    .A0(\registers[23] [31]),
+    .A1(_0504_),
     .S(_0016_),
-    .Y(_4342_)
+    .X(_4342_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6684_ (
-    .A(\registers[23] [12]),
-    .B(_0483_),
+  sky130_fd_sc_hd__mux2_1 _6684_ (
+    .A0(\registers[23] [12]),
+    .A1(_0483_),
     .S(_0016_),
-    .Y(_4321_)
+    .X(_4321_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6685_ (
-    .A(\registers[24] [0]),
-    .B(_0512_),
+  sky130_fd_sc_hd__mux2_1 _6685_ (
+    .A0(\registers[24] [0]),
+    .A1(_0512_),
     .S(_0015_),
-    .Y(_4350_)
+    .X(_4350_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6686_ (
-    .A(\registers[24] [18]),
-    .B(_0521_),
+  sky130_fd_sc_hd__mux2_1 _6686_ (
+    .A0(\registers[24] [18]),
+    .A1(_0521_),
     .S(_0015_),
-    .Y(_4359_)
+    .X(_4359_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6687_ (
-    .A(\registers[24] [17]),
-    .B(_0520_),
+  sky130_fd_sc_hd__mux2_1 _6687_ (
+    .A0(\registers[24] [17]),
+    .A1(_0520_),
     .S(_0015_),
-    .Y(_4358_)
+    .X(_4358_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6688_ (
-    .A(\registers[22] [1]),
-    .B(_0459_),
+  sky130_fd_sc_hd__mux2_1 _6688_ (
+    .A0(\registers[22] [1]),
+    .A1(_0459_),
     .S(_0017_),
-    .Y(_4297_)
+    .X(_4297_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6689_ (
-    .A(\registers[24] [16]),
-    .B(_0519_),
+  sky130_fd_sc_hd__mux2_1 _6689_ (
+    .A0(\registers[24] [16]),
+    .A1(_0519_),
     .S(_0015_),
-    .Y(_4357_)
+    .X(_4357_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6690_ (
-    .A(\registers[27] [26]),
-    .B(_0626_),
+  sky130_fd_sc_hd__mux2_1 _6690_ (
+    .A0(\registers[27] [26]),
+    .A1(_0626_),
     .S(_0012_),
-    .Y(_4464_)
+    .X(_4464_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6691_ (
-    .A(\registers[22] [2]),
-    .B(_0470_),
+  sky130_fd_sc_hd__mux2_1 _6691_ (
+    .A0(\registers[22] [2]),
+    .A1(_0470_),
     .S(_0017_),
-    .Y(_4308_)
+    .X(_4308_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6692_ (
-    .A(\registers[24] [15]),
-    .B(_0518_),
+  sky130_fd_sc_hd__mux2_1 _6692_ (
+    .A0(\registers[24] [15]),
+    .A1(_0518_),
     .S(_0015_),
-    .Y(_4356_)
+    .X(_4356_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6693_ (
-    .A(\registers[22] [3]),
-    .B(_0473_),
+  sky130_fd_sc_hd__mux2_1 _6693_ (
+    .A0(\registers[22] [3]),
+    .A1(_0473_),
     .S(_0017_),
-    .Y(_4311_)
+    .X(_4311_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6694_ (
-    .A(\registers[24] [14]),
-    .B(_0517_),
+  sky130_fd_sc_hd__mux2_1 _6694_ (
+    .A0(\registers[24] [14]),
+    .A1(_0517_),
     .S(_0015_),
-    .Y(_4355_)
+    .X(_4355_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6695_ (
-    .A(\registers[22] [4]),
-    .B(_0474_),
+  sky130_fd_sc_hd__mux2_1 _6695_ (
+    .A0(\registers[22] [4]),
+    .A1(_0474_),
     .S(_0017_),
-    .Y(_4312_)
+    .X(_4312_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6696_ (
-    .A(\registers[24] [13]),
-    .B(_0516_),
+  sky130_fd_sc_hd__mux2_1 _6696_ (
+    .A0(\registers[24] [13]),
+    .A1(_0516_),
     .S(_0015_),
-    .Y(_4354_)
+    .X(_4354_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6697_ (
-    .A(\registers[24] [12]),
-    .B(_0515_),
+  sky130_fd_sc_hd__mux2_1 _6697_ (
+    .A0(\registers[24] [12]),
+    .A1(_0515_),
     .S(_0015_),
-    .Y(_4353_)
+    .X(_4353_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6698_ (
-    .A(\registers[25] [0]),
-    .B(_0544_),
+  sky130_fd_sc_hd__mux2_1 _6698_ (
+    .A0(\registers[25] [0]),
+    .A1(_0544_),
     .S(_0014_),
-    .Y(_4382_)
+    .X(_4382_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6699_ (
-    .A(\registers[22] [5]),
-    .B(_0475_),
+  sky130_fd_sc_hd__mux2_1 _6699_ (
+    .A0(\registers[22] [5]),
+    .A1(_0475_),
     .S(_0017_),
-    .Y(_4313_)
+    .X(_4313_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6700_ (
-    .A(\registers[24] [11]),
-    .B(_0514_),
+  sky130_fd_sc_hd__mux2_1 _6700_ (
+    .A0(\registers[24] [11]),
+    .A1(_0514_),
     .S(_0015_),
-    .Y(_4352_)
+    .X(_4352_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6701_ (
-    .A(\registers[23] [15]),
-    .B(_0486_),
+  sky130_fd_sc_hd__mux2_1 _6701_ (
+    .A0(\registers[23] [15]),
+    .A1(_0486_),
     .S(_0016_),
-    .Y(_4324_)
+    .X(_4324_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6702_ (
-    .A(\registers[22] [6]),
-    .B(_0476_),
+  sky130_fd_sc_hd__mux2_1 _6702_ (
+    .A0(\registers[22] [6]),
+    .A1(_0476_),
     .S(_0017_),
-    .Y(_4314_)
+    .X(_4314_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6703_ (
-    .A(\registers[24] [10]),
-    .B(_0513_),
+  sky130_fd_sc_hd__mux2_1 _6703_ (
+    .A0(\registers[24] [10]),
+    .A1(_0513_),
     .S(_0015_),
-    .Y(_4351_)
+    .X(_4351_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6704_ (
-    .A(\registers[24] [9]),
-    .B(_0543_),
+  sky130_fd_sc_hd__mux2_1 _6704_ (
+    .A0(\registers[24] [9]),
+    .A1(_0543_),
     .S(_0015_),
-    .Y(_4381_)
+    .X(_4381_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6705_ (
-    .A(\registers[22] [7]),
-    .B(_0477_),
+  sky130_fd_sc_hd__mux2_1 _6705_ (
+    .A0(\registers[22] [7]),
+    .A1(_0477_),
     .S(_0017_),
-    .Y(_4315_)
+    .X(_4315_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6706_ (
-    .A(\registers[25] [10]),
-    .B(_0545_),
+  sky130_fd_sc_hd__mux2_1 _6706_ (
+    .A0(\registers[25] [10]),
+    .A1(_0545_),
     .S(_0014_),
-    .Y(_4383_)
+    .X(_4383_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6707_ (
-    .A(\registers[25] [11]),
-    .B(_0546_),
+  sky130_fd_sc_hd__mux2_1 _6707_ (
+    .A0(\registers[25] [11]),
+    .A1(_0546_),
     .S(_0014_),
-    .Y(_4384_)
+    .X(_4384_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6708_ (
-    .A(\registers[25] [12]),
-    .B(_0547_),
+  sky130_fd_sc_hd__mux2_1 _6708_ (
+    .A0(\registers[25] [12]),
+    .A1(_0547_),
     .S(_0014_),
-    .Y(_4385_)
+    .X(_4385_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6709_ (
-    .A(\registers[25] [13]),
-    .B(_0548_),
+  sky130_fd_sc_hd__mux2_1 _6709_ (
+    .A0(\registers[25] [13]),
+    .A1(_0548_),
     .S(_0014_),
-    .Y(_4386_)
+    .X(_4386_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6710_ (
-    .A(\registers[23] [8]),
-    .B(_0510_),
+  sky130_fd_sc_hd__mux2_1 _6710_ (
+    .A0(\registers[23] [8]),
+    .A1(_0510_),
     .S(_0016_),
-    .Y(_4348_)
+    .X(_4348_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6711_ (
-    .A(\registers[25] [5]),
-    .B(_0571_),
+  sky130_fd_sc_hd__mux2_1 _6711_ (
+    .A0(\registers[25] [5]),
+    .A1(_0571_),
     .S(_0014_),
-    .Y(_4409_)
+    .X(_4409_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6712_ (
-    .A(\registers[27] [23]),
-    .B(_0623_),
+  sky130_fd_sc_hd__mux2_1 _6712_ (
+    .A0(\registers[27] [23]),
+    .A1(_0623_),
     .S(_0012_),
-    .Y(_4461_)
+    .X(_4461_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6713_ (
-    .A(\registers[26] [29]),
-    .B(_0597_),
+  sky130_fd_sc_hd__mux2_1 _6713_ (
+    .A0(\registers[26] [29]),
+    .A1(_0597_),
     .S(_0013_),
-    .Y(_4435_)
+    .X(_4435_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6714_ (
-    .A(\registers[27] [21]),
-    .B(_0621_),
+  sky130_fd_sc_hd__mux2_1 _6714_ (
+    .A0(\registers[27] [21]),
+    .A1(_0621_),
     .S(_0012_),
-    .Y(_4459_)
+    .X(_4459_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6715_ (
-    .A(\registers[26] [30]),
-    .B(_0599_),
+  sky130_fd_sc_hd__mux2_1 _6715_ (
+    .A0(\registers[26] [30]),
+    .A1(_0599_),
     .S(_0013_),
-    .Y(_4437_)
+    .X(_4437_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6716_ (
-    .A(\registers[27] [20]),
-    .B(_0620_),
+  sky130_fd_sc_hd__mux2_1 _6716_ (
+    .A0(\registers[27] [20]),
+    .A1(_0620_),
     .S(_0012_),
-    .Y(_4458_)
+    .X(_4458_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6717_ (
-    .A(\registers[26] [31]),
-    .B(_0600_),
+  sky130_fd_sc_hd__mux2_1 _6717_ (
+    .A0(\registers[26] [31]),
+    .A1(_0600_),
     .S(_0013_),
-    .Y(_4438_)
+    .X(_4438_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6718_ (
-    .A(\registers[27] [19]),
-    .B(_0618_),
+  sky130_fd_sc_hd__mux2_1 _6718_ (
+    .A0(\registers[27] [19]),
+    .A1(_0618_),
     .S(_0012_),
-    .Y(_4456_)
+    .X(_4456_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6719_ (
-    .A(\registers[27] [18]),
-    .B(_0617_),
+  sky130_fd_sc_hd__mux2_1 _6719_ (
+    .A0(\registers[27] [18]),
+    .A1(_0617_),
     .S(_0012_),
-    .Y(_4455_)
+    .X(_4455_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6720_ (
-    .A(\registers[27] [17]),
-    .B(_0616_),
+  sky130_fd_sc_hd__mux2_1 _6720_ (
+    .A0(\registers[27] [17]),
+    .A1(_0616_),
     .S(_0012_),
-    .Y(_4454_)
+    .X(_4454_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6721_ (
-    .A(\registers[25] [1]),
-    .B(_0555_),
+  sky130_fd_sc_hd__mux2_1 _6721_ (
+    .A0(\registers[25] [1]),
+    .A1(_0555_),
     .S(_0014_),
-    .Y(_4393_)
+    .X(_4393_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6722_ (
-    .A(\registers[27] [16]),
-    .B(_0615_),
+  sky130_fd_sc_hd__mux2_1 _6722_ (
+    .A0(\registers[27] [16]),
+    .A1(_0615_),
     .S(_0012_),
-    .Y(_4453_)
+    .X(_4453_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6723_ (
-    .A(\registers[25] [2]),
-    .B(_0566_),
+  sky130_fd_sc_hd__mux2_1 _6723_ (
+    .A0(\registers[25] [2]),
+    .A1(_0566_),
     .S(_0014_),
-    .Y(_4404_)
+    .X(_4404_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6724_ (
-    .A(\registers[27] [15]),
-    .B(_0614_),
+  sky130_fd_sc_hd__mux2_1 _6724_ (
+    .A0(\registers[27] [15]),
+    .A1(_0614_),
     .S(_0012_),
-    .Y(_4452_)
+    .X(_4452_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6725_ (
-    .A(\registers[25] [3]),
-    .B(_0569_),
+  sky130_fd_sc_hd__mux2_1 _6725_ (
+    .A0(\registers[25] [3]),
+    .A1(_0569_),
     .S(_0014_),
-    .Y(_4407_)
+    .X(_4407_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6726_ (
-    .A(\registers[27] [14]),
-    .B(_0613_),
+  sky130_fd_sc_hd__mux2_1 _6726_ (
+    .A0(\registers[27] [14]),
+    .A1(_0613_),
     .S(_0012_),
-    .Y(_4451_)
+    .X(_4451_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6727_ (
-    .A(\registers[26] [22]),
-    .B(_0590_),
+  sky130_fd_sc_hd__mux2_1 _6727_ (
+    .A0(\registers[26] [22]),
+    .A1(_0590_),
     .S(_0013_),
-    .Y(_4428_)
+    .X(_4428_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6728_ (
-    .A(\registers[26] [20]),
-    .B(_0588_),
+  sky130_fd_sc_hd__mux2_1 _6728_ (
+    .A0(\registers[26] [20]),
+    .A1(_0588_),
     .S(_0013_),
-    .Y(_4426_)
+    .X(_4426_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6729_ (
-    .A(\registers[23] [4]),
-    .B(_0506_),
+  sky130_fd_sc_hd__mux2_1 _6729_ (
+    .A0(\registers[23] [4]),
+    .A1(_0506_),
     .S(_0016_),
-    .Y(_4344_)
+    .X(_4344_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6730_ (
-    .A(\registers[9] [0]),
-    .B(_0992_),
+  sky130_fd_sc_hd__mux2_1 _6730_ (
+    .A0(\registers[9] [0]),
+    .A1(_0992_),
     .S(_0000_),
-    .Y(_4830_)
+    .X(_4830_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6731_ (
-    .A(\registers[27] [13]),
-    .B(_0612_),
+  sky130_fd_sc_hd__mux2_1 _6731_ (
+    .A0(\registers[27] [13]),
+    .A1(_0612_),
     .S(_0012_),
-    .Y(_4450_)
+    .X(_4450_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6732_ (
-    .A(\registers[27] [12]),
-    .B(_0611_),
+  sky130_fd_sc_hd__mux2_1 _6732_ (
+    .A0(\registers[27] [12]),
+    .A1(_0611_),
     .S(_0012_),
-    .Y(_4449_)
+    .X(_4449_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6733_ (
-    .A(\registers[19] [0]),
-    .B(_0320_),
+  sky130_fd_sc_hd__mux2_1 _6733_ (
+    .A0(\registers[19] [0]),
+    .A1(_0320_),
     .S(_0021_),
-    .Y(_4158_)
+    .X(_4158_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6734_ (
-    .A(\registers[28] [28]),
-    .B(_0660_),
+  sky130_fd_sc_hd__mux2_1 _6734_ (
+    .A0(\registers[28] [28]),
+    .A1(_0660_),
     .S(_0011_),
-    .Y(_4498_)
+    .X(_4498_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6735_ (
-    .A(\registers[23] [24]),
-    .B(_0496_),
+  sky130_fd_sc_hd__mux2_1 _6735_ (
+    .A0(\registers[23] [24]),
+    .A1(_0496_),
     .S(_0016_),
-    .Y(_4334_)
+    .X(_4334_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6736_ (
-    .A(\registers[26] [14]),
-    .B(_0581_),
+  sky130_fd_sc_hd__mux2_1 _6736_ (
+    .A0(\registers[26] [14]),
+    .A1(_0581_),
     .S(_0013_),
-    .Y(_4419_)
+    .X(_4419_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6737_ (
-    .A(\registers[11] [2]),
-    .B(_0086_),
+  sky130_fd_sc_hd__mux2_1 _6737_ (
+    .A0(\registers[11] [2]),
+    .A1(_0086_),
     .S(_0029_),
-    .Y(_3924_)
+    .X(_3924_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6738_ (
-    .A(\registers[28] [27]),
-    .B(_0659_),
+  sky130_fd_sc_hd__mux2_1 _6738_ (
+    .A0(\registers[28] [27]),
+    .A1(_0659_),
     .S(_0011_),
-    .Y(_4497_)
+    .X(_4497_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6739_ (
-    .A(\registers[11] [3]),
-    .B(_0089_),
+  sky130_fd_sc_hd__mux2_1 _6739_ (
+    .A0(\registers[11] [3]),
+    .A1(_0089_),
     .S(_0029_),
-    .Y(_3927_)
+    .X(_3927_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6740_ (
-    .A(\registers[28] [26]),
-    .B(_0658_),
+  sky130_fd_sc_hd__mux2_1 _6740_ (
+    .A0(\registers[28] [26]),
+    .A1(_0658_),
     .S(_0011_),
-    .Y(_4496_)
+    .X(_4496_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6741_ (
-    .A(\registers[11] [4]),
-    .B(_0090_),
+  sky130_fd_sc_hd__mux2_1 _6741_ (
+    .A0(\registers[11] [4]),
+    .A1(_0090_),
     .S(_0029_),
-    .Y(_3928_)
+    .X(_3928_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6742_ (
-    .A(\registers[11] [10]),
-    .B(_0065_),
+  sky130_fd_sc_hd__mux2_1 _6742_ (
+    .A0(\registers[11] [10]),
+    .A1(_0065_),
     .S(_0029_),
-    .Y(_3903_)
+    .X(_3903_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6743_ (
-    .A(\registers[28] [25]),
-    .B(_0657_),
+  sky130_fd_sc_hd__mux2_1 _6743_ (
+    .A0(\registers[28] [25]),
+    .A1(_0657_),
     .S(_0011_),
-    .Y(_4495_)
+    .X(_4495_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6744_ (
-    .A(\registers[26] [13]),
-    .B(_0580_),
+  sky130_fd_sc_hd__mux2_1 _6744_ (
+    .A0(\registers[26] [13]),
+    .A1(_0580_),
     .S(_0013_),
-    .Y(_4418_)
+    .X(_4418_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6745_ (
-    .A(\registers[26] [12]),
-    .B(_0579_),
+  sky130_fd_sc_hd__mux2_1 _6745_ (
+    .A0(\registers[26] [12]),
+    .A1(_0579_),
     .S(_0013_),
-    .Y(_4417_)
+    .X(_4417_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6746_ (
-    .A(\registers[26] [11]),
-    .B(_0578_),
+  sky130_fd_sc_hd__mux2_1 _6746_ (
+    .A0(\registers[26] [11]),
+    .A1(_0578_),
     .S(_0013_),
-    .Y(_4416_)
+    .X(_4416_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6747_ (
-    .A(\registers[26] [10]),
-    .B(_0577_),
+  sky130_fd_sc_hd__mux2_1 _6747_ (
+    .A0(\registers[26] [10]),
+    .A1(_0577_),
     .S(_0013_),
-    .Y(_4415_)
+    .X(_4415_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6748_ (
-    .A(\registers[26] [9]),
-    .B(_0607_),
+  sky130_fd_sc_hd__mux2_1 _6748_ (
+    .A0(\registers[26] [9]),
+    .A1(_0607_),
     .S(_0013_),
-    .Y(_4445_)
+    .X(_4445_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6749_ (
-    .A(\registers[26] [8]),
-    .B(_0606_),
+  sky130_fd_sc_hd__mux2_1 _6749_ (
+    .A0(\registers[26] [8]),
+    .A1(_0606_),
     .S(_0013_),
-    .Y(_4444_)
+    .X(_4444_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6750_ (
-    .A(\registers[26] [7]),
-    .B(_0605_),
+  sky130_fd_sc_hd__mux2_1 _6750_ (
+    .A0(\registers[26] [7]),
+    .A1(_0605_),
     .S(_0013_),
-    .Y(_4443_)
+    .X(_4443_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6751_ (
-    .A(\registers[26] [6]),
-    .B(_0604_),
+  sky130_fd_sc_hd__mux2_1 _6751_ (
+    .A0(\registers[26] [6]),
+    .A1(_0604_),
     .S(_0013_),
-    .Y(_4442_)
+    .X(_4442_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6752_ (
-    .A(\registers[26] [5]),
-    .B(_0603_),
+  sky130_fd_sc_hd__mux2_1 _6752_ (
+    .A0(\registers[26] [5]),
+    .A1(_0603_),
     .S(_0013_),
-    .Y(_4441_)
+    .X(_4441_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6753_ (
-    .A(\registers[26] [4]),
-    .B(_0602_),
+  sky130_fd_sc_hd__mux2_1 _6753_ (
+    .A0(\registers[26] [4]),
+    .A1(_0602_),
     .S(_0013_),
-    .Y(_4440_)
+    .X(_4440_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6754_ (
-    .A(\registers[26] [3]),
-    .B(_0601_),
+  sky130_fd_sc_hd__mux2_1 _6754_ (
+    .A0(\registers[26] [3]),
+    .A1(_0601_),
     .S(_0013_),
-    .Y(_4439_)
+    .X(_4439_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6755_ (
-    .A(\registers[11] [5]),
-    .B(_0091_),
+  sky130_fd_sc_hd__mux2_1 _6755_ (
+    .A0(\registers[11] [5]),
+    .A1(_0091_),
     .S(_0029_),
-    .Y(_3929_)
+    .X(_3929_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6756_ (
-    .A(\registers[28] [24]),
-    .B(_0656_),
+  sky130_fd_sc_hd__mux2_1 _6756_ (
+    .A0(\registers[28] [24]),
+    .A1(_0656_),
     .S(_0011_),
-    .Y(_4494_)
+    .X(_4494_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6757_ (
-    .A(\registers[11] [6]),
-    .B(_0092_),
+  sky130_fd_sc_hd__mux2_1 _6757_ (
+    .A0(\registers[11] [6]),
+    .A1(_0092_),
     .S(_0029_),
-    .Y(_3930_)
+    .X(_3930_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6758_ (
-    .A(\registers[28] [23]),
-    .B(_0655_),
+  sky130_fd_sc_hd__mux2_1 _6758_ (
+    .A0(\registers[28] [23]),
+    .A1(_0655_),
     .S(_0011_),
-    .Y(_4493_)
+    .X(_4493_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6759_ (
-    .A(\registers[28] [22]),
-    .B(_0654_),
+  sky130_fd_sc_hd__mux2_1 _6759_ (
+    .A0(\registers[28] [22]),
+    .A1(_0654_),
     .S(_0011_),
-    .Y(_4492_)
+    .X(_4492_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6760_ (
-    .A(\registers[26] [16]),
-    .B(_0583_),
+  sky130_fd_sc_hd__mux2_1 _6760_ (
+    .A0(\registers[26] [16]),
+    .A1(_0583_),
     .S(_0013_),
-    .Y(_4421_)
+    .X(_4421_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6761_ (
-    .A(\registers[26] [17]),
-    .B(_0584_),
+  sky130_fd_sc_hd__mux2_1 _6761_ (
+    .A0(\registers[26] [17]),
+    .A1(_0584_),
     .S(_0013_),
-    .Y(_4422_)
+    .X(_4422_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6762_ (
-    .A(\registers[23] [7]),
-    .B(_0509_),
+  sky130_fd_sc_hd__mux2_1 _6762_ (
+    .A0(\registers[23] [7]),
+    .A1(_0509_),
     .S(_0016_),
-    .Y(_4347_)
+    .X(_4347_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6763_ (
-    .A(\registers[11] [7]),
-    .B(_0093_),
+  sky130_fd_sc_hd__mux2_1 _6763_ (
+    .A0(\registers[11] [7]),
+    .A1(_0093_),
     .S(_0029_),
-    .Y(_3931_)
+    .X(_3931_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6764_ (
-    .A(\registers[26] [15]),
-    .B(_0582_),
+  sky130_fd_sc_hd__mux2_1 _6764_ (
+    .A0(\registers[26] [15]),
+    .A1(_0582_),
     .S(_0013_),
-    .Y(_4420_)
+    .X(_4420_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6765_ (
-    .A(\registers[28] [29]),
-    .B(_0661_),
+  sky130_fd_sc_hd__mux2_1 _6765_ (
+    .A0(\registers[28] [29]),
+    .A1(_0661_),
     .S(_0011_),
-    .Y(_4499_)
+    .X(_4499_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6766_ (
-    .A(\registers[23] [3]),
-    .B(_0505_),
+  sky130_fd_sc_hd__mux2_1 _6766_ (
+    .A0(\registers[23] [3]),
+    .A1(_0505_),
     .S(_0016_),
-    .Y(_4343_)
+    .X(_4343_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6767_ (
-    .A(\registers[11] [8]),
-    .B(_0094_),
+  sky130_fd_sc_hd__mux2_1 _6767_ (
+    .A0(\registers[11] [8]),
+    .A1(_0094_),
     .S(_0029_),
-    .Y(_3932_)
+    .X(_3932_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6768_ (
-    .A(\registers[23] [2]),
-    .B(_0502_),
+  sky130_fd_sc_hd__mux2_1 _6768_ (
+    .A0(\registers[23] [2]),
+    .A1(_0502_),
     .S(_0016_),
-    .Y(_4340_)
+    .X(_4340_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6769_ (
-    .A(\registers[28] [30]),
-    .B(_0663_),
+  sky130_fd_sc_hd__mux2_1 _6769_ (
+    .A0(\registers[28] [30]),
+    .A1(_0663_),
     .S(_0011_),
-    .Y(_4501_)
+    .X(_4501_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6770_ (
-    .A(\registers[23] [1]),
-    .B(_0491_),
+  sky130_fd_sc_hd__mux2_1 _6770_ (
+    .A0(\registers[23] [1]),
+    .A1(_0491_),
     .S(_0016_),
-    .Y(_4329_)
+    .X(_4329_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6771_ (
-    .A(\registers[11] [9]),
-    .B(_0095_),
+  sky130_fd_sc_hd__mux2_1 _6771_ (
+    .A0(\registers[11] [9]),
+    .A1(_0095_),
     .S(_0029_),
-    .Y(_3933_)
+    .X(_3933_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6772_ (
-    .A(\registers[28] [31]),
-    .B(_0664_),
+  sky130_fd_sc_hd__mux2_1 _6772_ (
+    .A0(\registers[28] [31]),
+    .A1(_0664_),
     .S(_0011_),
-    .Y(_4502_)
+    .X(_4502_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6773_ (
-    .A(\registers[24] [31]),
-    .B(_0536_),
+  sky130_fd_sc_hd__mux2_1 _6773_ (
+    .A0(\registers[24] [31]),
+    .A1(_0536_),
     .S(_0015_),
-    .Y(_4374_)
+    .X(_4374_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6774_ (
-    .A(\registers[11] [11]),
-    .B(_0066_),
+  sky130_fd_sc_hd__mux2_1 _6774_ (
+    .A0(\registers[11] [11]),
+    .A1(_0066_),
     .S(_0029_),
-    .Y(_3904_)
+    .X(_3904_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6775_ (
-    .A(\registers[24] [30]),
-    .B(_0535_),
+  sky130_fd_sc_hd__mux2_1 _6775_ (
+    .A0(\registers[24] [30]),
+    .A1(_0535_),
     .S(_0015_),
-    .Y(_4373_)
+    .X(_4373_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6776_ (
-    .A(\registers[27] [1]),
-    .B(_0619_),
+  sky130_fd_sc_hd__mux2_1 _6776_ (
+    .A0(\registers[27] [1]),
+    .A1(_0619_),
     .S(_0012_),
-    .Y(_4457_)
+    .X(_4457_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6777_ (
-    .A(\registers[11] [14]),
-    .B(_0069_),
+  sky130_fd_sc_hd__mux2_1 _6777_ (
+    .A0(\registers[11] [14]),
+    .A1(_0069_),
     .S(_0029_),
-    .Y(_3907_)
+    .X(_3907_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6778_ (
-    .A(\registers[11] [12]),
-    .B(_0067_),
+  sky130_fd_sc_hd__mux2_1 _6778_ (
+    .A0(\registers[11] [12]),
+    .A1(_0067_),
     .S(_0029_),
-    .Y(_3905_)
+    .X(_3905_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6779_ (
-    .A(\registers[24] [29]),
-    .B(_0533_),
+  sky130_fd_sc_hd__mux2_1 _6779_ (
+    .A0(\registers[24] [29]),
+    .A1(_0533_),
     .S(_0015_),
-    .Y(_4371_)
+    .X(_4371_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6780_ (
-    .A(\registers[27] [2]),
-    .B(_0630_),
+  sky130_fd_sc_hd__mux2_1 _6780_ (
+    .A0(\registers[27] [2]),
+    .A1(_0630_),
     .S(_0012_),
-    .Y(_4468_)
+    .X(_4468_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6781_ (
-    .A(\registers[11] [15]),
-    .B(_0070_),
+  sky130_fd_sc_hd__mux2_1 _6781_ (
+    .A0(\registers[11] [15]),
+    .A1(_0070_),
     .S(_0029_),
-    .Y(_3908_)
+    .X(_3908_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6782_ (
-    .A(\registers[24] [28]),
-    .B(_0532_),
+  sky130_fd_sc_hd__mux2_1 _6782_ (
+    .A0(\registers[24] [28]),
+    .A1(_0532_),
     .S(_0015_),
-    .Y(_4370_)
+    .X(_4370_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6783_ (
-    .A(\registers[27] [3]),
-    .B(_0633_),
+  sky130_fd_sc_hd__mux2_1 _6783_ (
+    .A0(\registers[27] [3]),
+    .A1(_0633_),
     .S(_0012_),
-    .Y(_4471_)
+    .X(_4471_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6784_ (
-    .A(\registers[9] [13]),
-    .B(_0996_),
+  sky130_fd_sc_hd__mux2_1 _6784_ (
+    .A0(\registers[9] [13]),
+    .A1(_0996_),
     .S(_0000_),
-    .Y(_4834_)
+    .X(_4834_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6785_ (
-    .A(\registers[9] [4]),
-    .B(_1018_),
+  sky130_fd_sc_hd__mux2_1 _6785_ (
+    .A0(\registers[9] [4]),
+    .A1(_1018_),
     .S(_0000_),
-    .Y(_4856_)
+    .X(_4856_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6786_ (
-    .A(\registers[23] [5]),
-    .B(_0507_),
+  sky130_fd_sc_hd__mux2_1 _6786_ (
+    .A0(\registers[23] [5]),
+    .A1(_0507_),
     .S(_0016_),
-    .Y(_4345_)
+    .X(_4345_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6787_ (
-    .A(\registers[23] [22]),
-    .B(_0494_),
+  sky130_fd_sc_hd__mux2_1 _6787_ (
+    .A0(\registers[23] [22]),
+    .A1(_0494_),
     .S(_0016_),
-    .Y(_4332_)
+    .X(_4332_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6788_ (
-    .A(\registers[9] [5]),
-    .B(_1019_),
+  sky130_fd_sc_hd__mux2_1 _6788_ (
+    .A0(\registers[9] [5]),
+    .A1(_1019_),
     .S(_0000_),
-    .Y(_4857_)
+    .X(_4857_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6789_ (
-    .A(\registers[9] [6]),
-    .B(_1020_),
+  sky130_fd_sc_hd__mux2_1 _6789_ (
+    .A0(\registers[9] [6]),
+    .A1(_1020_),
     .S(_0000_),
-    .Y(_4858_)
+    .X(_4858_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6790_ (
-    .A(\registers[9] [7]),
-    .B(_1021_),
+  sky130_fd_sc_hd__mux2_1 _6790_ (
+    .A0(\registers[9] [7]),
+    .A1(_1021_),
     .S(_0000_),
-    .Y(_4859_)
+    .X(_4859_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6791_ (
-    .A(\registers[9] [8]),
-    .B(_1022_),
+  sky130_fd_sc_hd__mux2_1 _6791_ (
+    .A0(\registers[9] [8]),
+    .A1(_1022_),
     .S(_0000_),
-    .Y(_4860_)
+    .X(_4860_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6792_ (
-    .A(\registers[23] [21]),
-    .B(_0493_),
+  sky130_fd_sc_hd__mux2_1 _6792_ (
+    .A0(\registers[23] [21]),
+    .A1(_0493_),
     .S(_0016_),
-    .Y(_4331_)
+    .X(_4331_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6793_ (
-    .A(\registers[9] [9]),
-    .B(_1023_),
+  sky130_fd_sc_hd__mux2_1 _6793_ (
+    .A0(\registers[9] [9]),
+    .A1(_1023_),
     .S(_0000_),
-    .Y(_4861_)
+    .X(_4861_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6794_ (
-    .A(\registers[9] [10]),
-    .B(_0993_),
+  sky130_fd_sc_hd__mux2_1 _6794_ (
+    .A0(\registers[9] [10]),
+    .A1(_0993_),
     .S(_0000_),
-    .Y(_4831_)
+    .X(_4831_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6795_ (
-    .A(\registers[23] [20]),
-    .B(_0492_),
+  sky130_fd_sc_hd__mux2_1 _6795_ (
+    .A0(\registers[23] [20]),
+    .A1(_0492_),
     .S(_0016_),
-    .Y(_4330_)
+    .X(_4330_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6796_ (
-    .A(\registers[9] [11]),
-    .B(_0994_),
+  sky130_fd_sc_hd__mux2_1 _6796_ (
+    .A0(\registers[9] [11]),
+    .A1(_0994_),
     .S(_0000_),
-    .Y(_4832_)
+    .X(_4832_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6797_ (
-    .A(\registers[25] [14]),
-    .B(_0549_),
+  sky130_fd_sc_hd__mux2_1 _6797_ (
+    .A0(\registers[25] [14]),
+    .A1(_0549_),
     .S(_0014_),
-    .Y(_4387_)
+    .X(_4387_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6798_ (
-    .A(\registers[23] [19]),
-    .B(_0490_),
+  sky130_fd_sc_hd__mux2_1 _6798_ (
+    .A0(\registers[23] [19]),
+    .A1(_0490_),
     .S(_0016_),
-    .Y(_4328_)
+    .X(_4328_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6799_ (
-    .A(\registers[9] [12]),
-    .B(_0995_),
+  sky130_fd_sc_hd__mux2_1 _6799_ (
+    .A0(\registers[9] [12]),
+    .A1(_0995_),
     .S(_0000_),
-    .Y(_4833_)
+    .X(_4833_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6800_ (
-    .A(\registers[27] [4]),
-    .B(_0634_),
+  sky130_fd_sc_hd__mux2_1 _6800_ (
+    .A0(\registers[27] [4]),
+    .A1(_0634_),
     .S(_0012_),
-    .Y(_4472_)
+    .X(_4472_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6801_ (
-    .A(\registers[24] [27]),
-    .B(_0531_),
+  sky130_fd_sc_hd__mux2_1 _6801_ (
+    .A0(\registers[24] [27]),
+    .A1(_0531_),
     .S(_0015_),
-    .Y(_4369_)
+    .X(_4369_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6802_ (
-    .A(\registers[27] [5]),
-    .B(_0635_),
+  sky130_fd_sc_hd__mux2_1 _6802_ (
+    .A0(\registers[27] [5]),
+    .A1(_0635_),
     .S(_0012_),
-    .Y(_4473_)
+    .X(_4473_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6803_ (
-    .A(\registers[24] [26]),
-    .B(_0530_),
+  sky130_fd_sc_hd__mux2_1 _6803_ (
+    .A0(\registers[24] [26]),
+    .A1(_0530_),
     .S(_0015_),
-    .Y(_4368_)
+    .X(_4368_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6804_ (
-    .A(\registers[27] [6]),
-    .B(_0636_),
+  sky130_fd_sc_hd__mux2_1 _6804_ (
+    .A0(\registers[27] [6]),
+    .A1(_0636_),
     .S(_0012_),
-    .Y(_4474_)
+    .X(_4474_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6805_ (
-    .A(\registers[24] [25]),
-    .B(_0529_),
+  sky130_fd_sc_hd__mux2_1 _6805_ (
+    .A0(\registers[24] [25]),
+    .A1(_0529_),
     .S(_0015_),
-    .Y(_4367_)
+    .X(_4367_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6806_ (
-    .A(\registers[27] [7]),
-    .B(_0637_),
+  sky130_fd_sc_hd__mux2_1 _6806_ (
+    .A0(\registers[27] [7]),
+    .A1(_0637_),
     .S(_0012_),
-    .Y(_4475_)
+    .X(_4475_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6807_ (
-    .A(\registers[27] [8]),
-    .B(_0638_),
+  sky130_fd_sc_hd__mux2_1 _6807_ (
+    .A0(\registers[27] [8]),
+    .A1(_0638_),
     .S(_0012_),
-    .Y(_4476_)
+    .X(_4476_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6808_ (
-    .A(\registers[27] [9]),
-    .B(_0639_),
+  sky130_fd_sc_hd__mux2_1 _6808_ (
+    .A0(\registers[27] [9]),
+    .A1(_0639_),
     .S(_0012_),
-    .Y(_4477_)
+    .X(_4477_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6809_ (
-    .A(\registers[26] [18]),
-    .B(_0585_),
+  sky130_fd_sc_hd__mux2_1 _6809_ (
+    .A0(\registers[26] [18]),
+    .A1(_0585_),
     .S(_0013_),
-    .Y(_4423_)
+    .X(_4423_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6810_ (
-    .A(\registers[27] [10]),
-    .B(_0609_),
+  sky130_fd_sc_hd__mux2_1 _6810_ (
+    .A0(\registers[27] [10]),
+    .A1(_0609_),
     .S(_0012_),
-    .Y(_4447_)
+    .X(_4447_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6811_ (
-    .A(\registers[27] [11]),
-    .B(_0610_),
+  sky130_fd_sc_hd__mux2_1 _6811_ (
+    .A0(\registers[27] [11]),
+    .A1(_0610_),
     .S(_0012_),
-    .Y(_4448_)
+    .X(_4448_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6812_ (
-    .A(\registers[26] [19]),
-    .B(_0586_),
+  sky130_fd_sc_hd__mux2_1 _6812_ (
+    .A0(\registers[26] [19]),
+    .A1(_0586_),
     .S(_0013_),
-    .Y(_4424_)
+    .X(_4424_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6813_ (
-    .A(\registers[9] [1]),
-    .B(_1003_),
+  sky130_fd_sc_hd__mux2_1 _6813_ (
+    .A0(\registers[9] [1]),
+    .A1(_1003_),
     .S(_0000_),
-    .Y(_4841_)
+    .X(_4841_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6814_ (
-    .A(\registers[23] [23]),
-    .B(_0495_),
+  sky130_fd_sc_hd__mux2_1 _6814_ (
+    .A0(\registers[23] [23]),
+    .A1(_0495_),
     .S(_0016_),
-    .Y(_4333_)
+    .X(_4333_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6815_ (
-    .A(\registers[9] [2]),
-    .B(_1014_),
+  sky130_fd_sc_hd__mux2_1 _6815_ (
+    .A0(\registers[9] [2]),
+    .A1(_1014_),
     .S(_0000_),
-    .Y(_4852_)
+    .X(_4852_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6816_ (
-    .A(\registers[23] [6]),
-    .B(_0508_),
+  sky130_fd_sc_hd__mux2_1 _6816_ (
+    .A0(\registers[23] [6]),
+    .A1(_0508_),
     .S(_0016_),
-    .Y(_4346_)
+    .X(_4346_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6817_ (
-    .A(\registers[9] [3]),
-    .B(_1017_),
+  sky130_fd_sc_hd__mux2_1 _6817_ (
+    .A0(\registers[9] [3]),
+    .A1(_1017_),
     .S(_0000_),
-    .Y(_4855_)
+    .X(_4855_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6818_ (
-    .A(\registers[26] [21]),
-    .B(_0589_),
+  sky130_fd_sc_hd__mux2_1 _6818_ (
+    .A0(\registers[26] [21]),
+    .A1(_0589_),
     .S(_0013_),
-    .Y(_4427_)
+    .X(_4427_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6819_ (
-    .A(\registers[28] [19]),
-    .B(_0650_),
+  sky130_fd_sc_hd__mux2_1 _6819_ (
+    .A0(\registers[28] [19]),
+    .A1(_0650_),
     .S(_0011_),
-    .Y(_4488_)
+    .X(_4488_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6820_ (
-    .A(\registers[26] [27]),
-    .B(_0595_),
+  sky130_fd_sc_hd__mux2_1 _6820_ (
+    .A0(\registers[26] [27]),
+    .A1(_0595_),
     .S(_0013_),
-    .Y(_4433_)
+    .X(_4433_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6821_ (
-    .A(\registers[26] [28]),
-    .B(_0596_),
+  sky130_fd_sc_hd__mux2_1 _6821_ (
+    .A0(\registers[26] [28]),
+    .A1(_0596_),
     .S(_0013_),
-    .Y(_4434_)
+    .X(_4434_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6822_ (
-    .A(\registers[26] [25]),
-    .B(_0593_),
+  sky130_fd_sc_hd__mux2_1 _6822_ (
+    .A0(\registers[26] [25]),
+    .A1(_0593_),
     .S(_0013_),
-    .Y(_4431_)
+    .X(_4431_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6823_ (
-    .A(\registers[26] [26]),
-    .B(_0594_),
+  sky130_fd_sc_hd__mux2_1 _6823_ (
+    .A0(\registers[26] [26]),
+    .A1(_0594_),
     .S(_0013_),
-    .Y(_4432_)
+    .X(_4432_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6824_ (
-    .A(\registers[26] [24]),
-    .B(_0592_),
+  sky130_fd_sc_hd__mux2_1 _6824_ (
+    .A0(\registers[26] [24]),
+    .A1(_0592_),
     .S(_0013_),
-    .Y(_4430_)
+    .X(_4430_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6825_ (
-    .A(\registers[26] [23]),
-    .B(_0591_),
+  sky130_fd_sc_hd__mux2_1 _6825_ (
+    .A0(\registers[26] [23]),
+    .A1(_0591_),
     .S(_0013_),
-    .Y(_4429_)
+    .X(_4429_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6826_ (
-    .A(\registers[11] [13]),
-    .B(_0068_),
+  sky130_fd_sc_hd__mux2_1 _6826_ (
+    .A0(\registers[11] [13]),
+    .A1(_0068_),
     .S(_0029_),
-    .Y(_3906_)
+    .X(_3906_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6827_ (
-    .A(\registers[23] [25]),
-    .B(_0497_),
+  sky130_fd_sc_hd__mux2_1 _6827_ (
+    .A0(\registers[23] [25]),
+    .A1(_0497_),
     .S(_0016_),
-    .Y(_4335_)
+    .X(_4335_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6828_ (
-    .A(\registers[25] [4]),
-    .B(_0570_),
+  sky130_fd_sc_hd__mux2_1 _6828_ (
+    .A0(\registers[25] [4]),
+    .A1(_0570_),
     .S(_0014_),
-    .Y(_4408_)
+    .X(_4408_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6829_ (
-    .A(\registers[23] [26]),
-    .B(_0498_),
+  sky130_fd_sc_hd__mux2_1 _6829_ (
+    .A0(\registers[23] [26]),
+    .A1(_0498_),
     .S(_0016_),
-    .Y(_4336_)
+    .X(_4336_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6830_ (
-    .A(\registers[27] [22]),
-    .B(_0622_),
+  sky130_fd_sc_hd__mux2_1 _6830_ (
+    .A0(\registers[27] [22]),
+    .A1(_0622_),
     .S(_0012_),
-    .Y(_4460_)
+    .X(_4460_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6831_ (
-    .A(\registers[28] [20]),
-    .B(_0652_),
+  sky130_fd_sc_hd__mux2_1 _6831_ (
+    .A0(\registers[28] [20]),
+    .A1(_0652_),
     .S(_0011_),
-    .Y(_4490_)
+    .X(_4490_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6832_ (
-    .A(\registers[25] [8]),
-    .B(_0574_),
+  sky130_fd_sc_hd__mux2_1 _6832_ (
+    .A0(\registers[25] [8]),
+    .A1(_0574_),
     .S(_0014_),
-    .Y(_4412_)
+    .X(_4412_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6833_ (
-    .A(\registers[25] [9]),
-    .B(_0575_),
+  sky130_fd_sc_hd__mux2_1 _6833_ (
+    .A0(\registers[25] [9]),
+    .A1(_0575_),
     .S(_0014_),
-    .Y(_4413_)
+    .X(_4413_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6834_ (
-    .A(\registers[25] [6]),
-    .B(_0572_),
+  sky130_fd_sc_hd__mux2_1 _6834_ (
+    .A0(\registers[25] [6]),
+    .A1(_0572_),
     .S(_0014_),
-    .Y(_4410_)
+    .X(_4410_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6835_ (
-    .A(\registers[25] [7]),
-    .B(_0573_),
+  sky130_fd_sc_hd__mux2_1 _6835_ (
+    .A0(\registers[25] [7]),
+    .A1(_0573_),
     .S(_0014_),
-    .Y(_4411_)
+    .X(_4411_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6836_ (
-    .A(\registers[25] [15]),
-    .B(_0550_),
+  sky130_fd_sc_hd__mux2_1 _6836_ (
+    .A0(\registers[25] [15]),
+    .A1(_0550_),
     .S(_0014_),
-    .Y(_4388_)
+    .X(_4388_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6837_ (
-    .A(\registers[22] [26]),
-    .B(_0466_),
+  sky130_fd_sc_hd__mux2_1 _6837_ (
+    .A0(\registers[22] [26]),
+    .A1(_0466_),
     .S(_0017_),
-    .Y(_4304_)
+    .X(_4304_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6838_ (
-    .A(\registers[26] [0]),
-    .B(_0576_),
+  sky130_fd_sc_hd__mux2_1 _6838_ (
+    .A0(\registers[26] [0]),
+    .A1(_0576_),
     .S(_0013_),
-    .Y(_4414_)
+    .X(_4414_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6839_ (
-    .A(\registers[27] [0]),
-    .B(_0608_),
+  sky130_fd_sc_hd__mux2_1 _6839_ (
+    .A0(\registers[27] [0]),
+    .A1(_0608_),
     .S(_0012_),
-    .Y(_4446_)
+    .X(_4446_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6840_ (
-    .A(\registers[27] [25]),
-    .B(_0625_),
+  sky130_fd_sc_hd__mux2_1 _6840_ (
+    .A0(\registers[27] [25]),
+    .A1(_0625_),
     .S(_0012_),
-    .Y(_4463_)
+    .X(_4463_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6841_ (
-    .A(\registers[28] [0]),
-    .B(_0640_),
+  sky130_fd_sc_hd__mux2_1 _6841_ (
+    .A0(\registers[28] [0]),
+    .A1(_0640_),
     .S(_0011_),
-    .Y(_4478_)
+    .X(_4478_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6842_ (
-    .A(\registers[2] [0]),
-    .B(_0704_),
+  sky130_fd_sc_hd__mux2_1 _6842_ (
+    .A0(\registers[2] [0]),
+    .A1(_0704_),
     .S(_0009_),
-    .Y(_4542_)
+    .X(_4542_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6843_ (
-    .A(\registers[30] [0]),
-    .B(_0736_),
+  sky130_fd_sc_hd__mux2_1 _6843_ (
+    .A0(\registers[30] [0]),
+    .A1(_0736_),
     .S(_0008_),
-    .Y(_4574_)
+    .X(_4574_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6844_ (
-    .A(\registers[27] [24]),
-    .B(_0624_),
+  sky130_fd_sc_hd__mux2_1 _6844_ (
+    .A0(\registers[27] [24]),
+    .A1(_0624_),
     .S(_0012_),
-    .Y(_4462_)
+    .X(_4462_)
   );
-  \$mux  #(
-    .WIDTH(32'd1)
-  ) _6845_ (
-    .A(\registers[11] [0]),
-    .B(_0064_),
+  sky130_fd_sc_hd__mux2_1 _6845_ (
+    .A0(\registers[11] [0]),
+    .A1(_0064_),
     .S(_0029_),
-    .Y(_3902_)
+    .X(_3902_)
   );
   sky130_fd_sc_hd__clkinv_1 _1903_ (
     .A(rst),

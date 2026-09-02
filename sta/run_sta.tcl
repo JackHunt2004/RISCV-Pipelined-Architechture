@@ -3,7 +3,7 @@
 
 read_liberty ~/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
 
-read_verilog netlist/sta/riscv_core_sky130_sta.v
+read_verilog netlist/sta/riscv_core_baseline_sta.v
 
 link_design riscv_core
 

@@ -1,0 +1,145 @@
+M4 EXP2 — Arithmetic Selection Optimization
+=============================================
+
+Technology:
+  Sky130 HD
+  TT corner
+  0.25C
+  1.80V
+
+Clock constraint:
+  Period: 10.000 ns
+  Target frequency: 100 MHz
+
+------------------------------------------------------------
+STA NETLIST PREPARATION
+------------------------------------------------------------
+
+The synthesis-generated Sky130 netlists contained 1-bit
+generic $mux cells corresponding to reset muxing.
+
+These were converted structurally to:
+  $mux -> sky130_fd_sc_hd__mux2_1
+
+The conversion was performed separately for baseline and EXP2
+using:
+
+  sta/scripts/convert_baseline_sta_muxes.py
+  sta/scripts/convert_exp2_sta_muxes.py
+
+Baseline generic muxes converted:
+  1528
+
+EXP2 generic muxes converted:
+  1528
+
+The final STA netlists contain no generic $mux, $dff, or
+always constructs.
+
+------------------------------------------------------------
+MAPPED CELL AREA
+------------------------------------------------------------
+
+Area was calculated from the final structural STA netlists
+using cell areas from:
+
+  sky130_fd_sc_hd__tt_025C_1v80.lib
+
+Calculation:
+
+  Total area = sum(cell_count × Liberty_cell_area)
+
+Baseline:
+  Total mapped cells: 8247
+  Total cell area:   87363.7888
+
+EXP2:
+  Total mapped cells: 8158
+  Total cell area:   87238.6688
+
+Difference:
+  Cell count:        -89
+  Cell count change: -1.08%
+
+  Area difference:   -125.1200
+  Area change:       -0.143%
+
+------------------------------------------------------------
+STATIC TIMING ANALYSIS
+------------------------------------------------------------
+
+OpenSTA:
+  3.1.0 d1b2b3962c
+
+Library:
+  Sky130 HD TT 0.25C 1.80V
+
+SDC:
+  constraints/riscv_core.sdc
+
+BASELINE:
+  Worst setup slack:   -7.460 ns
+  Worst hold slack:    +0.410 ns
+  Critical arrival:    17.337 ns
+  Estimated Fmax:      57.68 MHz
+
+EXP2:
+  Worst setup slack:   -4.967 ns
+  Worst hold slack:    +0.410 ns
+  Critical arrival:    14.844 ns
+  Estimated Fmax:      67.37 MHz
+
+Timing improvement:
+  Setup slack improvement: +2.493 ns
+  Critical-path reduction: 2.493 ns
+  Estimated Fmax improvement: approximately +16.8%
+
+Hold timing:
+  No change
+  Hold remains MET with +0.410 ns slack
+
+------------------------------------------------------------
+EXP2 CONCLUSION
+------------------------------------------------------------
+
+EXP2 unified ADD/SUB/ADDI arithmetic selection in the ALU.
+
+Compared with baseline, EXP2 achieved:
+
+  Mapped cell area:       -0.143%
+  Mapped cell count:      -1.08%
+  Worst setup slack:      +2.493 ns
+  Critical arrival time:  -2.493 ns
+  Estimated Fmax:         +16.8%
+  Hold slack:             unchanged
+
+The 10 ns timing target is still violated.
+
+The remaining critical path contains a long chain of
+sky130_fd_sc_hd__maj3_1 cells associated with the 32-bit
+arithmetic/carry path.
+
+------------------------------------------------------------
+REPRODUCIBILITY
+------------------------------------------------------------
+
+STA scripts:
+  sta/run_sta.tcl
+  sta/run_exp2_sta.tcl
+
+Netlists:
+  netlist/sta/riscv_core_baseline_sta.v
+  netlist/sta/riscv_core_exp2_sta.v
+
+Supporting scripts:
+  sta/scripts/convert_baseline_sta_muxes.py
+  sta/scripts/convert_exp2_sta_muxes.py
+  sta/scripts/get_cell_areas.py
+  sta/scripts/calculate_sta_area.py
+
+STA logs:
+  sta/baseline_sta_final.log
+  sta/exp2_sta_final.log
+
+Liberty area extraction and complete mapped-area calculation
+were performed using calculate_sta_area.py.
