@@ -284,7 +284,6 @@ The synthesis and STA directories contain the scripts and artifacts used for the
 ├── README.md
 ├── ARCHITECTURE.md
 ├── VALIDATION.md
-├── CODING_STYLE.md
 ├── Makefile
 │
 ├── rtl/                         # Processor RTL
@@ -308,7 +307,6 @@ The synthesis and STA directories contain the scripts and artifacts used for the
 
 - [`ARCHITECTURE.md`](ARCHITECTURE.md) — processor hierarchy, interfaces, memory contract and pipeline organization
 - [`VALIDATION.md`](VALIDATION.md) — validation methodology and acceptance criteria
-- [`CODING_STYLE.md`](CODING_STYLE.md) — RTL coding conventions
 - [`docs/M4_EXP2_PPA_CHECKPOINT.md`](docs/M4_EXP2_PPA_CHECKPOINT.md) — EXP2 optimization and PPA results
 - [`docs/M4_EXP3_PPA_CHECKPOINT.md`](docs/M4_EXP3_PPA_CHECKPOINT.md) — EXP3 optimization and PPA results
 - [`docs/M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md`](docs/M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md) — final M4 results and closure
