@@ -1,7 +1,0 @@
-read_verilog netlist/riscv_core_sky130_tt.v
-hierarchy -top riscv_core
-
-techmap -map sta/sky130_mux_map.v
-opt
-
-write_verilog -noattr -noexpr netlist/sta/riscv_core_sky130_sta.v
