@@ -1,104 +1,166 @@
-# Pipelined RISC-V Core — ASIC Flow & PPA Optimization
+# 32-bit RISC-V Pipelined Processor — RTL, Synthesis & PPA Optimization
 
-A 5-stage pipelined RISC-V processor developed from an architecture-correct RTL baseline and progressively prepared for a complete ASIC implementation flow.
+A 32-bit, five-stage in-order RISC-V processor taken from an architecture-correct RTL baseline through verification, Sky130 synthesis, static timing analysis, and targeted RTL-level PPA optimization.
 
-The project covers RTL design, ISA correctness, pipeline control, verification, synthesis, static timing analysis, and PPA optimization using the Sky130 HD standard-cell library.
+The final optimization achieved a **29.53% reduction in critical-path delay with only 0.98% area overhead** versus the verified baseline.
+
+> **Project scope:** RTL design and verification → synthesis → Sky130 HD technology mapping → OpenSTA timing analysis → RTL PPA optimization.
+>
+> Physical design (floorplanning, placement, CTS, routing, DRC/LVS) is intentionally outside the scope of this project.
+
+---
+
+## Final Result
+
+### Baseline → Final EXP4
+
+| Metric | Baseline | Final EXP4 | Improvement |
+|---|---:|---:|---:|
+| **Critical delay** | 17.305 ns | **12.196 ns** | **29.53% ↓** |
+| **WNS** | -7.371 ns | **-2.343 ns** | **5.028 ns better** |
+| **Cell count** | 7,502 | **7,353** | **1.99% ↓** |
+| **Area** | 77,385.47 µm² | **78,146.20 µm²** | **0.98% ↑** |
+| **Hold slack** | — | **+0.385 ns** | **MET** |
+
+The final implementation therefore delivers approximately **30% critical-timing improvement for less than 1% area overhead**.
+
+The final design remains setup-time limited at the 10 ns clock target, but the critical-path violation was substantially reduced.
+
+---
 
 ## Architecture
 
-The processor uses a conventional five-stage pipeline:
+The processor uses a conventional five-stage in-order pipeline:
 
 ```text
-IF → ID → EX → MEM → WB
+        ┌────┐   ┌────┐   ┌────┐   ┌─────┐   ┌────┐
+        │ IF │ → │ ID │ → │ EX │ → │ MEM │ → │ WB │
+        └────┘   └────┘   └────┘   └─────┘   └────┘
+           │        │        │         │         │
+          IF/ID    ID/EX    EX/MEM    MEM/WB    RegFile
 ```
 
-The reusable processor is implemented as `riscv_core` and is the synthesis top. `soc_top` provides the simulation/integration wrapper, while `tb_top_selfcheck` is the regression top.
+Pipeline registers:
 
-### Authoritative module boundaries
+```text
+IF/ID → ID/EX → EX/MEM → MEM/WB
+```
 
-- `riscv_core` — reusable processor and synthesis top
-- `soc_top` — simulation/integration wrapper
-- `instruction_memory` — belongs to `soc_top`
-- `tb_top_selfcheck` — self-checking regression top
+### Core hierarchy
 
-See `ARCHITECTURE.md` for the interface contract and hierarchy.
-See `CODING_STYLE.md` for RTL coding conventions.
+```text
+soc_top
+├── instruction_memory
+└── riscv_core
+    ├── instruction_fetch_unit
+    │   └── if_id_reg
+    ├── instruction_decode_unit
+    │   ├── control_unit
+    │   ├── register_file
+    │   └── id_ex_reg
+    ├── execution_unit
+    │   ├── forwarding_unit
+    │   ├── alu_unit
+    │   └── ex_mem_reg
+    └── mem_wb_reg
+```
 
-## Completed Architecture Work
+`riscv_core` is the synthesis boundary. `soc_top` provides the simulation/integration wrapper and instruction-memory integration.
 
-### Milestone 1 — Architecture correctness
+Detailed interface and pipeline contracts are documented in [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
-Completed:
+---
 
+## What Was Implemented
+
+### Pipeline and control
+
+- Five-stage in-order pipeline
 - Explicit decode-to-EX control generation
-- Correct SRLI/SRAI semantics
-- ORI and five-bit shift semantics
-- BGE semantics
-- JAL and JALR support
-- Signed and unsigned branch comparisons
-- Redirect flushing of IF/ID and ID/EX
-- EX/MEM and MEM/WB forwarding
-- Forwarding support for branches and JALR
-- WB-to-ID register-file bypass
 - Pipeline-valid and retirement metadata
-- Self-checking directed regression
+- Redirect handling and pipeline flushing
+- EX/MEM and MEM/WB forwarding
+- Branch and JALR forwarding support
+- WB-to-ID register-file bypass
 
-### Milestone 2 — Memory subsystem
+### Instruction support and correctness
 
-Completed:
+- Arithmetic and logical operations
+- Immediate operations including ORI
+- Logical and arithmetic shifts with five-bit shift amounts
+- Conditional branches including signed and unsigned comparisons
+- BGE semantics
+- JAL and JALR
+- Correct JALR target handling
+
+### Memory subsystem
 
 - Explicit instruction-memory interface
 - Explicit data-memory interface
-- Memory-stage integration
-- Load/store datapath integration
-- Memory control propagation through the pipeline
-- Regression coverage for memory operations
+- Single-cycle, zero-wait-state data-memory contract
+- LB/LBU/LH/LHU/LW
+- SB/SH/SW
+- Load sign/zero extension
+- Store byte-enable generation
+- Forwarded store data
+- Load/writeback integration
 
-### Milestone 3 — Synthesis readiness
+### Verification
 
-Completed:
+The project uses self-checking directed RTL regressions with Icarus Verilog.
 
-- Architecture and hierarchy cleanup
-- RTL lint/sanity checks
-- Reproducible synthesis flow
-- Sky130 HD technology mapping
-- Baseline synthesized netlist
-- PPA measurement infrastructure
+Verification coverage includes:
 
-## ASIC Flow
+- ALU behavior
+- Branch behavior
+- Forwarding
+- Pipeline execution
+- Memory decode and integration
+- Load extraction
+- Load/writeback
+- Memory safety
+- End-to-end memory behavior
 
-The project is being evaluated using the Sky130 HD standard-cell library.
+The final EXP4 regression completed successfully with `TEST_PASS`.
 
-### Toolchain
+See [`VALIDATION.md`](VALIDATION.md) for the validation methodology and acceptance criteria.
 
-- Yosys — RTL synthesis and technology mapping
-- OpenSTA — static timing analysis
-- Sky130 HD — target standard-cell library
-- Icarus Verilog — RTL simulation and regression
+---
 
-Target library:
+## RTL PPA Optimization
+
+M4 was performed as a sequence of targeted RTL experiments. Each experiment was evaluated using functional regression, Sky130 synthesis, area measurement, and OpenSTA timing analysis.
+
+### Optimization progression
 
 ```text
-sky130_fd_sc_hd
+Verified Baseline
+      │
+      ▼
+    EXP2
+Unified arithmetic datapath
+      │
+      ▼
+    EXP3
+PC / branch-target adder optimization
+      │
+      ▼
+    EXP4 ★ FINAL
+Arithmetic critical-path optimization
 ```
 
-Target operating corner:
+### PPA progression
 
-```text
-TT
-0.25C
-1.80V
-```
-
-## M4 — PPA Optimization
-
-Milestone 4 focuses on evaluating targeted RTL optimizations using synthesis and timing results rather than changing the processor architecture.
+| Version | Optimization focus | Critical delay | WNS | Area | Cells |
+|---|---|---:|---:|---:|---:|
+| Baseline | Verified reference | 17.305 ns | -7.371 ns | 77,385.47 µm² | 7,502 |
+| EXP2 | Unified ADD/SUB/ADDI datapath | 14.693 ns | -4.816 ns | 79,571.32 µm² | 7,694 |
+| EXP3 | PC/branch-target adder | 12.817 ns | -2.930 ns | 82,277.66 µm² | 7,546 |
+| **EXP4** | **Final arithmetic optimization** | **12.196 ns** | **-2.343 ns** | **78,146.20 µm²** | **7,353** |
 
 ### EXP2 — Unified arithmetic datapath
 
-The second optimization experiment restructures the ALU arithmetic operations so that ADD, SUB, and ADDI share a single arithmetic datapath.
-
-The implementation uses a unified two's-complement formulation:
+ADD, SUB, and ADDI were consolidated around a shared two's-complement arithmetic formulation:
 
 ```text
 ADD  : A + B
@@ -106,139 +168,173 @@ SUB  : A + ~B + 1
 ADDI : A + immediate
 ```
 
-The arithmetic operand is selected between `rs2_data` and `imm_val`, while subtraction is controlled through operand inversion and carry-in.
+The arithmetic operand is selected between the register operand and immediate, while subtraction is controlled through operand inversion and carry-in.
 
-This experiment is intended to reduce duplicated arithmetic-selection logic while preserving the existing architectural behavior.
+Details are documented in [`docs/M4_EXP2_PPA_CHECKPOINT.md`](docs/M4_EXP2_PPA_CHECKPOINT.md).
 
-### EXP2 Area Results
+### EXP3 — PC / branch-target optimization
 
-Synthesis was performed against the same Sky130 HD TT library.
+The critical path migrated to PC + immediate target generation. A dedicated carry-select style target adder was introduced while retaining the JALR datapath optimization.
 
-| Metric | Baseline | EXP2 | Change |
-|---|---:|---:|---:|
-| Core area | 39607.9872 | 39482.8672 | **-0.316%** |
-| ALU area | 11564.8416 | 11439.7216 | **-1.082%** |
-| Mapped cells | 5193 | 5104 | **-1.71%** |
+This reduced the critical delay to **12.817 ns**.
 
-The complete core-area reduction comes from the ALU optimization; the other major blocks remain structurally unchanged.
+Details are documented in [`docs/M4_EXP3_PPA_CHECKPOINT.md`](docs/M4_EXP3_PPA_CHECKPOINT.md).
 
-Cell count is reported as a structural indicator. The area figures above are based on the mapped Sky130 cell areas reported by Yosys.
+### EXP4 — Final optimization
 
-## Static Timing Analysis
+EXP4 targeted the arithmetic carry chain exposed after EXP3.
 
-The project is currently establishing a reproducible apples-to-apples OpenSTA comparison between the baseline and EXP2 implementations.
+A dedicated `arithmetic_adder` module was introduced in `rtl/arithmetic_adder.v`, using 8-bit arithmetic blocks with carry-select behavior for upper blocks. The ALU instantiates this dedicated arithmetic datapath for the unified ADD/SUB/ADDI operation.
 
-Timing constraint:
+EXP4 reduced the critical delay from **12.817 ns to 12.196 ns** while also reducing measured area from **82,277.66 µm² to 78,146.20 µm²** relative to EXP3.
+
+**EXP4 is the final M4 optimization. No further RTL optimization is part of this project.**
+
+The complete final checkpoint is [`docs/M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md`](docs/M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md).
+
+---
+
+## ASIC-Oriented Evaluation Flow
+
+The design was evaluated using a reproducible RTL-to-gate flow:
+
+```text
+RTL
+ │
+ ▼
+Icarus Verilog
+Functional regression
+ │
+ ▼
+Yosys
+RTL synthesis
+ │
+ ▼
+Sky130 HD
+Technology mapping
+ │
+ ▼
+Mapped netlist
+ │
+ ▼
+OpenSTA
+Static timing analysis
+ │
+ ▼
+PPA evaluation
+```
+
+### Tools
+
+| Tool | Purpose |
+|---|---|
+| **Icarus Verilog** | RTL simulation and regression |
+| **Yosys** | Synthesis and technology mapping |
+| **OpenSTA** | Static timing analysis |
+| **Sky130 HD** | Target standard-cell library |
+
+Target library:
+
+```text
+sky130_fd_sc_hd
+```
+
+Characterization corner:
+
+```text
+TT
+0.25°C
+1.80 V
+```
+
+Timing target:
 
 ```text
 Clock period: 10 ns
 Target frequency: 100 MHz
 ```
 
-The saved STA netlists preserve the Sky130-mapped combinational structure and map only the sequential elements required for OpenSTA compatibility.
+Timing constraints are maintained in [`constraints/riscv_core.sdc`](constraints/riscv_core.sdc).
 
-Current STA preparation flow:
+---
 
-```text
-Sky130-mapped TT netlist
-        ↓
-      proc
-        ↓
-generic $dff
-        ↓
-Sky130 dfxtp_1 mapping
-        ↓
-      opt
-        ↓
-OpenSTA
-```
+## Reproduce the RTL Regression
 
-An additional combinational technology-mapping pass must not be applied to an already Sky130-mapped netlist, as this changes the synthesized structure and can produce artificial mux-cell growth.
-
-### STA artifacts
-
-```text
-netlist/
-├── riscv_core_baseline_tt.v
-├── riscv_core_exp2_tt.v
-└── sta/
-    ├── riscv_core_baseline_sta.v
-    └── riscv_core_exp2_sta.v
-```
-
-The baseline and EXP2 STA netlists were structurally verified to contain:
-
-| Cell | Baseline | EXP2 |
-|---|---:|---:|
-| `dfxtp_1` | 1526 | 1526 |
-| `mux2_1` | 75 | 72 |
-| `mux2i_1` | 122 | 139 |
-| `mux4_2` | 652 | 656 |
-
-Timing results will be used together with the area results to determine the overall PPA impact of EXP2.
-
-## STA Mapping References
-
-Reusable mapping references are maintained under:
-
-```text
-sta/mapping/
-├── README.md
-├── sky130_dff_map.v
-└── sky130_mux_map.v
-```
-
-`sky130_dff_map.v` provides the validated mapping of generic Yosys `$dff` cells to `sky130_fd_sc_hd__dfxtp_1` cells for OpenSTA preparation.
-
-`sky130_mux_map.v` provides a parameterized mapping for generic Yosys `$mux` cells.
-
-The MUX mapping must only be used when generic `$mux` cells are actually present. It must not be applied to a netlist that is already Sky130 technology-mapped.
-
-See `sta/mapping/README.md` for the detailed mapping notes.
-
-## Repository Structure
-
-```text
-rtl/         RTL source
-tb/          Testbenches and regression infrastructure
-constraints/ Timing constraints
-netlist/     Synthesized and STA-prepared netlists
-sta/         Synthesis/STA scripts, logs, and mapping references
-```
-
-## Verification
-
-RTL regression is run using Icarus Verilog:
+From the repository root:
 
 ```bash
 make clean
 make test
 ```
 
-The regression is self-checking and reports a `TEST_PASS` result on success.
-
-## Current Status
+The self-checking regression must finish with:
 
 ```text
-M1  Architecture correctness       ✓ Complete
-M2  Memory subsystem               ✓ Complete
-M3  Synthesis readiness            ✓ Complete
-M4  PPA optimization               → In progress
+TEST_PASS
 ```
 
-### M4 EXP2 status
+The synthesis and STA directories contain the scripts and artifacts used for the ASIC-oriented evaluation.
+
+---
+
+## Repository Structure
 
 ```text
-RTL optimization                  ✓ Complete
-Sky130 synthesis                  ✓ Complete
-Area comparison                   ✓ Complete
-Structurally faithful STA setup   ✓ Complete
-Baseline vs EXP2 timing           → Next
-PPA evaluation                    → Pending STA
+.
+├── README.md
+├── ARCHITECTURE.md
+├── VALIDATION.md
+├── CODING_STYLE.md
+├── Makefile
+│
+├── rtl/                         # Processor RTL
+├── tb/                          # Self-checking testbenches
+├── constraints/                 # Timing constraints
+│
+├── synthesis/                   # Yosys synthesis flows
+├── sta/                         # OpenSTA flows, mappings and results
+├── netlist/                     # Technology-mapped netlists
+├── scripts/                    # Supporting analysis scripts
+│
+└── docs/                        # Optimization checkpoints
+    ├── M4_EXP2_PPA_CHECKPOINT.md
+    ├── M4_EXP3_PPA_CHECKPOINT.md
+    └── M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md
 ```
 
-## Next Step
+---
 
-Complete the baseline-vs-EXP2 OpenSTA comparison using identical timing constraints and the saved structurally faithful STA netlists.
+## Engineering Documentation
 
-After the PPA experiment is evaluated, the project will continue toward the remaining ASIC implementation stages, including physical design, signoff timing, DRC/LVS, and final GDS generation.
+- [`ARCHITECTURE.md`](ARCHITECTURE.md) — processor hierarchy, interfaces, memory contract and pipeline organization
+- [`VALIDATION.md`](VALIDATION.md) — validation methodology and acceptance criteria
+- [`CODING_STYLE.md`](CODING_STYLE.md) — RTL coding conventions
+- [`docs/M4_EXP2_PPA_CHECKPOINT.md`](docs/M4_EXP2_PPA_CHECKPOINT.md) — EXP2 optimization and PPA results
+- [`docs/M4_EXP3_PPA_CHECKPOINT.md`](docs/M4_EXP3_PPA_CHECKPOINT.md) — EXP3 optimization and PPA results
+- [`docs/M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md`](docs/M4_FINAL_OPTIMIZATION_EXP4_CHECKPOINT.md) — final M4 results and closure
+
+---
+
+## Project Status
+
+```text
+RTL architecture & control       ✓ Complete
+Memory subsystem                 ✓ Complete
+RTL verification                 ✓ Complete
+Sky130 synthesis                 ✓ Complete
+Static timing analysis           ✓ Complete
+RTL PPA optimization             ✓ Complete
+Physical design                  — Out of scope
+```
+
+### Final project result
+
+**29.53% critical-delay reduction**
+
+**0.98% area overhead**
+
+**1.99% fewer mapped cells**
+
+**Functional regression: PASS**
+
+The project is complete at the RTL/synthesis/STA optimization stage.
