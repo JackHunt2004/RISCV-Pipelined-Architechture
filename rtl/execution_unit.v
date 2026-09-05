@@ -30,7 +30,7 @@ module execution_unit(clk,rst,ex_valid,ex_instruction,ex_pc,ex_rs1,ex_rs2,ex_rd,
 
     output mem_mem_read,mem_mem_write,mem_mem_unsigned;
     output [1:0] mem_mem_size;
-
+    wire [31:0] jalr_sum;
     wire [1:0] forward_a,forward_b;
     reg [31:0] operand_a,operand_b;
     wire [31:0] alu_result,ex_result;
@@ -83,11 +83,23 @@ module execution_unit(clk,rst,ex_valid,ex_instruction,ex_pc,ex_rs1,ex_rs2,ex_rd,
                 end
         end
 
-    assign branch_target=ex_pc+ex_imm_val;
+    wire [31:0] pc_imm_sum;
+
+    pc_target_adder pc_target_add(
+    .a(ex_pc),
+    .b(ex_imm_val),
+    .result(pc_imm_sum));
+
+    assign branch_target=pc_imm_sum;
+
+    jalr_adder jalr_add(
+    .a(operand_a),
+    .b(ex_imm_val),
+    .result(jalr_sum));
 
     assign jump_target=(ex_jump_type==2'd2) ?
-                       ((operand_a+ex_imm_val)&32'hfffffffe) :
-                       (ex_pc+ex_imm_val);
+                       (jalr_sum&32'hfffffffe) :
+                       (pc_imm_sum);
 
     assign take_jump=ex_valid && ex_jump_type!=2'd0;
 
