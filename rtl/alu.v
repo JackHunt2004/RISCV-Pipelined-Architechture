@@ -32,9 +32,11 @@ module alu_unit(ex_alu_control,result,rs1_data,rs2_data,imm_val);
      * ADD : A + B
      * SUB : A + ~B + 1
      */
-    assign arithmetic_result =
-        rs1_data + (arithmetic_sub ? ~arithmetic_b : arithmetic_b)
-                   + arithmetic_sub;
+        arithmetic_adder arithmetic_add(
+        .a(rs1_data),
+        .b(arithmetic_b),
+        .sub(arithmetic_sub),
+        .result(arithmetic_result));
 
     always@(*)
         begin
